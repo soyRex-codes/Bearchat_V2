@@ -31,7 +31,6 @@ wheels/
 *.pth
 *.pt
 models/
-_origianl_model_backup_gemma-1b-it-contextual/
 
 # OS files
 .DS_Store
