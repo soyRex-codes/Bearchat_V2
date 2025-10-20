@@ -44,6 +44,6 @@ Thumbs.db
 # Logs
 *.log
 
-# Temporary files
-*.tmp
-*.swp
+# Environment variables
+.env
+.env.local

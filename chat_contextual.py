@@ -3,9 +3,14 @@ Interactive chat with contextual prompting for MSU Assistant.
 Uses the same format as enhanced_finetune.py with topic and category context.
 """
 
+import os
 import torch
+from dotenv import load_dotenv
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
+
+# Load environment variables
+load_dotenv()
 
 # --- Configuration ---
 model_id = "meta-llama/Llama-3.2-3B-Instruct"  # Switched to Llama 3.2-3B for better quality
@@ -14,13 +19,13 @@ adapter_path = "./models/latest"  # Latest fine-tuned model
 # --- Model Loading ---
 print("Loading model... (this may take a moment)")
 
-tokenizer = AutoTokenizer.from_pretrained(model_id, token="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")
+tokenizer = AutoTokenizer.from_pretrained(model_id, token=os.environ['hf_token'])
 
 base_model = AutoModelForCausalLM.from_pretrained(
     model_id,
     dtype=torch.bfloat16,
     device_map="auto",
-    token="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"
+    token=os.environ['hf_token']
 )
 
 print("Loading fine-tuned LoRA adapters...")

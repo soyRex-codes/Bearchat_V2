@@ -58,8 +58,8 @@ A fine-tuned Llama-3.2-3B-Instruct model designed to answer questions about Miss
 
 4. Set up Hugging Face token:
    - Get your token from [Hugging Face](https://huggingface.co/settings/tokens)
-   - Create a `.env` file or set environment variable `HF_TOKEN`
-   - Alternatively, update the token directly in the scripts (not recommended for public repos)
+   - Create a `.env` file in the project root with: `hf_token=your_token_here`
+   - The scripts will automatically load the token from the environment
 
 ## Usage
 

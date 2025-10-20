@@ -22,14 +22,18 @@ import torch
 import os
 import shutil
 from datetime import datetime
+from dotenv import load_dotenv
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import LoraConfig, get_peft_model
 from trl import SFTTrainer, SFTConfig
 
+# Load environment variables
+load_dotenv()
+
 # ===== CONFIGURATION =====
 model_id = "meta-llama/Llama-3.2-3B-Instruct"  # Switched to Llama 3.2-3B for better quality
-HF_TOKEN = "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"
+HF_TOKEN = os.environ['hf_token']
 
 # Checkpoint directories
 CHECKPOINT_DIR = "./models"

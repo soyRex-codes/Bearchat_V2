@@ -1,3 +1,4 @@
+pip-requirements
 torch
 datasets
 transformers
@@ -7,3 +8,4 @@ accelerate
 beautifulsoup4
 requests
 lxml
+python-dotenv

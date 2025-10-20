@@ -1,14 +1,18 @@
 """
 MSU Chatbot API Server
-Flask-based REST API for serving the fine-tuned Gemma model
+Flask-based REST API for serving the fine-tuned Llama model
 """
 
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import torch
+from dotenv import load_dotenv
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 import os
+
+# Load environment variables
+load_dotenv()
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for Flutter web/mobile apps
@@ -37,11 +41,12 @@ def load_model():
     adapter_path = "./models/latest"
     
     print(f"Loading base model: {base_model_name}")
-    tokenizer = AutoTokenizer.from_pretrained(base_model_name)
+    tokenizer = AutoTokenizer.from_pretrained(base_model_name, token=os.environ['hf_token'])
     model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
         torch_dtype=torch.bfloat16,
-        device_map={"": device}
+        device_map={"": device},
+        token=os.environ['hf_token']
     )
     
     print(f" Loading fine-tuned adapters from: {adapter_path}")

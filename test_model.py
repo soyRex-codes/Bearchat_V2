@@ -1,21 +1,26 @@
 """
-Test script for your fine-tuned Gemma model on MSU Scholarship questions.
+Test script for your fine-tuned Llama model on MSU Cost of Attendance questions.
 """
 
+import os
 import torch
+from dotenv import load_dotenv
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from peft import PeftModel
 
+# Load environment variables
+load_dotenv()
+
 # Load the base model and tokenizer
 model_id = "meta-llama/Llama-3.2-3B-Instruct"
-tokenizer = AutoTokenizer.from_pretrained(model_id, token="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")
+tokenizer = AutoTokenizer.from_pretrained(model_id, token=os.environ['hf_token'])
 
 print("Loading base model...")
 base_model = AutoModelForCausalLM.from_pretrained(
     model_id,
     dtype=torch.bfloat16,
     device_map="auto",
-    token="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"
+    token=os.environ['hf_token']
 )
 
 # Load the fine-tuned LoRA adapters
