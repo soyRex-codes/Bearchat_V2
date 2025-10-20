@@ -1,0 +1,9 @@
+torch
+datasets
+transformers
+peft
+trl
+accelerate
+beautifulsoup4
+requests
+lxml
