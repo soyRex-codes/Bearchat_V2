@@ -1,10 +1,10 @@
-# MSU Cost of Attendance Chatbot
+# MSU Chatbot - trained on MSU knowledge
 
-A fine-tuned Llama-3.2-3B-Instruct model designed to answer questions about Missouri State University's Cost of Attendance. This project uses Retrieval-Augmented Generation (RAG) techniques and provides multiple interfaces for interacting with the model.
+A fine-tuned Llama-3.2-3B-Instruct model designed to answer questions about Missouri State University's knwledgebase data. This project uses Retrieval-Augmented Generation (RAG) techniques and provides multiple interfaces for interacting with the model.
 
 ## Features
 
-- **Fine-tuned Llama-3.2-3B-Instruct**: Optimized for domain-specific responses about MSU's cost of attendance
+- **Fine-tuned Llama-3.2-3B-Instruct**: Optimized for domain-specific responses like MSU's cost of attendance, scholarship, degree, courses, and more.
 - **Contextual Prompting**: Uses topic and content type metadata for accurate, context-aware answers
 - **Multiple Interfaces**: API server, interactive chat, and batch testing
 - **Smart Checkpoint Management**: Automatic backup and rollback capabilities
@@ -89,7 +89,7 @@ This runs predefined questions about MSU's cost of attendance and displays respo
 
 Start an interactive chat session:
 ```bash
-python chat_contextual.py
+python chat_contextual.pyx
 ```
 
 The chat includes topic detection to provide context-aware responses.
