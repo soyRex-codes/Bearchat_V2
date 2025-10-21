@@ -151,6 +151,9 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## Author
 
 Raj Kushwaha (soyRex-codes)
+Bertrand Rusanganwa
+Guillaume Girishya
+Bekhrom Norkulov
 
 ## Acknowledgments
 
