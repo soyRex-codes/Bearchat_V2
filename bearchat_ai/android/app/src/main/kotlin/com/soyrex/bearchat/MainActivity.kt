@@ -1,4 +1,4 @@
-package com.example.develop
+package com.soyrex.bearchat
 
 import io.flutter.embedding.android.FlutterActivity
 

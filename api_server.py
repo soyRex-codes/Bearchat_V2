@@ -310,7 +310,7 @@ if __name__ == '__main__':
     print("="*80)
     print("\n Server will be available at:")
     print("   - Local: http://localhost:8080")
-    print("   - Network: http://YOUR_MAC_IP:8080")
+    print("   - Network: http://My_MAC_IP:8080")
     print("\n Available endpoints:")
     print("   - GET  /health - Health check")
     print("   - POST /chat   - Single question")
