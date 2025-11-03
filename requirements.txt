@@ -10,3 +10,9 @@ lxml
 python-dotenv
 flask
 flask-cors
+
+# Document processing
+PyPDF2
+Pillow
+pdf2image
+pytesseract

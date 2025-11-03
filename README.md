@@ -5,6 +5,7 @@ A fine-tuned Llama-3.2-3B-Instruct model designed to answer questions about Miss
 ## Features
 
 - **Fine-tuned Llama-3.2-3B-Instruct**: Optimized for domain-specific responses like MSU's cost of attendance, scholarship, degree, courses, and more.
+- **Document Processing**: Upload PDFs and images (transcripts, syllabi, course catalogs) and ask questions about them
 - **Contextual Prompting**: Uses topic and content type metadata for accurate, context-aware answers
 - **Multiple Interfaces**: API server, interactive chat, and batch testing
 - **Smart Checkpoint Management**: Automatic backup and rollback capabilities
@@ -15,18 +16,18 @@ A fine-tuned Llama-3.2-3B-Instruct model designed to answer questions about Miss
 ```
 ├── api_server.py                 # Flask API server for model serving
 ├── chat_contextual.py            # Interactive chat with topic detection
-├── Superior_finetune.py          # Main fine-tuning script with LoRA
+├── document_processor.py         # PDF/image processing pipeline
+├── test_document_upload.py       # Test document upload functionality
+├── finetune.py                   # Main fine-tuning script with LoRA
 ├── test_model.py                 # Batch testing script
 ├── rollback_checkpoint.py        # Checkpoint rollback utility
-├── convert_csv_to_json.py        # Data conversion utility
-├── Use_when_scarpping_multiple_web_pages_combine_training_data.py  # Web scraping script
-├── smart_cost_of_attendance_for_missouri_state_university_training.json  # Training data
+├── superior_msu_collector.py     # Web scraping for training data
+├── Use_when_scarpping_multiple_web_pages_combine_training_data.py  # Data combiner
 ├── requirements.txt              # Python dependencies
-├── docs/                         # Documentation
 ├── models/                       # Model checkpoints and adapters
 │   ├── latest/                   # Current fine-tuned model
 │   └── previous/                 # Backup of previous version
-└── _origianl_model_backup_gemma-1b-it-contextual/  # Legacy backups
+└── Json_data_storage/            # Training data files
 ```
 
 ## Setup
@@ -56,7 +57,19 @@ A fine-tuned Llama-3.2-3B-Instruct model designed to answer questions about Miss
    pip install -r requirements.txt
    ```
 
-4. Set up Hugging Face token:
+4. Install Tesseract OCR (for scanned documents):
+   ```bash
+   # macOS
+   brew install tesseract
+   
+   # Ubuntu/Debian
+   sudo apt-get install tesseract-ocr
+   
+   # Windows
+   # Download installer from: https://github.com/UB-Mannheim/tesseract/wiki
+   ```
+
+5. Set up Hugging Face token:
    - Get your token from [Hugging Face](https://huggingface.co/settings/tokens)
    - Create a `.env` file in the project root with: `hf_token=your_token_here`
    - The scripts will automatically load the token from the environment
@@ -101,7 +114,77 @@ Start the Flask API server:
 python api_server.py
 ```
 
-The server will be available at `http://localhost:5000` with CORS enabled for web/mobile apps.
+The server will be available at `http://localhost:8080` with CORS enabled for web/mobile apps.
+
+#### API Endpoints
+
+**1. Regular Chat**
+```bash
+curl -X POST http://localhost:8080/chat \
+  -H "Content-Type: application/json" \
+  -d '{
+    "question": "What scholarships are available for CS students?",
+    "max_length": 512,
+    "temperature": 0.3
+  }'
+```
+
+**2. Document Upload (NEW)**
+
+Upload PDFs or images (transcripts, syllabi, degree audits) and ask questions:
+
+```bash
+curl -X POST http://localhost:8080/upload \
+  -F "file=@transcript.pdf" \
+  -F "question=What is my GPA?" \
+  -F "max_length=1024"
+```
+
+Supported formats: PDF, PNG, JPG, JPEG, BMP, TIFF, GIF
+
+**Python example:**
+```python
+import requests
+
+# Upload transcript and ask question
+with open('transcript.pdf', 'rb') as f:
+    response = requests.post(
+        'http://localhost:8080/upload',
+        files={'file': f},
+        data={
+            'question': 'What courses did I complete in Fall 2024?',
+            'max_length': 1024
+        }
+    )
+    
+result = response.json()
+print(result['answer'])
+```
+
+**3. Batch Processing**
+```bash
+curl -X POST http://localhost:8080/batch \
+  -H "Content-Type: application/json" \
+  -d '{
+    "questions": [
+      "What is the CS curriculum?",
+      "What are the admission requirements?"
+    ]
+  }'
+```
+
+### Testing Document Upload
+
+Test the document processing pipeline:
+```bash
+python test_document_upload.py
+```
+
+This will:
+- Check if the API server is running
+- Test regular chat functionality
+- Test document upload with sample files
+- Validate text extraction and response generation
 
 ### Data Collection
 

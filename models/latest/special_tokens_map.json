@@ -12,5 +12,6 @@
     "normalized": false,
     "rstrip": false,
     "single_word": false
-  }
+  },
+  "pad_token": "<|eot_id|>"
 }

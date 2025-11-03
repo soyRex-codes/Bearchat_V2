@@ -36,6 +36,9 @@ dependencies:
   cupertino_icons: ^1.0.8
   http: ^1.1.0
   flutter_dotenv: ^5.1.0
+  file_picker: ^8.1.4  # For picking PDF and image files
+  path: ^1.9.0  # For file path operations
+  url_launcher: ^6.2.0  # For opening links in browser
 
 dev_dependencies:
   flutter_test:

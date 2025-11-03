@@ -2058,5 +2058,6 @@
     "attention_mask"
   ],
   "model_max_length": 131072,
+  "pad_token": "<|eot_id|>",
   "tokenizer_class": "PreTrainedTokenizerFast"
 }
