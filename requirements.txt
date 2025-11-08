@@ -4,6 +4,7 @@ transformers
 peft
 trl
 accelerate
+bitsandbytes  # For 4-bit quantization on Mac
 beautifulsoup4
 requests
 lxml

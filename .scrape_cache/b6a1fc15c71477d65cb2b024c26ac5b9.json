@@ -1,0 +1,60 @@
+{
+  "training_data": [
+    {
+      "instruction": "Tell me about Contact Information - Computer Science Department.",
+      "response": "Contact Information\n- Location\n- Cheek Hall 203C\n- Telephone\n[417-836-4157](tel:+1-417-836-4157)- Relay Missouri\n- 711 or\n[800-735-2966](tel:+1-800-735-2966) [ComputerScience@MissouriState.edu](mailto:ComputerScience@MissouriState.edu)[CSGradProgram@MissouriState.edu](mailto:CSGradProgram@MissouriState.edu)- Address\n- Missouri State University\nComputer Science Department\nComputer Science\n901 S. National Ave.\nSpringfield, MO 65897 - Website address\n[ComputerScience.MissouriState.edu](https://ComputerScience.MissouriState.edu)",
+      "metadata": {
+        "topic": "Contact Information - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/contact.htm",
+        "content_type": "general_info",
+        "context_type": "overview",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "What is Contact Information - Computer Science Department?",
+      "response": "Contact Information\n- Location\n- Cheek Hall 203C\n- Telephone\n[417-836-4157](tel:+1-417-836-4157)- Relay Missouri\n- 711 or\n[800-735-2966](tel:+1-800-735-2966) [ComputerScience@MissouriState.edu](mailto:ComputerScience@MissouriState.edu)[CSGradProgram@MissouriState.edu](mailto:CSGradProgram@MissouriState.edu)- Address\n- Missouri State University\nComputer Science Department\nComputer Science\n901 S. National Ave.\nSpringfield, MO 65897 - Website address\n[ComputerScience.MissouriState.edu](https://ComputerScience.MissouriState.edu)",
+      "metadata": {
+        "topic": "Contact Information - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/contact.htm",
+        "content_type": "general_info",
+        "context_type": "overview",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "What information is available about Contact Information - Computer Science Department?",
+      "response": "Contact Information\n- Location\n- Cheek Hall 203C\n- Telephone\n[417-836-4157](tel:+1-417-836-4157)- Relay Missouri\n- 711 or\n[800-735-2966](tel:+1-800-735-2966) [ComputerScience@MissouriState.edu](mailto:ComputerScience@MissouriState.edu)[CSGradProgram@MissouriState.edu](mailto:CSGradProgram@MissouriState.edu)- Address\n- Missouri State University\nComputer Science Department\nComputer Science\n901 S. National Ave.\nSpringfield, MO 65897 - Website address\n[ComputerScience.MissouriState.edu](https://ComputerScience.MissouriState.edu)",
+      "metadata": {
+        "topic": "Contact Information - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/contact.htm",
+        "content_type": "general_info",
+        "context_type": "specific_detail",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "Give me comprehensive information about Contact Information - Computer Science Department.",
+      "response": "Contact Information\n- Location\n- Cheek Hall 203C\n- Telephone\n[417-836-4157](tel:+1-417-836-4157)- Relay Missouri\n- 711 or\n[800-735-2966](tel:+1-800-735-2966) [ComputerScience@MissouriState.edu](mailto:ComputerScience@MissouriState.edu)[CSGradProgram@MissouriState.edu](mailto:CSGradProgram@MissouriState.edu)- Address\n- Missouri State University\nComputer Science Department\nComputer Science\n901 S. National Ave.\nSpringfield, MO 65897 - Website address\n[ComputerScience.MissouriState.edu](https://ComputerScience.MissouriState.edu)",
+      "metadata": {
+        "topic": "Contact Information - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/contact.htm",
+        "content_type": "general_info",
+        "context_type": "comprehensive",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "Where can I learn more about Contact Information - Computer Science Department?",
+      "response": "You can find detailed information at: https://computerscience.missouristate.edu/contact.htm",
+      "metadata": {
+        "topic": "Contact Information - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/contact.htm",
+        "content_type": "general_info",
+        "context_type": "reference",
+        "collected_date": "2025-11-03"
+      }
+    }
+  ],
+  "cached_at": "2025-11-03T18:33:44.657147"
+}

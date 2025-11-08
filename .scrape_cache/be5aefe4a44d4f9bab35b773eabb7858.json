@@ -1,0 +1,60 @@
+{
+  "training_data": [
+    {
+      "instruction": "Tell me about Computer Science Department.",
+      "response": "Undergraduate programs\nComputer science (CS) is the study of computers and computational systems.\nComputer scientists create systems \u2013 from video games and phones to cars and airplanes \u2013 that are correct, reliable and efficient.\nMajor\nUse your creativity to solve problems. This major prepares you to work in computer/video\ngame design, software development, computer forensics and many other arenas.\nMajor\nUnlock more than just numbers. Discover patterns, predict trends and make the world\nsmarter.\nEnhance your degree with a certificate or minor\nTech knowledge is valuable in any career field.\nCertificate\nExplore how programs and software are made.\nMinor\nLearn to code and other computer science basics.\nMinor\nDiscover how tiny bits of data can lead to big discoveries.\nGraduate programs\nPropel your career or pivot into new roles with practical skills and advanced knowledge.\nOur master's programs can be completed in two years (four semesters) or less.",
+      "metadata": {
+        "topic": "Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/default.htm",
+        "content_type": "general_info",
+        "context_type": "overview",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "What is Computer Science Department?",
+      "response": "Undergraduate programs\nComputer science (CS) is the study of computers and computational systems.\nComputer scientists create systems \u2013 from video games and phones to cars and airplanes \u2013 that are correct, reliable and efficient.\nMajor\nUse your creativity to solve problems. This major prepares you to work in computer/video\ngame design, software development, computer forensics and many other arenas.\nMajor\nUnlock more than just numbers. Discover patterns, predict trends and make the world\nsmarter.\nEnhance your degree with a certificate or minor\nTech knowledge is valuable in any career field.\nCertificate\nExplore how programs and software are made.\nMinor\nLearn to code and other computer science basics.\nMinor\nDiscover how tiny bits of data can lead to big discoveries.\nGraduate programs\nPropel your career or pivot into new roles with practical skills and advanced knowledge.\nOur master's programs can be completed in two years (four semesters) or less.",
+      "metadata": {
+        "topic": "Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/default.htm",
+        "content_type": "general_info",
+        "context_type": "overview",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "What information is available about Computer Science Department?",
+      "response": "Undergraduate programs\nComputer science (CS) is the study of computers and computational systems.\nComputer scientists create systems \u2013 from video games and phones to cars and airplanes \u2013 that are correct, reliable and efficient.\nMajor\nUse your creativity to solve problems. This major prepares you to work in computer/video\ngame design, software development, computer forensics and many other arenas.\nMajor\nUnlock more than just numbers. Discover patterns, predict trends and make the world\nsmarter.\nEnhance your degree with a certificate or minor\nTech knowledge is valuable in any career field.\nCertificate\nExplore how programs and software are made.\nMinor\nLearn to code and other computer science basics.\nMinor\nDiscover how tiny bits of data can lead to big discoveries.\nGraduate programs\nPropel your career or pivot into new roles with practical skills and advanced knowledge.\nOur master's programs can be completed in two years (four semesters) or less.",
+      "metadata": {
+        "topic": "Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/default.htm",
+        "content_type": "general_info",
+        "context_type": "specific_detail",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "Give me comprehensive information about Computer Science Department.",
+      "response": "Undergraduate programs\nComputer science (CS) is the study of computers and computational systems.\nComputer scientists create systems \u2013 from video games and phones to cars and airplanes \u2013 that are correct, reliable and efficient.\nMajor\nUse your creativity to solve problems. This major prepares you to work in computer/video\ngame design, software development, computer forensics and many other arenas.\nMajor\nUnlock more than just numbers. Discover patterns, predict trends and make the world\nsmarter.\nEnhance your degree with a certificate or minor\nTech knowledge is valuable in any career field.\nCertificate\nExplore how programs and software are made.\nMinor\nLearn to code and other computer science basics.\nMinor\nDiscover how tiny bits of data can lead to big discoveries.\nGraduate programs\nPropel your career or pivot into new roles with practical skills and advanced knowledge.\nOur master's programs can be completed in two years (four semesters) or less. Certificates\ngive you specialized training in less time.\nMaster's\nBe the architect of digital innovation.\nMaster's\nCraft a tailored science degree that reflects you.\nCertificate\nUse computer systems to interpret data across various scientific disciplines.\nCertificate\nLeverage new insights that yield better results.\nCertificate\nLearn the tools and tactics for making quality software.\nStudent spotlight\nReady for takeoff\nIn Missouri State\u2019s computer science graduate program, international student Jeniya Sultana has found confidence and preparation for her next step.\nHelping you succeed\nScholarships and financial aid\nStudent opportunities and services",
+      "metadata": {
+        "topic": "Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/default.htm",
+        "content_type": "general_info",
+        "context_type": "comprehensive",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "Where can I learn more about Computer Science Department?",
+      "response": "You can find detailed information at: https://computerscience.missouristate.edu/default.htm",
+      "metadata": {
+        "topic": "Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/default.htm",
+        "content_type": "general_info",
+        "context_type": "reference",
+        "collected_date": "2025-11-03"
+      }
+    }
+  ],
+  "cached_at": "2025-11-03T18:33:01.637095"
+}

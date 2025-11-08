@@ -1,0 +1,60 @@
+{
+  "training_data": [
+    {
+      "instruction": "Tell me about Faculty and Staff - Computer Science Department.",
+      "response": "Faculty and Staff\nFaculty\n[Dr. Ajay K. Katangur](profile-display.aspx?p=AjayKatangur)\nDepartment Head\nDistinguished Professor\nCyber Security, Information Assurance, Cloud Computing, Wireless Networks, Computer Networks, Optical Networks, Mobile Computing.\nDeep Learning and its Applications, Machine Learning and Pattern Recognition, Secure Machine Learning, Information Fusion, Computer Vision, Software Engineering, Software Quality Assurance.\nMachine Learning, Evolutionary Algorithms, Explainable AI, Deep Surrogate Models and Applications in Complex Real-World Problems.\nRobotics, Computational Geometry, Solid and Physics-based Modeling, Algorithms, Theory of Computation, Deep Learning.\n[Dr. Razib Iqbal](profile-display.aspx?p=RIqbal)\nProfessor\nRoy D.",
+      "metadata": {
+        "topic": "Faculty and Staff - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/people.htm",
+        "content_type": "general_info",
+        "context_type": "overview",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "What is Faculty and Staff - Computer Science Department?",
+      "response": "Faculty and Staff\nFaculty\n[Dr. Ajay K. Katangur](profile-display.aspx?p=AjayKatangur)\nDepartment Head\nDistinguished Professor\nCyber Security, Information Assurance, Cloud Computing, Wireless Networks, Computer Networks, Optical Networks, Mobile Computing.\nDeep Learning and its Applications, Machine Learning and Pattern Recognition, Secure Machine Learning, Information Fusion, Computer Vision, Software Engineering, Software Quality Assurance.\nMachine Learning, Evolutionary Algorithms, Explainable AI, Deep Surrogate Models and Applications in Complex Real-World Problems.\nRobotics, Computational Geometry, Solid and Physics-based Modeling, Algorithms, Theory of Computation, Deep Learning.\n[Dr. Razib Iqbal](profile-display.aspx?p=RIqbal)\nProfessor\nRoy D.",
+      "metadata": {
+        "topic": "Faculty and Staff - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/people.htm",
+        "content_type": "general_info",
+        "context_type": "overview",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "What information is available about Faculty and Staff - Computer Science Department?",
+      "response": "Faculty and Staff\nFaculty\n[Dr. Ajay K. Katangur](profile-display.aspx?p=AjayKatangur)\nDepartment Head\nDistinguished Professor\nCyber Security, Information Assurance, Cloud Computing, Wireless Networks, Computer Networks, Optical Networks, Mobile Computing.\nDeep Learning and its Applications, Machine Learning and Pattern Recognition, Secure Machine Learning, Information Fusion, Computer Vision, Software Engineering, Software Quality Assurance.\nMachine Learning, Evolutionary Algorithms, Explainable AI, Deep Surrogate Models and Applications in Complex Real-World Problems.\nRobotics, Computational Geometry, Solid and Physics-based Modeling, Algorithms, Theory of Computation, Deep Learning.\n[Dr. Razib Iqbal](profile-display.aspx?p=RIqbal)\nProfessor\nRoy D.",
+      "metadata": {
+        "topic": "Faculty and Staff - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/people.htm",
+        "content_type": "general_info",
+        "context_type": "specific_detail",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "Give me comprehensive information about Faculty and Staff - Computer Science Department.",
+      "response": "Faculty and Staff\nFaculty\n[Dr. Ajay K. Katangur](profile-display.aspx?p=AjayKatangur)\nDepartment Head\nDistinguished Professor\nCyber Security, Information Assurance, Cloud Computing, Wireless Networks, Computer Networks, Optical Networks, Mobile Computing.\nDeep Learning and its Applications, Machine Learning and Pattern Recognition, Secure Machine Learning, Information Fusion, Computer Vision, Software Engineering, Software Quality Assurance.\nMachine Learning, Evolutionary Algorithms, Explainable AI, Deep Surrogate Models and Applications in Complex Real-World Problems.\nRobotics, Computational Geometry, Solid and Physics-based Modeling, Algorithms, Theory of Computation, Deep Learning.\n[Dr. Razib Iqbal](profile-display.aspx?p=RIqbal)\nProfessor\nRoy D. Blunt Life Science Endowed Professor\nMultimedia Systems and Communications, Digital Content Adaptation, Software Engineering, Software Quality Assurance, Automated Software Verification and Validation, Internet of Things, Computer Security.\nWireless Ad-hoc, Sensor Networks, Mobile Computing, Parallel and Distributed Computing, and Bioinformatics.\nSearch, Optimization, Machine Learning, Evolutionary Computation, Artificial Intelligence, Parallel and Distributed Computing, Games and Simulations.\nHybrid Memory Systems, Storage Systems, High-Performance Computing, System Reliability, System Performance, Operating Systems.\nAlgorithmic Robotics, Artificial Intelligence, Forma Methods in Robotics, Computational Geometry, Data Analytics, Algorithms.\nData Mining, Formal Concept Analysis, Machine Learning, Computer Science Education, Graph Theory, Cloud Computing, Internet of Things, and Graph Algorithms.\n[Dr. Lloyd A. Smith](profile-display.aspx?p=LloydSmith)\nProfessor\nGraduate Coordinator of Computer Science; MNAS Coordinator of Computer Science\nMultimedia Digital Libraries, Speech-driven and Multimodal User Interfaces, Music Information Retrieval, Computer-aided Music Education, Pattern Recognition\nDeep Learning, Supervised learning, Unsupervised learning, Data Analytics Image restoration, Algorithms, Computer Vision, Bioinformatics.\nAdjunct Faculty\n[Dr.",
+      "metadata": {
+        "topic": "Faculty and Staff - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/people.htm",
+        "content_type": "general_info",
+        "context_type": "comprehensive",
+        "collected_date": "2025-11-03"
+      }
+    },
+    {
+      "instruction": "Where can I learn more about Faculty and Staff - Computer Science Department?",
+      "response": "You can find detailed information at: https://computerscience.missouristate.edu/people.htm",
+      "metadata": {
+        "topic": "Faculty and Staff - Computer Science Department",
+        "source_url": "https://computerscience.missouristate.edu/people.htm",
+        "content_type": "general_info",
+        "context_type": "reference",
+        "collected_date": "2025-11-03"
+      }
+    }
+  ],
+  "cached_at": "2025-11-03T18:33:38.203750"
+}

@@ -13,9 +13,36 @@ import os
 from werkzeug.utils import secure_filename
 import tempfile
 import re
+import hashlib
+import time
+from functools import lru_cache
+from datetime import datetime
+import logging
+import traceback
 
-# Import our document processor
-from document_processor import DocumentProcessor
+# Try to import PDF processing libraries
+try:
+    import PyPDF2
+    HAS_PDF = True
+except ImportError:
+    HAS_PDF = False
+    print("⚠️  PyPDF2 not installed - PDF upload will be disabled")
+
+try:
+    from PIL import Image
+    import pytesseract
+    HAS_OCR = True
+except ImportError:
+    HAS_OCR = False
+    print("⚠️  PIL/pytesseract not installed - Image OCR will be disabled")
+
+
+# Configure logging for performance monitoring
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 # Load environment variables
 load_dotenv()
@@ -37,6 +64,158 @@ tokenizer = None
 device = None
 doc_processor = None
 
+# Response cache (in-memory LRU cache for frequent questions)
+# Key: hash of (question + temperature + top_p)
+# Value: (response, topic, content_type, timestamp)
+response_cache = {}
+CACHE_MAX_SIZE = 100  # Maximum cached responses
+CACHE_TTL = 3600  # Cache time-to-live: 1 hour
+
+def get_cache_key(question, temperature, top_p, conversation_history=None):
+    """Generate cache key from question parameters"""
+    # Include conversation history in cache key for context-aware caching
+    history_str = ""
+    if conversation_history:
+        history_str = str([(h.get('question', ''), h.get('answer', '')) for h in conversation_history[-2:]])
+    
+    cache_input = f"{question.lower().strip()}|{temperature}|{top_p}|{history_str}"
+    return hashlib.md5(cache_input.encode()).hexdigest()
+
+def get_cached_response(cache_key):
+    """Retrieve cached response if valid"""
+    if cache_key in response_cache:
+        cached_data = response_cache[cache_key]
+        timestamp = cached_data.get('timestamp', 0)
+        
+        # Check if cache is still valid
+        if time.time() - timestamp < CACHE_TTL:
+            logger.info(f"✓ Cache HIT: {cache_key[:8]}...")
+            return cached_data
+        else:
+            # Cache expired
+            logger.info(f"⚠ Cache EXPIRED: {cache_key[:8]}...")
+            del response_cache[cache_key]
+    
+    logger.info(f"✗ Cache MISS: {cache_key[:8]}...")
+    return None
+
+def cache_response(cache_key, response, topic, content_type):
+    """Cache a response with LRU eviction"""
+    global response_cache
+    
+    # If cache is full, remove oldest entry (simple LRU)
+    if len(response_cache) >= CACHE_MAX_SIZE:
+        oldest_key = min(response_cache.keys(), key=lambda k: response_cache[k]['timestamp'])
+        del response_cache[oldest_key]
+        logger.info(f"Cache full, evicted: {oldest_key[:8]}...")
+    
+    response_cache[cache_key] = {
+        'response': response,
+        'topic': topic,
+        'content_type': content_type,
+        'timestamp': time.time()
+    }
+    logger.info(f"✓ Cached response: {cache_key[:8]}... (total: {len(response_cache)})")
+
+# Simple Document Processor
+class SimpleDocumentProcessor:
+    """Basic document processor for PDFs and images"""
+    
+    def process_document(self, file_path, original_filename=None):
+        """Extract text from document"""
+        file_ext = os.path.splitext(file_path)[1].lower()
+        
+        metadata = {
+            'file_name': original_filename or os.path.basename(file_path),
+            'file_type': file_ext,
+            'processing_method': 'unknown',
+            'num_characters': 0,
+            'num_pages': 0
+        }
+        
+        try:
+            if file_ext == '.pdf':
+                if not HAS_PDF:
+                    return "PDF processing not available. Please install PyPDF2: pip install PyPDF2", metadata
+                
+                text, num_pages = self._extract_pdf(file_path)
+                metadata['processing_method'] = 'pdf_extraction'
+                metadata['num_pages'] = num_pages
+                metadata['num_characters'] = len(text)
+                return text, metadata
+                
+            elif file_ext in ['.png', '.jpg', '.jpeg', '.bmp', '.tiff', '.gif']:
+                if not HAS_OCR:
+                    return "Image OCR not available. Please install: pip install pillow pytesseract", metadata
+                
+                text = self._extract_image_ocr(file_path)
+                metadata['processing_method'] = 'ocr'
+                metadata['num_characters'] = len(text)
+                return text, metadata
+            else:
+                return f"Unsupported file type: {file_ext}", metadata
+                
+        except Exception as e:
+            return f"Error processing document: {str(e)}", metadata
+    
+    def _extract_pdf(self, file_path):
+        """Extract text from PDF with page limit for large files"""
+        text = ""
+        num_pages = 0
+        
+        with open(file_path, 'rb') as file:
+            pdf_reader = PyPDF2.PdfReader(file)
+            total_pages = len(pdf_reader.pages)
+            num_pages = total_pages
+            
+            # Limit to first 10 pages for large PDFs to avoid memory issues
+            max_pages = min(10, total_pages)
+            
+            if total_pages > max_pages:
+                print(f"  ⚠️  Large PDF detected ({total_pages} pages), processing first {max_pages} pages only")
+            
+            for i in range(max_pages):
+                try:
+                    page_text = pdf_reader.pages[i].extract_text()
+                    text += page_text + "\n"
+                except Exception as e:
+                    print(f"  ⚠️  Error extracting page {i+1}: {str(e)}")
+                    continue
+        
+        return text.strip(), num_pages
+    
+    def _extract_image_ocr(self, file_path):
+        """Extract text from image using OCR"""
+        image = Image.open(file_path)
+        text = pytesseract.image_to_string(image)
+        return text.strip()
+    
+    def chunk_text_for_llama(self, text, max_tokens=3000):
+        """Split text into chunks that fit in context window"""
+        # Rough estimate: 1 token ≈ 4 characters
+        max_chars = max_tokens * 4
+        
+        if len(text) <= max_chars:
+            return [text]
+        
+        # Split by paragraphs first
+        paragraphs = text.split('\n\n')
+        chunks = []
+        current_chunk = ""
+        
+        for para in paragraphs:
+            if len(current_chunk) + len(para) <= max_chars:
+                current_chunk += para + "\n\n"
+            else:
+                if current_chunk:
+                    chunks.append(current_chunk.strip())
+                current_chunk = para + "\n\n"
+        
+        if current_chunk:
+            chunks.append(current_chunk.strip())
+        
+        return chunks if chunks else [text[:max_chars]]
+
 def load_model():
     """Load the fine-tuned model at server startup"""
     global model, tokenizer, device, doc_processor
@@ -52,7 +231,7 @@ def load_model():
         print(" Using CPU")
     
     # Load base model and tokenizer
-    base_model_name = "meta-llama/Llama-3.2-3B-Instruct"  # Switched to Llama 3.2-3B for better quality
+    base_model_name = "meta-llama/Llama-3.2-3B-Instruct"  # Llama 3.2-3B
     
     # Model selection priority: production > staging > latest (fallback for old setups)
     if os.path.exists("./models/production"):
@@ -71,6 +250,16 @@ def load_model():
     
     print(f"Loading base model: {base_model_name}")
     tokenizer = AutoTokenizer.from_pretrained(base_model_name, token=os.environ['hf_token'])
+    
+    # CRITICAL FIX: Ensure padding side and special tokens match training
+    tokenizer.padding_side = 'right'
+    if tokenizer.pad_token is None:
+        tokenizer.pad_token = tokenizer.eos_token
+        tokenizer.pad_token_id = tokenizer.eos_token_id
+    
+    # DISABLE chat template to use raw format (matches training)
+    tokenizer.chat_template = None
+    
     model = AutoModelForCausalLM.from_pretrained(
         base_model_name,
         torch_dtype=torch.bfloat16,
@@ -81,20 +270,59 @@ def load_model():
     
     print(f" Loading fine-tuned adapters from: {adapter_path}")
     model = PeftModel.from_pretrained(model, adapter_path)
+    
+    # Check adapter config
+    import json
+    config_path = os.path.join(adapter_path, "adapter_config.json")
+    if os.path.exists(config_path):
+        with open(config_path, 'r') as f:
+            adapter_config = json.load(f)
+            alpha = adapter_config.get('lora_alpha', 32)
+            rank = adapter_config.get('r', 16)
+            scaling = alpha / rank
+            print(f" ✓ Adapter loaded: alpha={alpha}, rank={rank}, scaling={scaling:.1f}x")
+            
+            # Only apply scaling fix if alpha is weak (< 64)
+            if alpha < 64:
+                print(f" ⚡ APPLYING QUICK FIX: Scaling weak adapters...")
+                for name, param in model.named_parameters():
+                    if 'lora_A' in name or 'lora_B' in name:
+                        param.data *= 2.0
+                print(f"    ✓ Adapters scaled 2x (compensating for alpha={alpha})")
+            else:
+                print(f" ✓ Strong adapters detected (alpha={alpha}), no scaling needed")
+    
+    # Merge LoRA weights into base model
+    print(" Merging LoRA adapters into base model...")
+    model = model.merge_and_unload()
+    
     model.eval()  # Set to evaluation mode
     
     # Initialize document processor
-    print(" Initializing document processor...")
-    doc_processor = DocumentProcessor()
+    doc_processor = SimpleDocumentProcessor()
+    print(" Document processor initialized")
     
     print(" Model loaded successfully!\n")
 
 def detect_topic(question):
     """Simple topic detection based on keywords"""
-    question_lower = question.lower()
+    question_lower = question.lower().strip()
+    
+    # Check for greetings/casual conversation (return special marker)
+    greetings = ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening', 
+                 'greetings', 'howdy', 'what\'s up', 'whats up', 'sup']
+    casual = ['how are you', 'how r u', 'hru', 'thank you', 'thanks', 'bye', 'goodbye', 
+              'see you', 'nice talking', 'ok', 'okay', 'cool', 'great']
+    
+    if any(question_lower == greeting or question_lower.startswith(greeting + ' ') 
+           for greeting in greetings):
+        return "Greeting", "casual"
+    
+    if any(phrase in question_lower for phrase in casual):
+        return "Casual", "casual"
     
     # Topic detection logic
-    if any(word in question_lower for word in ['computer science', 'cs', 'programming', 'coding', 'software']):
+    if any(word in question_lower for word in ['computer science', 'cs', 'csc', 'msu', 'course plan', ' Computer Science degree plan', 'programming', 'coding', 'software']):
         return "BS Computer Science Degree Plan", "academic_program"
     elif any(word in question_lower for word in ['scholarship', 'financial aid', 'grant', 'loan']):
         return "Scholarships and Financial Aid", "financial_aid"
@@ -121,10 +349,11 @@ def format_response_text(text):
     # 1. Remove excessive whitespace (multiple spaces, tabs)
     text = re.sub(r'[ \t]+', ' ', text)
     
-    # 2. Remove random special characters that don't belong (but keep bullets, numbers, basic punctuation)
-    # Keep: . , ! ? : ; - • () [] "" '' 1234567890
+    # 2. Remove random special characters that don't belong (but keep bullets, numbers, basic punctuation, URLs)
+    # Keep: . , ! ? : ; - • () [] "" '' 1234567890 / @ # (for URLs and markdown)
     # Remove: weird unicode, excessive symbols
-    text = re.sub(r'[^\w\s.,!?:;\-•()\[\]"\'•\n1-9]', '', text)
+    # CRITICAL: Preserve URL characters (://@#) and markdown syntax ([])
+    text = re.sub(r'[^\w\s.,!?:;\-•()\[\]"\'•\n1-9/@#]', '', text)
     
     # 3. Fix line breaks - ensure proper spacing
     # Remove excessive newlines (more than 2)
@@ -177,61 +406,114 @@ def format_response_text(text):
     
     return text
 
-def generate_response(question, max_length=512, temperature=0.3, top_p=0.85):
-    """Generate response from the model"""
+def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conversation_history=None):
+    """
+    Generate response from the model with optional conversation history and caching
+    
+    Args:
+        question: Current user question
+        max_length: Max tokens to generate
+        temperature: Sampling temperature
+        top_p: Top-p sampling parameter
+        conversation_history: List of {"question": str, "answer": str} dicts (last 3-5 exchanges)
+    
+    Returns:
+        tuple: (response, topic, content_type, metrics)
+        - response: Generated text
+        - topic: Detected topic
+        - content_type: Type of content
+        - metrics: Dict with performance data
+    """
+    start_time = time.time()
+    
+    # Check cache first (only for non-casual questions)
+    cache_key = get_cache_key(question, temperature, top_p, conversation_history)
+    cached = get_cached_response(cache_key)
+    
+    if cached:
+        metrics = {
+            'cached': True,
+            'inference_time': 0,
+            'total_time': time.time() - start_time
+        }
+        return cached['response'], cached['topic'], cached['content_type'], metrics
     
     # Detect topic
     topic, content_type = detect_topic(question)
     
-    # Format with contextual metadata (same as training)
+    # Handle greetings and casual conversation with SHORT responses
+    if content_type == "casual":
+        greeting_responses = {
+            "hi": "Hi! I'm BearChat, your Missouri State University assistant. How can I help you today?",
+            "hello": "Hello! I'm here to help with questions about Missouri State University. What would you like to know?",
+            "hey": "Hey! How can I assist you with Missouri State University information?",
+            "good morning": "Good morning! How can I help you with Missouri State University today?",
+            "good afternoon": "Good afternoon! What can I help you with regarding Missouri State University?",
+            "good evening": "Good evening! How may I assist you with Missouri State University?",
+            "how are you": "I'm doing great, thanks for asking! How can I help you with Missouri State University information?",
+            "thank you": "You're welcome! Let me know if you need anything else about Missouri State University.",
+            "thanks": "Happy to help! Feel free to ask more questions about Missouri State University.",
+            "bye": "Goodbye! Feel free to come back if you have more questions about Missouri State University.",
+            "goodbye": "Take care! Come back anytime you need information about Missouri State University.",
+            "ok": "Great! Let me know if you have any other questions.",
+            "okay": "Sounds good! Feel free to ask more questions about Missouri State University.",
+        }
+        
+        question_lower = question.lower().strip()
+        # Try exact match first
+        for key, response in greeting_responses.items():
+            if question_lower == key or question_lower.startswith(key + ' '):
+                metrics = {'cached': False, 'casual_response': True, 'total_time': time.time() - start_time}
+                return response, topic, content_type, metrics
+        
+        # Try partial match for casual phrases
+        for key, response in greeting_responses.items():
+            if key in question_lower:
+                metrics = {'cached': False, 'casual_response': True, 'total_time': time.time() - start_time}
+                return response, topic, content_type, metrics
+        
+        # Default casual response
+        metrics = {'cached': False, 'casual_response': True, 'total_time': time.time() - start_time}
+        return "I'm BearChat, your Missouri State University assistant. How can I help you today?", topic, content_type, metrics
+    
+    # Build conversation context if history exists
+    history_context = ""
+    if conversation_history and len(conversation_history) > 0:
+        history_context = "\n### Conversation History:\n"
+        for i, exchange in enumerate(conversation_history[-3:], 1):  # Last 3 exchanges
+            history_context += f"User: {exchange['question']}\n"
+            history_context += f"Assistant: {exchange['answer']}\n\n"
+    
+    # Format with contextual metadata (EXACTLY like training format)
+    # CRITICAL: Add strong constraints to prevent generic responses
     content_type_readable = content_type.replace('_', ' ').title()
     prompt = f"""### Topic: {topic}
 ### Category: {content_type_readable}
+### Context: You are BearChat, an AI assistant specialized ONLY in Missouri State University (MSU) information. You must ONLY provide information about MSU. Do NOT provide general advice or information about other universities.{history_context}
 ### Instruction:
 {question}
 
 ### Response:
 """
     
-    # Enhanced system prompt with formatting instructions
-    system_prompt = """You are Boomer, Missouri State University's helpful assistant.
-
-FORMATTING RULES (IMPORTANT):
-- Write clear, well-structured responses
-- Use line breaks between different ideas or sections
-- For lists, use this format:
-  • Item one
-  • Item two
-  • Item three
-- For numbered steps:
-  1. First step
-  2. Second step
-  3. Third step
-- Keep sentences concise and readable
-- Use proper spacing and avoid wall-of-text
-- NO random symbols, special characters, or formatting artifacts
-- Structure logically: give context, then details, then helpful conclusion
-
-CONTENT RULES:
-- Answer accurately about Missouri State University
-- If unsure, clearly state: "I don't have that information, but you can find it at missouristate.edu"
-- Be friendly, helpful, and professional"""
-    
-    full_prompt = system_prompt + "\n\n" + prompt
+    # NO system prompt - use ONLY the training format
+    # The model was fine-tuned without a system prompt prefix
     
     # Tokenize
-    inputs = tokenizer(full_prompt, return_tensors="pt").to(device)
+    inputs = tokenizer(prompt, return_tensors="pt").to(device)
     
-    # Generate
+    # Generate with parameters matching training
+    # CRITICAL: Use same settings as training to prevent gibberish
     with torch.no_grad():
         outputs = model.generate(
             **inputs,
             max_new_tokens=max_length,
-            temperature=temperature,
-            top_p=top_p,
+            temperature=0.7,  # Moderate temperature for coherent output
+            top_p=0.9,  # Standard nucleus sampling
             do_sample=True,
             pad_token_id=tokenizer.pad_token_id,
             eos_token_id=tokenizer.eos_token_id,
+            repetition_penalty=1.1,  # Mild repetition penalty
         )
     
     # Decode
@@ -241,14 +523,53 @@ CONTENT RULES:
     if "### Response:" in response:
         response = response.split("### Response:")[-1].strip()
     
-    # Remove the system prompt if it's still there
-    if system_prompt in response:
-        response = response.replace(system_prompt, "").strip()
+    # Remove any remaining prompt artifacts
+    if "### Instruction:" in response:
+        response = response.split("### Instruction:")[-1].strip()
     
     # APPLY POST-PROCESSING FORMATTER
     response = format_response_text(response)
     
-    return response, topic, content_type
+    # CRITICAL: Filter for generic/off-topic responses
+    # If the model gives generic advice not specific to MSU, replace with a focused response
+    generic_phrases = [
+        "in general", "universities typically", "most colleges", "many schools",
+        "usually", "generally speaking", "colleges and universities", "higher education institutions",
+        "educational institutions", "across different universities"
+    ]
+    
+    # Check if response is too generic
+    response_lower = response.lower()
+    if any(phrase in response_lower for phrase in generic_phrases) and "missouri state" not in response_lower:
+        logger.warning(f"Detected generic response, adding MSU-specific constraint")
+        response = f"I'm specifically designed to help with Missouri State University (MSU) information. For your question about {topic}, I recommend:\n\n" + \
+                   "• Visit the MSU website at missouristate.edu\n" + \
+                   "• Contact MSU directly at (417) 836-5000\n" + \
+                   "• Email admissions@missouristate.edu for specific inquiries\n\n" + \
+                   "Could you rephrase your question to focus specifically on Missouri State University?"
+    
+    # Ensure MSU is mentioned at least once in substantial responses (>50 chars)
+    if len(response) > 50 and "missouri state" not in response_lower and "msu" not in response_lower:
+        logger.warning(f"Response missing MSU reference, adding reminder")
+        response = f"[Missouri State University (MSU) Information]\n\n{response}\n\n*Note: This information is specific to Missouri State University.*"
+    
+    # Calculate metrics
+    inference_time = time.time() - start_time
+    metrics = {
+        'cached': False,
+        'casual_response': False,
+        'inference_time': inference_time,
+        'total_time': inference_time,
+        'tokens_generated': len(tokenizer.encode(response)) if tokenizer else 0
+    }
+    
+    # Cache the response (skip casual conversations)
+    if content_type != "casual":
+        cache_response(cache_key, response, topic, content_type)
+    
+    logger.info(f"Generated response in {inference_time:.2f}s ({metrics['tokens_generated']} tokens)")
+    
+    return response, topic, content_type, metrics
 
 def allowed_file(filename):
     """Check if file extension is allowed."""
@@ -324,7 +645,7 @@ def upload_document():
             }), 400
         
         # Get optional parameters
-        max_length = int(request.form.get('max_length', 1024))
+        max_length = int(request.form.get('max_length', 512))
         temperature = float(request.form.get('temperature', 0.3))
         top_p = float(request.form.get('top_p', 0.85))
         
@@ -336,7 +657,7 @@ def upload_document():
         try:
             # 3. Process document (extract text)
             print(f"\n📄 Processing document: {filename}")
-            extracted_text, metadata = doc_processor.process_document(temp_path)
+            extracted_text, metadata = doc_processor.process_document(temp_path, original_filename=filename)
             
             # 4. Check if text was extracted
             if not extracted_text or len(extracted_text.strip()) < 10:
@@ -359,7 +680,7 @@ def upload_document():
                 context_note = ""
             
             # 6. Create prompt with document context
-            system_prompt = """You are Boomer, a helpful assistant for Missouri State University. answer data in a good formatted way, if you don't know something , just say you don't know yet, but you can go to misssouristate.edu to find info about it."""
+            system_prompt = """You are Boomer, your should only include data in your response regarding Missouri State University and not anything random. answer data in a good formatted way, if you don't know something , just say you don't know yet, but you can go to misssouristate.edu to find info about it."""
             
             # Detect topic from question
             topic, content_type = detect_topic(question)
@@ -379,7 +700,7 @@ def upload_document():
 """
             
             # 7. Generate response
-            print(f"🤖 Generating response...")
+            print(f" Generating response...")
             inputs = tokenizer(full_prompt, return_tensors="pt", truncation=True, max_length=4096).to(device)
             
             with torch.no_grad():
@@ -406,7 +727,7 @@ def upload_document():
             # APPLY POST-PROCESSING FORMATTER
             response = format_response_text(response)
             
-            print(f"✅ Response generated successfully")
+            print(f" Response generated successfully")
             
             # 8. Return response
             return jsonify({
@@ -433,7 +754,7 @@ def upload_document():
                 pass
         
     except Exception as e:
-        print(f"❌ Error in upload endpoint: {e}")
+        print(f" Error in upload endpoint: {e}")
         import traceback
         traceback.print_exc()
         
@@ -445,14 +766,18 @@ def upload_document():
 @app.route('/chat', methods=['POST'])
 def chat():
     """
-    Main chat endpoint
+    Main chat endpoint with conversation memory support
     
     Request body:
     {
         "question": "What courses do I need for CS degree?",
-        "max_length": 512,  // optional, default 512
-        "temperature": 0.3,  // optional, default 0.3 # lower values mean more focused and deterministic responses & less randomness & creativity & diversity & more focused answers
-        "top_p": 0.85  // optional, default 0.85 ## higher values mean more random completions and creativity & diversity & less focused answers
+        "conversation_history": [  // optional - last 3-5 Q&A pairs
+            {"question": "What is the CS program?", "answer": "The CS program is..."},
+            {"question": "How long is it?", "answer": "It's a 4-year program..."}
+        ],
+        "max_length": 1024,  // optional, default 1024
+        "temperature": 0.8,  // optional, default 0.8
+        "top_p": 0.92  // optional, default 0.92
     }
     
     Response:
@@ -475,10 +800,11 @@ def chat():
             }), 400
         
         question = data['question']
+        conversation_history = data.get('conversation_history', [])  # Optional history
         max_length = data.get('max_length', 512)
-        temperature = data.get('temperature', 0.3)
-        top_p = data.get('top_p', 0.85)
-        
+        temperature = data.get('temperature', 0.6)
+        top_p = data.get('top_p', 0.8)
+
         # Validate parameters
         if not isinstance(question, str) or len(question.strip()) == 0:
             return jsonify({
@@ -486,20 +812,38 @@ def chat():
                 "error": "Question must be a non-empty string"
             }), 400
         
-        # Generate response
-        answer, topic, content_type = generate_response(
+        # Validate conversation history format
+        if conversation_history and not isinstance(conversation_history, list):
+            return jsonify({
+                "success": False,
+                "error": "conversation_history must be a list of {question, answer} objects"
+            }), 400
+        
+        # Generate response WITH conversation context
+        answer, topic, content_type, metrics = generate_response(
             question, 
             max_length=max_length,
             temperature=temperature,
-            top_p=top_p
+            top_p=top_p,
+            conversation_history=conversation_history
         )
+        
+        # Log performance metrics
+        logger.info(f"Chat request: cached={metrics.get('cached', False)}, "
+                   f"time={metrics.get('total_time', 0):.2f}s, "
+                   f"tokens={metrics.get('tokens_generated', 0)}")
         
         return jsonify({
             "success": True,
             "question": question,
             "answer": answer,
             "topic": topic,
-            "content_type": content_type
+            "content_type": content_type,
+            "metrics": {
+                "cached": metrics.get('cached', False),
+                "inference_time": metrics.get('inference_time', 0),
+                "total_time": metrics.get('total_time', 0)
+            }
         })
         
     except Exception as e:
@@ -557,7 +901,7 @@ def batch_chat():
         
         results = []
         for question in questions:
-            answer, topic, content_type = generate_response(
+            answer, topic, content_type, metrics = generate_response(
                 question,
                 max_length=max_length,
                 temperature=temperature,
@@ -567,7 +911,8 @@ def batch_chat():
                 "question": question,
                 "answer": answer,
                 "topic": topic,
-                "content_type": content_type
+                "content_type": content_type,
+                "cached": metrics.get('cached', False)
             })
         
         return jsonify({
@@ -611,9 +956,9 @@ def root():
                 "form_data": {
                     "file": "transcript.pdf (or image file)",
                     "question": "What is my GPA?",
-                    "max_length": 1024,
+                    "max_length": 512,
                     "temperature": 0.3,
-                    "top_p": 0.85
+                    "top_p": 0.8
                 },
                 "supported_formats": ["pdf", "png", "jpg", "jpeg", "bmp", "tiff", "gif"]
             }

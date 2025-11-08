@@ -1,424 +1,615 @@
 """
-Smart MSU Data Collector with Contextual Training Format
-=========================================================
-Advanced web scraper that creates high-quality, contextual training data.
+Production MSU Data Scraper (2025)
+==================================
+Modern web scraper using industry-standard tools for LLM training data.
 
-Features:
-- Contextual metadata (topic, source, category)
-- Intelligent content cleaning (removes "Loading...", formats tables)
-- Natural, varied question generation
-- Multi-turn conversation format
-- Better structure for model training
+Tech Stack:
+- trafilatura: Professional-grade content extraction (used by Common Crawl)
+- httpx: Modern async HTTP client
+- JSON-LD: Structured data extraction
+- Smart caching & rate limiting
+
+Install dependencies:
+    pip install trafilatura httpx
 
 Usage:
-    python smart_msu_collector.py
-    
-Date: October 2025
+    python web_scrapping_script.py
+
+Features:
+✓ Automatic content extraction (no manual parsing)
+✓ JSON-LD structured data support
+✓ Async batch processing
+✓ Smart caching (avoid re-scraping)
+✓ Rate limiting (respectful)
+✓ High-quality Q&A generation
+✓ Direct output to training format
 """
 
 import json
-import requests
-from bs4 import BeautifulSoup
 import re
-import time
-from typing import List, Dict, Optional, Tuple
-from urllib.parse import urljoin, urlparse
+import asyncio
+import hashlib
+from pathlib import Path
+from typing import List, Dict, Optional
 from datetime import datetime
+from urllib.parse import urlparse
 
-class SmartMSUCollector:
-    """Intelligent MSU content collector with contextual training data."""
+try:
+    import httpx
+    from trafilatura import extract
+    from trafilatura.settings import use_config
+except ImportError:
+    print("❌ Missing dependencies!")
+    print("Install with: pip install trafilatura httpx playwright")
+    print("Then run: playwright install chromium")
+    exit(1)
+
+# Try to import Playwright (for JavaScript sites)
+try:
+    from playwright.async_api import async_playwright
+    PLAYWRIGHT_AVAILABLE = True
+except ImportError:
+    PLAYWRIGHT_AVAILABLE = False
+    print("⚠️  Playwright not installed - will use basic HTTP (may fail on modern sites)")
+    print("For better results: pip install playwright && playwright install chromium")
+
+
+
+class MSUDataScraper:
+    """Production-grade scraper for MSU content."""
     
-    def __init__(self):
-        self.base_url = "https://www.missouristate.edu"
-        self.session = requests.Session()
-        self.session.headers.update({
-            'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36'
-        })
+    def __init__(self, cache_dir: str = ".scrape_cache"):
+        self.cache_dir = Path(cache_dir)
+        self.cache_dir.mkdir(exist_ok=True)
         
-    def clean_text(self, text: str) -> str:
-        """Clean and normalize text content."""
-        # Remove "Loading..." artifacts
-        text = re.sub(r'\bLoading\.{3}\s*', '', text)
+        # Configure trafilatura for better extraction
+        self.config = use_config()
+        self.config.set("DEFAULT", "EXTRACTION_TIMEOUT", "30")
         
-        # Remove excessive whitespace
-        text = re.sub(r'\s+', ' ', text)
-        
-        # Remove weird characters
-        text = re.sub(r'[^\w\s.,;:!?()\-\'/\"&%$#@]', '', text)
-        
-        # Clean up spacing around punctuation
-        text = re.sub(r'\s+([.,;:!?])', r'\1', text)
-        
-        return text.strip()
+    def _cache_key(self, url: str) -> str:
+        """Generate cache filename from URL."""
+        return hashlib.md5(url.encode()).hexdigest()
     
-    def extract_structured_content(self, soup: BeautifulSoup, url: str) -> Dict:
-        """Extract structured content from page with better organization."""
-        
-        # Get page title and main topic
-        title = soup.find('h1')
-        page_title = title.get_text(strip=True) if title else "MSU Information"
-        
-        # Remove navigation, footer, sidebar
-        for element in soup.find_all(['nav', 'footer', 'aside', 'script', 'style']):
-            element.decompose()
-        
-        content = {
-            'title': self.clean_text(page_title),
-            'url': url,
-            'sections': [],
-            'tables': [],
-            'lists': [],
-            'key_info': []
-        }
-        
-        # Extract sections with headings
-        for heading in soup.find_all(['h2', 'h3', 'h4']):
-            section_title = self.clean_text(heading.get_text())
-            if not section_title or len(section_title) < 3:
-                continue
-                
-            # Get content after heading until next heading
-            section_content = []
-            for sibling in heading.find_next_siblings():
-                if sibling.name in ['h2', 'h3', 'h4']:
-                    break
-                text = self.clean_text(sibling.get_text())
-                if text and len(text) > 10:
-                    section_content.append(text)
-            
-            if section_content:
-                content['sections'].append({
-                    'heading': section_title,
-                    'content': ' '.join(section_content)
-                })
-        
-        # Extract tables (like course schedules)
-        for table in soup.find_all('table'):
-            table_data = self.parse_table(table)
-            if table_data:
-                content['tables'].append(table_data)
-        
-        # Extract important lists
-        for ul in soup.find_all(['ul', 'ol']):
-            items = [self.clean_text(li.get_text()) for li in ul.find_all('li')]
-            items = [item for item in items if item and len(item) > 5]
-            if len(items) >= 2:
-                content['lists'].append(items)
-        
-        # Extract key paragraphs
-        for p in soup.find_all('p'):
-            text = self.clean_text(p.get_text())
-            if len(text) > 50:  # Meaningful paragraphs only
-                content['key_info'].append(text)
-        
-        return content
-    
-    def parse_table(self, table) -> Optional[Dict]:
-        """Parse HTML table into structured data."""
-        headers = []
-        rows = []
-        
-        # Get headers
-        header_row = table.find('thead') or table.find('tr')
-        if header_row:
-            headers = [self.clean_text(th.get_text()) for th in header_row.find_all(['th', 'td'])]
-            headers = [h for h in headers if h]
-        
-        # Get data rows
-        tbody = table.find('tbody') or table
-        for tr in tbody.find_all('tr'):
-            cells = [self.clean_text(td.get_text()) for td in tr.find_all(['td', 'th'])]
-            cells = [c for c in cells if c]
-            if cells and len(cells) >= 2:
-                rows.append(cells)
-        
-        if rows:
-            return {'headers': headers, 'rows': rows}
+    def _load_cache(self, url: str) -> Optional[Dict]:
+        """Load cached content."""
+        cache_file = self.cache_dir / f"{self._cache_key(url)}.json"
+        if cache_file.exists():
+            try:
+                with open(cache_file) as f:
+                    data = json.load(f)
+                    # Check if cache is less than 7 days old
+                    cache_date = datetime.fromisoformat(data.get('cached_at', ''))
+                    if (datetime.now() - cache_date).days < 7:
+                        return data
+            except:
+                pass
         return None
     
-    def detect_content_type(self, content: Dict) -> str:
-        """Detect what type of content this is."""
-        title_lower = content['title'].lower()
-        url_lower = content['url'].lower()
-        
-        if 'degree' in title_lower or 'program' in title_lower or 'major' in title_lower:
-            return 'academic_program'
-        elif 'scholarship' in title_lower or 'financial aid' in title_lower:
-            return 'financial_aid'
-        elif 'admission' in title_lower or 'apply' in title_lower:
-            return 'admissions'
-        elif 'course' in title_lower and content['tables']:
-            return 'course_schedule'
-        elif 'housing' in title_lower or 'residence' in title_lower:
-            return 'housing'
-        elif 'requirement' in title_lower:
-            return 'requirements'
-        else:
-            return 'general_info'
+    def _save_cache(self, url: str, data: Dict):
+        """Save content to cache."""
+        cache_file = self.cache_dir / f"{self._cache_key(url)}.json"
+        data['cached_at'] = datetime.now().isoformat()
+        with open(cache_file, 'w') as f:
+            json.dump(data, f, indent=2)
     
-    def generate_contextual_questions(self, content: Dict, content_type: str) -> List[Dict]:
-        """Generate high-quality, contextual Q&A pairs."""
-        training_data = []
-        topic = content['title']
-        url = content['url']
+    async def fetch_content(self, url: str) -> Optional[str]:
+        """Fetch URL content - uses Playwright for JavaScript sites."""
         
-        # Add metadata to each entry
-        def create_entry(instruction: str, response: str, context_type: str = "general"):
-            return {
-                "instruction": instruction,
-                "response": response,
-                "metadata": {
-                    "topic": topic,
-                    "source_url": url,
-                    "content_type": content_type,
-                    "context_type": context_type,
-                    "collected_date": datetime.now().strftime("%Y-%m-%d")
-                }
-            }
-        
-        # 1. Main overview question
-        if content['key_info']:
-            overview = ' '.join(content['key_info'][:3])[:500]
-            training_data.append(create_entry(
-                f"Tell me about {topic} at Missouri State University.",
-                f"{overview}",
-                "overview"
-            ))
-            
-            training_data.append(create_entry(
-                f"What is the {topic} program at MSU?",
-                f"{overview}",
-                "overview"
-            ))
-        
-        # 2. Section-based questions
-        for section in content['sections']:
-            heading = section['heading']
-            section_content = section['content'][:600]  # Limit length
-            
-            # Natural questions based on content type
-            if content_type == 'academic_program':
-                questions = [
-                    f"What are the requirements for {heading} in the {topic}?",
-                    f"Tell me about {heading} for {topic} students.",
-                    f"Can you explain the {heading} for this program?",
-                ]
-            elif content_type == 'financial_aid':
-                questions = [
-                    f"What do I need to know about {heading}?",
-                    f"How does {heading} work at MSU?",
-                    f"Tell me about {heading} for students.",
-                ]
-            elif content_type == 'course_schedule':
-                questions = [
-                    f"What courses should I take in {heading}?",
-                    f"Tell me about the {heading} course requirements.",
-                    f"What's included in {heading}?",
-                ]
-            else:
-                questions = [
-                    f"What should I know about {heading}?",
-                    f"Can you explain {heading}?",
-                ]
-            
-            # Add 2 variations per section (not 4 identical ones!)
-            for q in questions[:2]:
-                training_data.append(create_entry(q, section_content, "section_detail"))
-        
-        # 3. Table-based questions (for degree plans, course schedules)
-        for i, table in enumerate(content['tables']):
-            if table['headers'] and table['rows']:
-                # Format table nicely
-                formatted_table = self.format_table_for_training(table)
-                
-                if content_type == 'course_schedule':
-                    training_data.append(create_entry(
-                        f"What courses are in the {topic} curriculum?",
-                        formatted_table,
-                        "course_list"
-                    ))
+        # Try Playwright first (handles JavaScript)
+        if PLAYWRIGHT_AVAILABLE:
+            try:
+                async with async_playwright() as p:
+                    browser = await p.chromium.launch(headless=True)
+                    page = await browser.new_page()
                     
-                    # Specific semester questions
-                    if 'semester' in str(table).lower() or 'year' in str(table).lower():
-                        for row in table['rows'][:4]:  # First few rows
-                            if len(row) >= 2:
-                                semester_name = row[0]
-                                training_data.append(create_entry(
-                                    f"What courses should I take in {semester_name} for {topic}?",
-                                    f"In {semester_name}, you should take: {' | '.join(row[1:])}",
-                                    "semester_specific"
-                                ))
-                else:
-                    training_data.append(create_entry(
-                        f"Show me the details for {topic}.",
-                        formatted_table,
-                        "table_data"
-                    ))
+                    # Set longer timeout for slow-loading pages
+                    page.set_default_timeout(60000)  # 60 seconds
+                    
+                    # Navigate and wait for content to load
+                    await page.goto(url, wait_until="domcontentloaded", timeout=60000)
+                    
+                    # Wait for any dynamic content to finish loading
+                    await page.wait_for_timeout(3000)
+                    
+                    # Get final HTML after JavaScript execution
+                    html = await page.content()
+                    await browser.close()
+                    
+                    return html
+            except Exception as e:
+                print(f"  ⚠️  Playwright failed: {e}")
+                print(f"  Falling back to basic HTTP...")
         
-        # 4. List-based questions
-        for lst in content['lists'][:3]:  # Top 3 lists
-            if len(lst) >= 2:
-                list_text = '\n• ' + '\n• '.join(lst[:10])
-                training_data.append(create_entry(
-                    f"What are the key points about {topic}?",
-                    f"Here are the important details about {topic}:{list_text}",
-                    "key_points"
-                ))
-        
-        # 5. Comparison and specific questions
-        if content_type == 'academic_program':
-            training_data.append(create_entry(
-                f"Why should I choose the {topic}?",
-                content['key_info'][0] if content['key_info'] else "This is a great program at MSU.",
-                "persuasive"
-            ))
-            
-            training_data.append(create_entry(
-                f"What makes the {topic} unique at Missouri State?",
-                content['key_info'][1] if len(content['key_info']) > 1 else "MSU offers excellent opportunities.",
-                "unique_value"
-            ))
-        
-        # 6. Follow-up questions
-        if len(training_data) > 0:
-            training_data.append(create_entry(
-                f"Where can I find more information about {topic}?",
-                f"You can find detailed information at {url}",
-                "reference"
-            ))
-        
-        return training_data
-    
-    def format_table_for_training(self, table: Dict) -> str:
-        """Format table data in a readable way for training."""
-        output = []
-        
-        if table['headers']:
-            output.append(" | ".join(table['headers']))
-            output.append("-" * 50)
-        
-        for row in table['rows'][:20]:  # Limit to 20 rows
-            output.append(" | ".join(row))
-        
-        return '\n'.join(output)
-    
-    def scrape_page(self, url: str) -> Optional[Dict]:
-        """Scrape and structure a single page."""
+        # Fallback to basic HTTP
         try:
-            print(f" Fetching: {url}")
-            response = self.session.get(url, timeout=15)
-            response.raise_for_status()
-            
-            soup = BeautifulSoup(response.text, 'html.parser')
-            content = self.extract_structured_content(soup, url)
-            content_type = self.detect_content_type(content)
-            
-            print(f"Content type: {content_type}")
-            print(f"Found {len(content['sections'])} sections, {len(content['tables'])} tables")
-            
-            return content
-            
+            async with httpx.AsyncClient(timeout=30.0) as client:
+                response = await client.get(
+                    url,
+                    headers={'User-Agent': 'Mozilla/5.0 (Educational Research Bot)'},
+                    follow_redirects=True
+                )
+                response.raise_for_status()
+                return response.text
         except Exception as e:
-            print(f"Error scraping {url}: {e}")
+            print(f"  ✗ Fetch error: {e}")
             return None
     
-    def collect_and_format(self, url: str, topic_name: str) -> Optional[str]:
-        """Collect data and create training file."""
-        content = self.scrape_page(url)
+    def extract_json_ld(self, html: str) -> List[Dict]:
+        """Extract JSON-LD structured data from HTML."""
+        pattern = r'<script type="application/ld\+json">(.*?)</script>'
+        matches = re.findall(pattern, html, re.DOTALL)
+        
+        structured_data = []
+        for match in matches:
+            try:
+                data = json.loads(match)
+                structured_data.append(data)
+            except json.JSONDecodeError:
+                continue
+        
+        return structured_data
+    
+    def extract_main_content(self, html: str, url: str) -> Optional[Dict]:
+        """
+        Extract main content using trafilatura (industry standard).
+        
+        Trafilatura automatically:
+        - Removes navigation, ads, footers
+        - Extracts main article text
+        - Preserves structure (headings, lists)
+        - Cleans formatting
+        """
+        # Extract with trafilatura (handles all the messy parsing)
+        content = extract(
+            html,
+            include_tables=True,
+            include_links=True,
+            include_images=False,
+            output_format='json',
+            config=self.config,
+            favor_precision=False,  # Get more content even if less precise
+            favor_recall=True  # Prioritize getting all content
+        )
         
         if not content:
             return None
         
-        content_type = self.detect_content_type(content)
-        training_data = self.generate_contextual_questions(content, content_type)
+        # Parse JSON output
+        try:
+            data = json.loads(content)
+            
+            # If title is missing, extract from HTML manually
+            title = data.get('title', '').strip()
+            if not title or len(title) < 3:
+                # Try to extract from <title> tag or <h1>
+                import re
+                title_match = re.search(r'<title>(.*?)</title>', html, re.IGNORECASE)
+                if title_match:
+                    title = title_match.group(1).strip()
+                    # Clean up common suffixes
+                    title = re.sub(r'\s*[\|\-]\s*Missouri State.*$', '', title, flags=re.IGNORECASE)
+                    title = re.sub(r'\s*[\|\-]\s*MSU.*$', '', title, flags=re.IGNORECASE)
+                
+                # If still no title, try <h1>
+                if not title or len(title) < 3:
+                    h1_match = re.search(r'<h1[^>]*>(.*?)</h1>', html, re.IGNORECASE | re.DOTALL)
+                    if h1_match:
+                        # Remove HTML tags from h1 content
+                        title = re.sub(r'<[^>]+>', '', h1_match.group(1)).strip()
+            
+            # Get text - if too short, try extracting more aggressively
+            text = data.get('text', '').strip()
+            
+            if len(text) < 500:
+                # Trafilatura didn't get enough content
+                # Try extracting from <main>, <article>, or <div class="content">
+                import re
+                from bs4 import BeautifulSoup
+                
+                soup = BeautifulSoup(html, 'html.parser')
+                
+                # Remove unwanted elements
+                for elem in soup.find_all(['script', 'style', 'nav', 'footer', 'aside', 'header']):
+                    elem.decompose()
+                
+                # Try to find main content area
+                main_content = (
+                    soup.find('main') or
+                    soup.find('article') or 
+                    soup.find(class_=lambda x: x and 'content' in x.lower()) or
+                    soup.find(id=lambda x: x and 'content' in x.lower()) or
+                    soup.find('body')
+                )
+                
+                if main_content:
+                    # Get all text from paragraphs and headings
+                    paragraphs = main_content.find_all(['p', 'h1', 'h2', 'h3', 'h4', 'li'])
+                    extracted_text = []
+                    
+                    for p in paragraphs:
+                        p_text = p.get_text(strip=True)
+                        if len(p_text) > 20:  # Skip very short fragments
+                            extracted_text.append(p_text)
+                    
+                    if extracted_text:
+                        text = '\n\n'.join(extracted_text)
+            
+            return {
+                'title': title or 'Missouri State Information',
+                'author': data.get('author', ''),
+                'date': data.get('date', ''),
+                'text': text,
+                'raw_text': data.get('raw_text', ''),
+                'comments': data.get('comments', ''),
+                'url': url
+            }
+        except Exception as e:
+            print(f"  ✗ Parse error: {e}")
+            return None
+    
+    def detect_content_type(self, title: str, url: str, text: str) -> str:
+        """Detect content category."""
+        combined = f"{title} {url}".lower()
         
-        if not training_data:
-            print("No training data generated")
+        if any(word in combined for word in ['degree', 'program', 'major', 'bachelor', 'master']):
+            return 'academic_program'
+        elif any(word in combined for word in ['scholarship', 'financial', 'tuition', 'aid']):
+            return 'financial_aid'
+        elif any(word in combined for word in ['admission', 'apply', 'application', 'requirements']):
+            return 'admissions'
+        elif any(word in combined for word in ['housing', 'residence', 'dorm']):
+            return 'housing'
+        elif any(word in combined for word in ['course', 'curriculum', 'syllabus']):
+            return 'academics'
+        else:
+            return 'general_info'
+    
+    def generate_training_data(self, content: Dict, content_type: str) -> List[Dict]:
+        """
+        Generate high-quality Q&A pairs for training.
+        
+        Strategy:
+        - Overview questions (broad understanding)
+        - Specific detail questions
+        - Comparison questions
+        - Practical application questions
+        """
+        training_data = []
+        title = content.get('title', 'MSU Information')
+        text = content.get('text', '')
+        url = content.get('url', '')
+        
+        if not text or len(text) < 100:
+            return []
+        
+        # Split text into chunks for different types of questions
+        paragraphs = [p.strip() for p in text.split('\n\n') if len(p.strip()) > 50]
+        
+        # Metadata template
+        def make_entry(instruction: str, response: str, context: str = "general"):
+            return {
+                "instruction": instruction,
+                "response": response,
+                "metadata": {
+                    "topic": title,
+                    "source_url": url,
+                    "content_type": content_type,
+                    "context_type": context,
+                    "collected_date": datetime.now().strftime("%Y-%m-%d")
+                }
+            }
+        
+        # 1. Overview question
+        if paragraphs:
+            overview = ' '.join(paragraphs[:3])
+            overview = self.truncate_at_sentence(overview, 1200)  # Smart truncation
+            training_data.append(make_entry(
+                f"Tell me about {title}.",
+                overview,
+                "overview"
+            ))
+            
+            training_data.append(make_entry(
+                f"What is {title}?",
+                overview,
+                "overview"
+            ))
+        
+        # 2. Detailed questions from specific paragraphs
+        for i, para in enumerate(paragraphs[:5]):
+            if len(para) > 100:
+                # Extract key topic from paragraph
+                words = para.split()[:10]
+                key_phrase = ' '.join(words[:5])
+                
+                if content_type == 'academic_program':
+                    questions = [
+                        f"What are the details about {title}?",
+                        f"Tell me more about the {title} program.",
+                        f"What should I know about {title}?",
+                    ]
+                elif content_type == 'admissions':
+                    questions = [
+                        f"How do I apply to {title}?",
+                        f"What are the requirements for {title}?",
+                        f"Tell me about the {title} process.",
+                    ]
+                elif content_type == 'financial_aid':
+                    questions = [
+                        f"How does {title} work?",
+                        f"What financial aid options are available?",
+                        f"Tell me about {title}.",
+                    ]
+                else:
+                    questions = [
+                        f"What information is available about {title}?",
+                        f"Can you explain {title}?",
+                    ]
+                
+                if i < len(questions):
+                    training_data.append(make_entry(
+                        questions[i],
+                        self.truncate_at_sentence(para, 1000),  # Smart truncation
+                        "specific_detail"
+                    ))
+        
+        # 3. Full content question (for comprehensive info)
+        if len(text) > 200:
+            full_text = self.truncate_at_sentence(text, 2500)  # Smart truncation
+            training_data.append(make_entry(
+                f"Give me comprehensive information about {title}.",
+                full_text,
+                "comprehensive"
+            ))
+        
+        # 4. Reference question
+        training_data.append(make_entry(
+            f"Where can I learn more about {title}?",
+            f"You can find detailed information at: {url}",
+            "reference"
+        ))
+        
+        return training_data
+    
+    def truncate_at_sentence(self, text: str, max_chars: int) -> str:
+        """
+        Truncate text at the last complete sentence before max_chars.
+        Avoids mid-sentence cutoffs for better training data quality.
+        """
+        if len(text) <= max_chars:
+            return text
+        
+        # Find the last sentence boundary (., !, ?) before max_chars
+        truncated = text[:max_chars]
+        
+        # Look for sentence endings in reverse order
+        for delimiter in ['. ', '! ', '? ']:
+            last_sentence = truncated.rfind(delimiter)
+            if last_sentence > max_chars * 0.5:  # Keep at least 50% of content
+                return truncated[:last_sentence + 1].strip()
+        
+        # Fallback: find last period even without space (end of text)
+        last_period = truncated.rfind('.')
+        if last_period > max_chars * 0.5:
+            return truncated[:last_period + 1].strip()
+        
+        # Last resort: return full text if we can't find good boundary
+        return text
+    
+    async def scrape_url(self, url: str) -> Optional[List[Dict]]:
+        """
+        Complete scraping pipeline for one URL.
+        
+        Steps:
+        1. Check cache
+        2. Fetch HTML
+        3. Extract content with trafilatura
+        4. Try JSON-LD extraction
+        5. Generate training data
+        6. Cache results
+        """
+        print(f"\n📍 {urlparse(url).path}")
+        
+        # Check cache
+        cached = self._load_cache(url)
+        if cached:
+            print(f"  ✓ Using cached data")
+            return cached.get('training_data', [])
+        
+        # Fetch
+        html = await self.fetch_content(url)
+        if not html:
             return None
         
-        # Save to file
-        filename = f"smart_{topic_name}_training.json"
-        with open(filename, 'w', encoding='utf-8') as f:
-            json.dump(training_data, f, indent=2, ensure_ascii=False)
+        # Extract with trafilatura (does all the heavy lifting)
+        content = self.extract_main_content(html, url)
+        if not content or not content.get('text'):
+            print(f"  ✗ No content extracted")
+            return None
         
-        print(f"Created {filename} with {len(training_data)} training examples")
+        print(f"  ✓ Extracted {len(content['text'])} chars")
         
-        # Show sample
-        print("\n Sample training data:")
-        for item in training_data[:2]:
-            print(f"\n  Q: {item['instruction']}")
-            print(f"  A: {item['response'][:150]}...")
-            print(f"  Context: {item['metadata']['context_type']}")
+        # Try JSON-LD
+        json_ld = self.extract_json_ld(html)
+        if json_ld:
+            print(f"  ✓ Found {len(json_ld)} JSON-LD blocks")
+        
+        # Detect type
+        content_type = self.detect_content_type(
+            content.get('title', ''),
+            url,
+            content.get('text', '')
+        )
+        print(f"  ✓ Type: {content_type}")
+        
+        # Generate training data
+        training_data = self.generate_training_data(content, content_type)
+        if not training_data:
+            print(f"  ✗ No training data generated")
+            return None
+        
+        print(f"  ✓ Generated {len(training_data)} Q&A pairs")
+        
+        # Cache
+        self._save_cache(url, {'training_data': training_data})
+        
+        return training_data
+    
+    async def scrape_multiple(self, urls: List[str]) -> List[Dict]:
+        """Scrape multiple URLs with rate limiting."""
+        all_data = []
+        
+        for url in urls:
+            data = await self.scrape_url(url)
+            if data:
+                all_data.extend(data)
+            
+            # Rate limiting: 2 seconds between requests
+            await asyncio.sleep(2)
+        
+        return all_data
+    
+    def save_training_file(self, data: List[Dict], filename: str = "msu_training_data.json"):
+        """Save training data in format ready for finetune.py"""
+        output_path = Path(filename)
+        
+        with open(output_path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, indent=2, ensure_ascii=False)
+        
+        print(f"\n✅ Saved {len(data)} examples to {filename}")
+        print(f"\n📊 Stats:")
+        print(f"   Total Q&A pairs: {len(data)}")
+        
+        # Count by type
+        types = {}
+        for item in data:
+            ct = item.get('metadata', {}).get('content_type', 'unknown')
+            types[ct] = types.get(ct, 0) + 1
+        
+        for ct, count in types.items():
+            print(f"   {ct}: {count}")
         
         return filename
+
+
+# ============================================================================
+# INTERACTIVE MODE
+# ============================================================================
+
+async def interactive_mode():
+    """User-friendly interactive scraping."""
+    scraper = MSUDataScraper()
     
-    def run_interactive(self):
-        """Interactive collection mode."""
-        print("\n" + "="*80)
-        print("SMART MSU DATA COLLECTOR")
-        print("="*80)
-        print("Creates high-quality, contextual training data with metadata.")
-        print("="*80)
+    print("\n" + "="*70)
+    print("🐻 MSU DATA SCRAPER - Production Version")
+    print("="*70)
+    print("\nUsing: trafilatura (professional content extraction)")
+    print("Output: Ready-to-train JSON format")
+    print("="*70)
+    
+    urls = []
+    
+    print("\n📝 Enter URLs to scrape (one per line, empty line to finish):")
+    print("Example: https://www.missouristate.edu/admissions")
+    print()
+    
+    while True:
+        url = input("URL: ").strip()
+        if not url:
+            break
         
-        while True:
-            print("\n Options:")
-            print("  1. Enter MSU URL to scrape")
-            print("  2. Exit")
-            
-            choice = input("\nChoice (1-2): ").strip()
-            
-            if choice == '2':
-                print("\n Goodbye!")
-                break
-            
-            if choice != '1':
-                print(" Invalid choice")
-                continue
-            
-            url = input("\n Enter MSU URL: ").strip()
-            
-            if not url:
-                print(" No URL provided")
-                continue
-            
-            # Ensure full URL
-            if not url.startswith('http'):
-                url = self.base_url + ('/' if not url.startswith('/') else '') + url
-
-            topic = input(" Topic name (e.g., 'cs-degree-plan'): ").strip()
-            if not topic:
-                topic = "msu_data"
-            
-            # Clean topic name
-            topic = re.sub(r'[^\w\-]', '_', topic.lower())
-
-            print(f"\n Collecting data from: {url}")
-            filename = self.collect_and_format(url, topic)
-            
-            if filename:
-                print(f"\n SUCCESS! File created: {filename}")
-                print("\n Next steps:")
-                print(f"   1. Review: cat {filename}")
-                print("   2. Update finetune.py:")
-                print(f'      data = load_dataset("json", data_files="{filename}", split="train")')
-                print("   3. Train: python finetune.py")
-            
-            again = input("\n Collect more? (y/n): ").strip().lower()
-            if again != 'y':
-                break
+        if not url.startswith('http'):
+            url = f"https://www.missouristate.edu{url if url.startswith('/') else '/' + url}"
         
-        print("\n Thank you for using Smart MSU Collector!")
+        urls.append(url)
+        print(f"  ✓ Added ({len(urls)} total)")
+    
+    if not urls:
+        print("\n❌ No URLs provided")
+        return
+    
+    print(f"\n🚀 Scraping {len(urls)} URL(s)...")
+    print("="*70)
+    
+    # Scrape
+    training_data = await scraper.scrape_multiple(urls)
+    
+    if not training_data:
+        print("\n❌ No data collected")
+        return
+    
+    # Save
+    filename = f"msu_training_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+    scraper.save_training_file(training_data, filename)
+    
+    print(f"\n📦 Next steps:")
+    print(f"   1. Review: cat {filename} | head -100")
+    print(f"   2. Update finetune.py:")
+    print(f'      data = load_dataset("json", data_files="{filename}", split="train")')
+    print(f"   3. Train: python finetune.py")
+    print()
 
+
+# ============================================================================
+# BATCH MODE (for power users)
+# ============================================================================
+
+async def batch_mode():
+    """Batch scraping from config file."""
+    scraper = MSUDataScraper()
+    
+    # Example configuration
+    urls_config = [
+        "https://www.missouristate.edu/admissions",
+        "https://www.missouristate.edu/financialaid",
+        "https://www.missouristate.edu/academics",
+    ]
+    
+    print(f"\n🚀 Batch mode: {len(urls_config)} URLs")
+    training_data = await scraper.scrape_multiple(urls_config)
+    
+    if training_data:
+        scraper.save_training_file(training_data)
+
+
+# ============================================================================
+# MAIN ENTRY POINT
+# ============================================================================
 
 def main():
     """Main entry point."""
+    print("\n🔍 Checking dependencies...")
+    
+    # Check basic dependencies
     try:
-        collector = SmartMSUCollector()
-        collector.run_interactive()
+        import httpx
+        import trafilatura
+        print("✓ httpx and trafilatura installed")
+    except ImportError as e:
+        print(f"\n❌ Missing basic dependencies: {e}")
+        print("\nInstall with:")
+        print("  pip install trafilatura httpx")
+        return
+    
+    # Check Playwright (recommended for modern sites)
+    if not PLAYWRIGHT_AVAILABLE:
+        print("⚠️  Playwright not installed (recommended for JavaScript sites like MSU)")
+        print("\nFor best results, install:")
+        print("  pip install playwright")
+        print("  playwright install chromium")
+        print("\nContinuing with basic HTTP (may produce incomplete data)...")
+        input("\nPress Enter to continue anyway, or Ctrl+C to cancel...")
+    else:
+        print("✓ Playwright available (will handle JavaScript sites)")
+    
+    print()
+    
+    try:
+        asyncio.run(interactive_mode())
     except KeyboardInterrupt:
-        print("\n\n Interrupted by user. Exiting...")
+        print("\n\n👋 Cancelled by user")
     except Exception as e:
-        print(f"\n Error: {e}")
+        print(f"\n❌ Error: {e}")
         import traceback
         traceback.print_exc()
 

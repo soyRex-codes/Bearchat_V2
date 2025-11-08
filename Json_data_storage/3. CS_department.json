@@ -1,0 +1,47 @@
+[
+  {
+    "instruction": "What are all the courses required to get a BS in Computer Science at Missouri State?",
+    "response": "To get a BS in Computer Science (CS Option), you must complete 120 total hours, including Core CS, Math, Science, and Elective courses.\n\n**Core Computer Science (13 courses / 40 hours):**\n• **CSC 130(3):** The World of Computer Science\n• **CSC 131(4):** Computational Thinking\n• **CSC 232(4):** Data Structures\n• **CSC 244(3):** Computer Architecture\n• **CSC 325(3):** Algorithms & Adv. Data Structures\n• **CSC 333(2):** Lang. & Machines\n• **CSC 335(3):** Database Systems Concepts\n• **CSC 360(3):** Operating Systems\n• **CSC 365(3):** Internet Programming\n• **CSC 388(3):** Intro to Secure Computing\n• **CSC 450(4):** Software Engineering\n• **CSC 482(2):** Seminar in Computer Science\n• **CSC 565(3):** Computer Networks\n\n**Required Math (5 courses / 19 hours):**\n• **MTH 261(5):** Calculus I\n• **MTH 280(5):** Calculus II\n• **MTH 314(3):** Discrete Mathematics\n• **MTH 315(3):** Algebraic Structures\n• **MTH 345(3) OR MTH 540(3):** Statistics OR Statistical Theory\n\n**Required Science (2 courses):**\n• **PHY 203(5) OR PHY 123(4):** Found. of Physics I OR Intro to Physics I\n• **BIO 121(4) OR BMS 110(3):** (Biology or Biomedical Sciences)\n\n**Other Requirements:**\n• **9 hours** of approved CSC electives\n• **General Education** courses\n• **Exit Exam:** Pass the computer science major field test (MFT)\n\n**Resources:**\nConsult the official flowchart: https://www.cs.missouristate.edu\n\n**Next Steps:**\nThis is a sample plan. You must meet with an advisor to map out your full remaining schedule and track your 120 total hours.",
+    "metadata": {
+      "topic": "BS Computer Science All Course Requirements (Missouri State)",
+      "source_url": "https://www.cs.missouristate.edu",
+      "context_type": "details"
+    }
+  },
+  {
+    "instruction": "List just the core CSC courses required for the Computer Science major at MSU.",
+    "response": "Here are the 13 core Computer Science (CSC) courses required for the BS in Computer Science (Computer Science Option):\n\n• **CSC 130(3):** The World of Computer Science\n• **CSC 131(4):** Computational Thinking\n• **CSC 232(4):** Data Structures\n• **CSC 244(3):** Computer Architecture\n• **CSC 325(3):** Algorithms & Adv. Data Structures\n• **CSC 333(2):** Lang. & Machines\n• **CSC 335(3):** Database Systems Concepts\n• **CSC 360(3):** Operating Systems\n• **CSC 365(3):** Internet Programming\n• **CSC 388(3):** Intro to Secure Computing\n• **CSC 450(4):** Software Engineering\n• **CSC 482(2):** Seminar in Computer Science\n• **CSC 565(3):** Computer Networks\n\n**Resources:**\nThese courses are all listed on the official department flowchart: https://www.cs.missouristate.edu\n\n**Next Steps:**\nRemember that in addition to these 40 hours of core courses, you also need 9 hours of CSC electives, plus all Math, Science, and General Education requirements.",
+    "metadata": {
+      "topic": "BS Computer Science Core CSC Courses (Missouri State)",
+      "source_url": "https://www.cs.missouristate.edu",
+      "context_type": "details"
+    }
+  },
+  {
+    "instruction": "How many courses and credit hours do I need for the Computer Science major at Missouri State?",
+    "response": "You need a total of **120 credit hours** to graduate. The requirements for the Computer Science Option are broken down as follows:\n\n• **Core CS:** 13 courses (totaling 40 credit hours)\n• **Math:** 5 courses (totaling 19 credit hours)\n• **Science:** 2 courses (totaling 7-9 credit hours)\n• **CS Electives:** 9 credit hours (usually 3 courses)\n• **General Education & Minor:** The remaining hours (approx. 45-47) are filled by your General Education requirements and a minor (the Math courses often fulfill the minor).\n\n**Graduation Requirements:**\n• **Total Hours:** 120\n• **Upper-Division:** At least 40 hours must be 300-level or above.\n• **Exit Exam:** You must pass the Major Field Test (MFT) with a 50th percentile or higher.\n\n**Resources:**\nSee the official flowchart for the visual breakdown: https://www.cs.missouristate.edu\n\n**Next Steps:**\nUse your C-APP degree audit in My Missouri State to track your progress toward these 120 hours.",
+    "metadata": {
+      "topic": "BS Computer Science Credit Hour Breakdown (Missouri State)",
+      "source_url": "https://www.cs.missouristate.edu",
+      "context_type": "overview"
+    }
+  },
+  {
+    "instruction": "What are the math and science requirements for the BS in Computer Science at MSU?",
+    "response": "The BS in Computer Science has a strong math emphasis. You are required to complete the following 5 math courses and 2 science courses:\n\n**Mathematics Requirements (5 courses):**\n• **MTH 261(5):** Calculus I\n• **MTH 280(5):** Calculus II\n• **MTH 314(3):** Discrete Mathematics\n• **MTH 315(3):** Algebraic Structures\n• **MTH 345(3) OR MTH 540(3):** Statistics OR Statistical Theory\n\n**Science Requirements (2 courses):**\n• **Physics:** PHY 203(5) Found. of Physics I OR PHY 123(4) Intro to Physics I\n• **Life Science:** BIO 121(4) OR BMS 110(3)\n\n**Resources:**\nThese are listed on the official CS department flowchart: https://www.cs.missouristate.edu\n\n**Next Steps:**\nBe sure to check the prerequisites for these courses. For example, MTH 261 is a prerequisite for MTH 280, and MTH 315 is a prerequisite for CSC 325.",
+    "metadata": {
+      "topic": "BS Computer Science Math and Science Requirements (Missouri State)",
+      "source_url": "https://www.cs.missouristate.edu",
+      "context_type": "details"
+    }
+  },
+  {
+    "instruction": "Can you give me a checklist of all requirements to graduate with a BS in Computer Science from Missouri State?",
+    "response": "Yes, here is a checklist of the main requirements for the BS in Computer Science (Computer Science Option).\n\n**Graduation Checklist:**\n• **Total Hours:** Complete at least 120 total credit hours.\n• **Upper-Division Hours:** Complete at least 40 credit hours at the 300-level or above.\n• **Core CS:** Complete all 13 required core CSC courses (CSC 130 through CSC 565).\n• **Math:** Complete all 5 required MTH courses (MTH 261, 280, 314, 315, and 345/540).\n• **Science:** Complete 1 Physics course and 1 Life Science course from the approved list.\n• **Electives:** Complete 9 hours of approved CSC electives.\n• **Minor:** Fulfill the requirements for a minor (the required math courses typically satisfy the Mathematics minor).\n• **GenEd:** Complete all General Education requirements.\n• **Exit Exam:** Pass the Computer Science Major Field Test (MFT) with at least a 50th percentile score.\n\n**Resources:**\nYou can visualize these requirements on the CS flowchart: https://www.cs.missouristate.edu\n\n**Next Steps:**\nUse your C-APP degree audit on My Missouri State as your official checklist and meet with your advisor every semester to confirm you are on track.",
+    "metadata": {
+      "topic": "BS Computer Science Graduation Checklist (Missouri State)",
+      "source_url": "https://www.cs.missouristate.edu",
+      "context_type": "howto"
+    }
+  }
+]

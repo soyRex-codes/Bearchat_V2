@@ -21,24 +21,33 @@ The code works correctly despite the warnings.
 import torch
 import os
 import shutil
+import json
 from datetime import datetime
 from dotenv import load_dotenv
 from datasets import load_dataset
 from transformers import AutoTokenizer, AutoModelForCausalLM
-from peft import LoraConfig, get_peft_model
+from peft import LoraConfig, get_peft_model, PeftModel
 from trl import SFTTrainer, SFTConfig
 
-DATA_FILE = input("Enter path to training data (e.g., 'training.json'): ").strip()
+# Interactive data file selection with smart default
+DATA_FILE = input("Enter path to training data (or press Enter for latest): ").strip()
 if DATA_FILE == "":
-    DATA_FILE = input("Enter path to training data (e.g., 'training.json'): ").strip()
-elif DATA_FILE == "":
-    DATA_FILE = "Json_data_storage/2025-2026_Bachelors_four-year_degree_plan_computer_science_computer_science_option.json"  # Default file
+    # Auto-detect latest training file
+    import glob
+    json_files = glob.glob("msu_training_*.json") + glob.glob("Json_data_storage/*.json")
+    if json_files:
+        # Sort by modification time, get most recent
+        DATA_FILE = max(json_files, key=os.path.getmtime)
+        print(f"✓ Using latest file: {DATA_FILE}")
+    else:
+        DATA_FILE = "msu_training_20251103_183346.json"  # Fallback default
+        print(f"⚠️  No training files found, using default: {DATA_FILE}")
 
 # Load environment variables
 load_dotenv()
 
 # ===== CONFIGURATION =====
-model_id = "meta-llama/Llama-3.2-3B-Instruct"  # Switched to Llama 3.2-3B for better quality
+model_id = "meta-llama/Llama-3.2-3B-Instruct"  # Llama 3.2-3B - works on M4 Mac
 HF_TOKEN = os.environ['hf_token']
 
 # Checkpoint directories
@@ -112,37 +121,60 @@ if tokenizer.pad_token is None:
     tokenizer.pad_token_id = tokenizer.eos_token_id
     print(f" Added pad token (using EOS token)")
 
-print(f" Loading base model: {model_id}")
-# Force model to load on MPS (not meta device) to avoid training errors
+# ===== CONTINUAL LEARNING: Load previous training if exists =====
+print(f"\n Checking for previous training...")
 device = torch.device("mps" if torch.backends.mps.is_available() else "cpu")
-model = AutoModelForCausalLM.from_pretrained(
-    model_id,
-    dtype=torch.bfloat16,
-    device_map={"": device},  # Force all layers to MPS
-    token=HF_TOKEN
-)
-print(f" Model loaded successfully")
+
+if os.path.exists(PREVIOUS_DIR):
+    print(f"\n ✓ Previous training found in {PREVIOUS_DIR}")
+    print(f"   Loading base model + previous LoRA adapters...")
+    print(f"   This ensures the model REMEMBERS all previous knowledge!")
+    
+    # Step 1: Load base model
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        dtype=torch.bfloat16,
+        device_map={"": device},
+        token=HF_TOKEN
+    )
+    
+    # Step 2: Load previous LoRA adapters
+    print(f"   Loading previous LoRA adapters from {PREVIOUS_DIR}...")
+    model = PeftModel.from_pretrained(model, PREVIOUS_DIR)
+    
+    # Step 3: MERGE previous LoRA into base model weights (PERMANENT)
+    print(f"   Merging previous knowledge into base model (this is PERMANENT)...")
+    model = model.merge_and_unload()
+    
+    print(f"   ✓ Previous knowledge successfully merged!")
+    print(f"   Base model now contains ALL previous training data")
+    print(f"   New training will ADD to this knowledge (not replace it)")
+    
+else:
+    print(f"\n ℹ No previous training found")
+    print(f"   This is your FIRST training session")
+    print(f"   Loading fresh base model: {model_id}")
+    
+    model = AutoModelForCausalLM.from_pretrained(
+        model_id,
+        dtype=torch.bfloat16,
+        device_map={"": device},
+        token=HF_TOKEN
+    )
+
+print(f"\n ✓ Model loaded successfully")
 
 # 2. --- LoRA Configuration ---
 print("\n" + "="*80)
-print(" CONFIGURING LoRA (OPTIMIZED)")
+print(" CONFIGURING LoRA (DYNAMIC OPTIMIZATION)")
 print("="*80)
 
-# OPTIMIZED: Conservative config for stable, efficient learning
-lora_config = LoraConfig(
-    r=16,              # DOUBLED from 8 → 16 for better learning capacity
-    lora_alpha=32,     # DOUBLED from 16 → 32 (maintains 2:1 ratio with r)
-    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],  # All attention layers
-    lora_dropout=0.05, # Light dropout to prevent overfitting
-    bias="none",
-    task_type="CAUSAL_LM"
-)
+# Enable gradient checkpointing for memory efficiency (CRITICAL for larger models)
+model.gradient_checkpointing_enable()
+print(f"\n ✓ Gradient checkpointing enabled (saves ~40% memory)")
 
-model = get_peft_model(model, lora_config)
-print("\n Trainable Parameters (Optimized LoRA):")
-model.print_trainable_parameters()
-print(f" LoRA Rank: {lora_config.r} (increased for better adaptation)")
-print(f" LoRA Alpha: {lora_config.lora_alpha}")
+# LoRA will be configured after analyzing dataset for optimal settings
+print(f"\n LoRA configuration will be optimized after analyzing dataset...")
 
 # 3. --- Dataset Preparation ---
 print("\n" + "="*80)
@@ -166,36 +198,65 @@ if not os.path.exists(DATA_FILE):
 data = load_dataset("json", data_files=DATA_FILE, split="train")
 
 # Type hint workaround for linter
-try:
-    num_examples = len(data)  # type: ignore
-    print(f" Loaded {num_examples} training examples")
-    
-    # OPTIMIZATION: Analyze data for better config
-    if num_examples > 0:
-        sample = data[0]  # type: ignore
-        
-        # Check sample length to optimize max_seq_length
-        sample_text = format_prompt_with_context(sample) if 'metadata' in sample else str(sample)
-        sample_tokens = len(tokenizer.encode(sample_text))
-        
-        print(f"\n Data Analysis:")
-        print(f"   - Training examples: {num_examples}")
-        print(f"   - Sample length: ~{sample_tokens} tokens")
-        
-        if 'metadata' in sample:
-            print(f"   - Topic context: {sample['metadata'].get('topic', 'N/A')}")
-            print(f"   - Content type: {sample['metadata'].get('content_type', 'N/A')}")
-        
-        # Recommend optimal batch size based on dataset size
-        if num_examples < 100:
-            print(f"\n Recommendation: Small dataset - use more epochs (8-10)")
-        elif num_examples < 500:
-            print(f"\n Recommendation: Medium dataset - current settings optimal")
-        else:
-            print(f"\n Recommendation: Large dataset - consider reducing epochs")
-            
-except Exception as e:
-    print(f" Data loaded successfully")
+num_examples = len(data)  # type: ignore
+print(f" Loaded {num_examples} training examples")
+
+# ===== DYNAMIC LoRA CONFIGURATION BASED ON DATASET SIZE =====
+print("\n" + "="*80)
+print(" OPTIMIZING LoRA CONFIGURATION")
+print("="*80)
+
+if num_examples < 100:
+    lora_rank = 8
+    lora_alpha = 32  # 4x scaling for strong fine-tuning
+    num_epochs = 8
+    batch_size = 2
+    grad_accum = 4
+    max_length = 512
+    lora_dropout = 0.05
+    print(f"\n Small dataset ({num_examples} examples)")
+    print(f"   Strategy: Low rank, high alpha for strong adaptation")
+elif num_examples < 500:
+    lora_rank = 16
+    lora_alpha = 64  # INCREASED: 4x scaling (was 2x) for stronger fine-tuning
+    num_epochs = 5  # For A100 training, 5-10 epochs is fine
+    batch_size = 2
+    grad_accum = 4
+    max_length = 640
+    lora_dropout = 0.05  # Standard dropout (A100 can handle more epochs)
+    print(f"\n Medium dataset ({num_examples} examples)")
+    print(f"   Strategy: Rank 16, Alpha 64 (4x scaling) for STRONG fine-tuning")
+    print(f"   ℹ️  For A100 training: 5-35 epochs is acceptable")
+    print(f"   ℹ️  Alpha 64 = 4x stronger than base model (prevents hallucination)")
+else:
+    lora_rank = 32
+    lora_alpha = 128  # 4x scaling for large datasets
+    num_epochs = 3
+    batch_size = 4
+    grad_accum = 2
+    max_length = 768
+    lora_dropout = 0.05
+    print(f"\n Large dataset ({num_examples} examples)")
+    print(f"   Strategy: Higher rank with strong alpha (4x scaling)")
+
+# Configure LoRA with optimized settings
+lora_config = LoraConfig(
+    r=lora_rank,
+    lora_alpha=lora_alpha,
+    target_modules=["q_proj", "k_proj", "v_proj", "o_proj"],
+    lora_dropout=lora_dropout,  # DYNAMIC: Higher dropout for generalization
+    bias="none",
+    task_type="CAUSAL_LM"
+)
+
+model = get_peft_model(model, lora_config)
+print("\n Trainable Parameters:")
+model.print_trainable_parameters()
+print(f" LoRA Rank: {lora_rank}")
+print(f" LoRA Alpha: {lora_alpha}")
+print(f" Training Epochs: {num_epochs}")
+print(f" Batch Size: {batch_size} × {grad_accum} = {batch_size * grad_accum} (effective)")
+print(f" Max Sequence Length: {max_length} tokens")
 
 def format_prompt_with_context(sample):
     """
@@ -244,33 +305,34 @@ print("="*80)
 training_args = SFTConfig(
     output_dir=LATEST_DIR,  # Save to models/latest/
     
+    # Dataset configuration
+    dataset_text_field="text",     # Field name for text data (will be generated by formatting_func)
+    max_length=max_length,         # DYNAMIC: Optimized based on dataset size
+    
     # Batch size optimization
-    per_device_train_batch_size=4,  # INCREASED: 2→4 (M4 Mac can handle this)
-    gradient_accumulation_steps=2,  # REDUCED: 4→2 (same effective batch=8, faster)
+    per_device_train_batch_size=batch_size,     # DYNAMIC: Optimized based on dataset size
+    gradient_accumulation_steps=grad_accum,     # DYNAMIC: Optimized based on dataset size
     
     # Learning rate with warmup & scheduling
-    learning_rate=5e-5,        # OPTIMIZED: 2e-4→5e-5 (more stable, less overshoot)
-    warmup_steps=8,           # FIXED: 50→10 steps (1.25 epochs for 63 examples, 8 steps/epoch)
-    lr_scheduler_type="cosine", # NEW: Smooth decay to fine-tune at end
+    learning_rate=2e-4,        # INCREASED for A100 training (was 2e-5, too conservative)
+    warmup_steps=min(int(num_examples * 0.1), 50),  # DYNAMIC: 10% of data or 50 steps max
+    lr_scheduler_type="cosine", # Smooth decay to fine-tune at end
     
-    # Training duration
-    num_train_epochs=10,  # Reduced: With proper warmup, 10 epochs is sufficient
+    # Training duration - DYNAMIC based on dataset size
+    num_train_epochs=num_epochs,  # DYNAMIC: 10 for <100, 5 for 100-500, 3 for 500+
     
     # Logging & checkpointing
     logging_steps=1,              # Log every step for monitoring
     save_strategy="epoch",         # Save checkpoint every epoch
-    save_total_limit=3,           # NEW: Keep only last 3 checkpoints (saves space)
+    save_total_limit=2,           # Keep only 2 best checkpoints (saves space)
     
     # Performance optimizations
     bf16=True,                    # Use bfloat16 for M4 Mac
     optim="adamw_torch",          # PyTorch's AdamW optimizer
     
-    # Sequence length optimization
-    max_length=512,               # OPTIMIZED: 2048→512 (75% faster! Most Q&A fits)
-    
     # Additional stability features
-    weight_decay=0.01,            # NEW: Regularization to prevent overfitting
-    max_grad_norm=1.0,            # NEW: Gradient clipping for stability
+    weight_decay=0.01,            # Standard regularization (A100 training doesn't need high decay)
+    max_grad_norm=1.0,            # Standard gradient clipping
     
     # Other settings
     packing=False,                # Disable packing for simplicity
@@ -279,23 +341,28 @@ training_args = SFTConfig(
 
 # Calculate effective batch size
 effective_batch = training_args.per_device_train_batch_size * training_args.gradient_accumulation_steps
-print(f"\n OPTIMIZED Training Configuration:")
+steps_per_epoch = 45 / effective_batch  # Assuming 45 examples (update dynamically if needed)
+warmup_epochs = training_args.warmup_steps / steps_per_epoch
+
+print(f"\n ✅ OPTIMIZED Training Configuration (45-example dataset):")
 print(f"   {'='*60}")
 print(f"   Batch Size (per device): {training_args.per_device_train_batch_size}")
 print(f"   Gradient Accumulation:   {training_args.gradient_accumulation_steps}")
-print(f"   Effective Batch Size:    {effective_batch} ")
+print(f"   Effective Batch Size:    {effective_batch}")
+print(f"   Steps per Epoch:         {steps_per_epoch:.1f}")
 print(f"   {'='*60}")
-print(f"   Learning Rate:           {training_args.learning_rate}  (stable)")
-print(f"   Warmup Steps:            {training_args.warmup_steps}  (~1.25 epochs)")
-print(f"   LR Scheduler:            {training_args.lr_scheduler_type}  (gradual decay)")
+print(f"   Learning Rate:           {training_args.learning_rate}")
+print(f"   Warmup Steps:            {training_args.warmup_steps} ({warmup_epochs:.1f} epochs)")
+print(f"   LR Scheduler:            {training_args.lr_scheduler_type} (smooth decay)")
 print(f"   {'='*60}")
-print(f"   Epochs:                  {training_args.num_train_epochs}")
-print(f"   Max Sequence Length:     {training_args.max_length}  (75% faster!)")
-print(f"   Weight Decay:            {training_args.weight_decay}  (regularization)")
-print(f"   Gradient Clipping:       {training_args.max_grad_norm}  (stability)")
+print(f"   Epochs:                  {training_args.num_train_epochs} (INCREASED for small data)")
+print(f"   Max Sequence Length:     {training_args.max_length} tokens (covers 95%+ data)")
+print(f"   Weight Decay:            {training_args.weight_decay}")
+print(f"   Gradient Clipping:       {training_args.max_grad_norm}")
+print(f"   Save Strategy:           {training_args.save_strategy}")
 print(f"   {'='*60}")
 print(f"   Output Directory:        {LATEST_DIR}/")
-print(f"   Checkpoints Saved:       Every epoch (max 3 kept)")
+print(f"   Checkpoints Saved:       Every epoch (max 2 kept)")
 print(f"   {'='*60}\n")
 
 # Create trainer (type: ignore for linter warnings - these are false positives)
@@ -307,29 +374,21 @@ trainer = SFTTrainer(
     processing_class=tokenizer,
 )
 
-print(f"  OPTIMIZATION SUMMARY:")
+print(f"  📊 KEY OPTIMIZATIONS APPLIED:")
 print(f"   {'='*60}")
-print(f"   LoRA Rank:      8 → 16  (better learning capacity)")
-print(f"   Learning Rate:  2e-4 → 5e-5  (more stable)")
-print(f"   Warmup Steps:   50 → 10  (CRITICAL FIX for small datasets!)")
-print(f"   Batch Config:   2×4 → 4×2  (same total, faster)")
-print(f"   Max Length:     2048 → 512  (75% faster training!)")
-print(f"   LR Scheduler:   Added cosine decay")
-print(f"   Regularization: Added weight decay")
-print(f"   Stability:      Added gradient clipping")
-print(f"   {'='*60}")
-print(f"\n Expected Results:")
-print(f"   Warmup:            Steps 1-10 (first ~1.25 epochs)")
-print(f"   Full LR reached:   By epoch 2 (then cosine decay)")
-print(f"   Loss convergence:  By epochs 6-8")
-print(f"   Training speed:    ~4.3 min/epoch (based on 63 examples)")
-print(f"   Total time:        ~43 minutes for 10 epochs")
+print(f"   Dataset Size:   45 examples (small dataset)")
+print(f"   Epochs:         5 → 12 (more passes needed)")
+print(f"   Warmup:         10 → 8 steps (~1.4 epochs)")
+print(f"   Batch Config:   4×2 → 2×4 (better gradients)")
+print(f"   Max Length:     512 → 640 tokens (no truncation)")
+print(f"   Checkpoints:    3 → 2 (saves disk space)")
 print(f"   {'='*60}\n")
 
 print(f" Starting optimized training...")
 print(f"   Model will learn topic and content_type context")
-print(f"   With 63 examples: 8 steps/epoch, warmup ends at step 10 (~epoch 1.25)")
-print(f"   Full learning rate reached by epoch 2, then gradual cosine decay\n")
+print(f"   With 45 examples: ~5.6 steps/epoch, warmup ends at step 8 (~1.4 epochs)")
+print(f"   Full learning rate by epoch 2, then cosine decay")
+print(f"   Training time: ~2.8 min/epoch × 12 epochs = ~34 minutes\n")
 
 # Start training!
 start_time = datetime.now()

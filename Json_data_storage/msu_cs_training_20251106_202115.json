@@ -1,0 +1,850 @@
+[
+  {
+    "instruction": "How do I contact the Computer Science Department at Missouri State University?",
+    "response": "Computer Science Department Contact:\n\u2022 Address: 901 S. National, Springfield MO 65897\n\u2022 Phone: (417) 836-4157\n\u2022 Email: ComputerScience@missouristate.edu\n\u2022 Website: www.cs.missouristate.edu",
+    "metadata": {
+      "topic": "CS Department Contact",
+      "content_type": "contact_information"
+    }
+  },
+  {
+    "instruction": "Is the CS program at MSU accredited?",
+    "response": "Yes, the Bachelor of Science in Computer Science, Computer Science Option (ABET Accredited) is accredited by the Computing Accreditation Commission of ABET.",
+    "metadata": {
+      "topic": "Program Accreditation",
+      "content_type": "program_information"
+    }
+  },
+  {
+    "instruction": "What is the Successful completion of the computer science major field test (MFT) for CS at MSU?",
+    "response": "Must achieve at least a score of 50th percentile.",
+    "metadata": {
+      "topic": "Graduation Requirements",
+      "content_type": "requirements"
+    }
+  },
+  {
+    "instruction": "What is the Minimum Total Hours for CS at MSU?",
+    "response": "At least 120 hours of courses must be taken to graduate.",
+    "metadata": {
+      "topic": "Graduation Requirements",
+      "content_type": "requirements"
+    }
+  },
+  {
+    "instruction": "What is the Minimum Upper-Level Hours for CS at MSU?",
+    "response": "At least 40 hours of courses must be numbered 300 and above.",
+    "metadata": {
+      "topic": "Graduation Requirements",
+      "content_type": "requirements"
+    }
+  },
+  {
+    "instruction": "What are the CS elective options at Missouri State University?",
+    "response": "Choose 9 hours from among the following courses.\n\nOptions: CSC 300, CSC 330, CSC 388, CSC 399, CSC/MTH 421, CSC/MTH 422, CSC 455, CSC 515, CSC 521, CSC 525, CSC 526, CSC 534, CSC 535, CSC 538, CSC 540, CSC 545, CSC 567, CSC 590, CSC 596\n\nNote: No more than three hours can count from CSC 399 and no more than 3 hours can count from CSC 596.",
+    "metadata": {
+      "topic": "CS Electives",
+      "content_type": "electives"
+    }
+  },
+  {
+    "instruction": "Tell me about MTH 261",
+    "response": "MTH 261 (Calculus I) is a 5-credit course at Missouri State University.",
+    "metadata": {
+      "topic": "MTH 261",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is MTH 261?",
+    "response": "MTH 261 is 5 credit hours.",
+    "metadata": {
+      "topic": "MTH 261 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about MTH 280",
+    "response": "MTH 280 (Calculus II) is a 5-credit course at Missouri State University. Prerequisites: MTH 261.",
+    "metadata": {
+      "topic": "MTH 280",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for MTH 280?",
+    "response": "The prerequisites for MTH 280 (Calculus II) are: MTH 261.",
+    "metadata": {
+      "topic": "MTH 280 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is MTH 280?",
+    "response": "MTH 280 is 5 credit hours.",
+    "metadata": {
+      "topic": "MTH 280 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about MTH 314",
+    "response": "MTH 314 (Discrete Mathematics) is a 3-credit course at Missouri State University. Prerequisites: MTH 280.",
+    "metadata": {
+      "topic": "MTH 314",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for MTH 314?",
+    "response": "The prerequisites for MTH 314 (Discrete Mathematics) are: MTH 280.",
+    "metadata": {
+      "topic": "MTH 314 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is MTH 314?",
+    "response": "MTH 314 is 3 credit hours.",
+    "metadata": {
+      "topic": "MTH 314 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about MTH 315",
+    "response": "MTH 315 (Algebraic Structures) is a 3-credit course at Missouri State University. Prerequisites: MTH 314.",
+    "metadata": {
+      "topic": "MTH 315",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for MTH 315?",
+    "response": "The prerequisites for MTH 315 (Algebraic Structures) are: MTH 314.",
+    "metadata": {
+      "topic": "MTH 315 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is MTH 315?",
+    "response": "MTH 315 is 3 credit hours.",
+    "metadata": {
+      "topic": "MTH 315 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about MTH 345",
+    "response": "MTH 345 (Statistics) is a 3-credit course at Missouri State University. Prerequisites: MTH 280.",
+    "metadata": {
+      "topic": "MTH 345",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for MTH 345?",
+    "response": "The prerequisites for MTH 345 (Statistics) are: MTH 280.",
+    "metadata": {
+      "topic": "MTH 345 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is MTH 345?",
+    "response": "MTH 345 is 3 credit hours.",
+    "metadata": {
+      "topic": "MTH 345 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about MTH 540",
+    "response": "MTH 540 (Statistical Theory) is a 3-credit course at Missouri State University. Prerequisites: MTH 280.",
+    "metadata": {
+      "topic": "MTH 540",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for MTH 540?",
+    "response": "The prerequisites for MTH 540 (Statistical Theory) are: MTH 280.",
+    "metadata": {
+      "topic": "MTH 540 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is MTH 540?",
+    "response": "MTH 540 is 3 credit hours.",
+    "metadata": {
+      "topic": "MTH 540 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about PHY 203",
+    "response": "PHY 203 (Found. of Physics I) is a 5-credit course at Missouri State University. Prerequisites: MTH 261.",
+    "metadata": {
+      "topic": "PHY 203",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for PHY 203?",
+    "response": "The prerequisites for PHY 203 (Found. of Physics I) are: MTH 261.",
+    "metadata": {
+      "topic": "PHY 203 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is PHY 203?",
+    "response": "PHY 203 is 5 credit hours.",
+    "metadata": {
+      "topic": "PHY 203 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about PHY 123",
+    "response": "PHY 123 (Intro to Physics I) is a 4-credit course at Missouri State University. Prerequisites: MTH 261.",
+    "metadata": {
+      "topic": "PHY 123",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for PHY 123?",
+    "response": "The prerequisites for PHY 123 (Intro to Physics I) are: MTH 261.",
+    "metadata": {
+      "topic": "PHY 123 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is PHY 123?",
+    "response": "PHY 123 is 4 credit hours.",
+    "metadata": {
+      "topic": "PHY 123 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about BIO 121",
+    "response": "BIO 121 (BIO 121) is a 4-credit course at Missouri State University.",
+    "metadata": {
+      "topic": "BIO 121",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is BIO 121?",
+    "response": "BIO 121 is 4 credit hours.",
+    "metadata": {
+      "topic": "BIO 121 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about BMS 110",
+    "response": "BMS 110 (BMS 110) is a 3-credit course at Missouri State University.",
+    "metadata": {
+      "topic": "BMS 110",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is BMS 110?",
+    "response": "BMS 110 is 3 credit hours.",
+    "metadata": {
+      "topic": "BMS 110 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 130",
+    "response": "CSC 130 (The World of Computer Science) is a 3-credit course at Missouri State University.",
+    "metadata": {
+      "topic": "CSC 130",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 130?",
+    "response": "CSC 130 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 130 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 131",
+    "response": "CSC 131 (Computational Thinking) is a 4-credit course at Missouri State University.",
+    "metadata": {
+      "topic": "CSC 131",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 131?",
+    "response": "CSC 131 is 4 credit hours.",
+    "metadata": {
+      "topic": "CSC 131 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 232",
+    "response": "CSC 232 (Data Structures) is a 4-credit course at Missouri State University. Prerequisites: CSC 131, MTH 314.",
+    "metadata": {
+      "topic": "CSC 232",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 232?",
+    "response": "The prerequisites for CSC 232 (Data Structures) are: CSC 131, MTH 314.",
+    "metadata": {
+      "topic": "CSC 232 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 232?",
+    "response": "CSC 232 is 4 credit hours.",
+    "metadata": {
+      "topic": "CSC 232 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 244",
+    "response": "CSC 244 (Computer Architecture) is a 3-credit course at Missouri State University. Prerequisites: CSC 131.",
+    "metadata": {
+      "topic": "CSC 244",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 244?",
+    "response": "The prerequisites for CSC 244 (Computer Architecture) are: CSC 131.",
+    "metadata": {
+      "topic": "CSC 244 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 244?",
+    "response": "CSC 244 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 244 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 325",
+    "response": "CSC 325 (Algorithms & Adv. Data Structures) is a 3-credit course at Missouri State University. Prerequisites: CSC 232.",
+    "metadata": {
+      "topic": "CSC 325",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 325?",
+    "response": "The prerequisites for CSC 325 (Algorithms & Adv. Data Structures) are: CSC 232.",
+    "metadata": {
+      "topic": "CSC 325 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 325?",
+    "response": "CSC 325 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 325 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 333",
+    "response": "CSC 333 (Lang. & Machines) is a 2-credit course at Missouri State University. Prerequisites: CSC 232.",
+    "metadata": {
+      "topic": "CSC 333",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 333?",
+    "response": "The prerequisites for CSC 333 (Lang. & Machines) are: CSC 232.",
+    "metadata": {
+      "topic": "CSC 333 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 333?",
+    "response": "CSC 333 is 2 credit hours.",
+    "metadata": {
+      "topic": "CSC 333 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 335",
+    "response": "CSC 335 (Database Systems Concepts) is a 3-credit course at Missouri State University. Prerequisites: CSC 232.",
+    "metadata": {
+      "topic": "CSC 335",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 335?",
+    "response": "The prerequisites for CSC 335 (Database Systems Concepts) are: CSC 232.",
+    "metadata": {
+      "topic": "CSC 335 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 335?",
+    "response": "CSC 335 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 335 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 360",
+    "response": "CSC 360 (Operating Systems) is a 3-credit course at Missouri State University. Prerequisites: CSC 232, CSC 244.",
+    "metadata": {
+      "topic": "CSC 360",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 360?",
+    "response": "The prerequisites for CSC 360 (Operating Systems) are: CSC 232, CSC 244.",
+    "metadata": {
+      "topic": "CSC 360 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 360?",
+    "response": "CSC 360 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 360 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 365",
+    "response": "CSC 365 (Internet Programming) is a 3-credit course at Missouri State University. Prerequisites: CSC 232.",
+    "metadata": {
+      "topic": "CSC 365",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 365?",
+    "response": "The prerequisites for CSC 365 (Internet Programming) are: CSC 232.",
+    "metadata": {
+      "topic": "CSC 365 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 365?",
+    "response": "CSC 365 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 365 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 450",
+    "response": "CSC 450 (Software Engineering) is a 4-credit course at Missouri State University. Prerequisites: CSC 325, CSC 335, CSC 360.",
+    "metadata": {
+      "topic": "CSC 450",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 450?",
+    "response": "The prerequisites for CSC 450 (Software Engineering) are: CSC 325, CSC 335, CSC 360.",
+    "metadata": {
+      "topic": "CSC 450 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 450?",
+    "response": "CSC 450 is 4 credit hours.",
+    "metadata": {
+      "topic": "CSC 450 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 482",
+    "response": "CSC 482 (Seminar in Computer Science) is a 2-credit course at Missouri State University. Prerequisites: CSC 450.",
+    "metadata": {
+      "topic": "CSC 482",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 482?",
+    "response": "The prerequisites for CSC 482 (Seminar in Computer Science) are: CSC 450.",
+    "metadata": {
+      "topic": "CSC 482 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 482?",
+    "response": "CSC 482 is 2 credit hours.",
+    "metadata": {
+      "topic": "CSC 482 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 565",
+    "response": "CSC 565 (Computer Networks) is a 3-credit course at Missouri State University. Prerequisites: CSC 360.",
+    "metadata": {
+      "topic": "CSC 565",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 565?",
+    "response": "The prerequisites for CSC 565 (Computer Networks) are: CSC 360.",
+    "metadata": {
+      "topic": "CSC 565 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 565?",
+    "response": "CSC 565 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 565 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 300",
+    "response": "CSC 300 (Service Learning in CS) is a 1-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 300",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 300?",
+    "response": "CSC 300 is 1 credit hours.",
+    "metadata": {
+      "topic": "CSC 300 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 330",
+    "response": "CSC 330 (Intro to Data Science) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 330",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 330?",
+    "response": "CSC 330 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 330 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 388",
+    "response": "CSC 388 (Intro to Secure Computing) is a 3-credit course at Missouri State University. Prerequisites: CSC 232. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 388",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "What are the prerequisites for CSC 388?",
+    "response": "The prerequisites for CSC 388 (Intro to Secure Computing) are: CSC 232.",
+    "metadata": {
+      "topic": "CSC 388 Prerequisites",
+      "content_type": "prerequisites"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 388?",
+    "response": "CSC 388 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 388 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 399",
+    "response": "CSC 399 (Cooperative Education) is a 1-3-credit course at Missouri State University. Offered: Fall, Spring, Summer.",
+    "metadata": {
+      "topic": "CSC 399",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 399?",
+    "response": "CSC 399 is 1-3 credit hours.",
+    "metadata": {
+      "topic": "CSC 399 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC/MTH 421",
+    "response": "CSC/MTH 421 (Numerical Analysis I) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC/MTH 421",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC/MTH 421?",
+    "response": "CSC/MTH 421 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC/MTH 421 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC/MTH 422",
+    "response": "CSC/MTH 422 (Numerical Analysis II) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC/MTH 422",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC/MTH 422?",
+    "response": "CSC/MTH 422 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC/MTH 422 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 455",
+    "response": "CSC 455 (Software Quality Assurance) is a 3-credit course at Missouri State University. Offered: Fall.",
+    "metadata": {
+      "topic": "CSC 455",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 455?",
+    "response": "CSC 455 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 455 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 515",
+    "response": "CSC 515 (Advanced Internet Programming) is a 3-credit course at Missouri State University. Offered: Spring.",
+    "metadata": {
+      "topic": "CSC 515",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 515?",
+    "response": "CSC 515 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 515 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 521",
+    "response": "CSC 521 (Compiler Construction) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 521",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 521?",
+    "response": "CSC 521 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 521 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 525",
+    "response": "CSC 525 (Computer Graphics) is a 3-credit course at Missouri State University. Offered: Fall.",
+    "metadata": {
+      "topic": "CSC 525",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 525?",
+    "response": "CSC 525 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 525 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 526",
+    "response": "CSC 526 (Methods of Optimization) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 526",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 526?",
+    "response": "CSC 526 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 526 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 534",
+    "response": "CSC 534 (Big Data Analytics) is a 3-credit course at Missouri State University. Offered: Spring.",
+    "metadata": {
+      "topic": "CSC 534",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 534?",
+    "response": "CSC 534 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 534 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 535",
+    "response": "CSC 535 (Data Mining) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 535",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 535?",
+    "response": "CSC 535 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 535 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 538",
+    "response": "CSC 538 (Parallel & Distributed Computing) is a 3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 538",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 538?",
+    "response": "CSC 538 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 538 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 540",
+    "response": "CSC 540 (Intro. to Artificial Intelligence) is a 3-credit course at Missouri State University. Offered: Spring.",
+    "metadata": {
+      "topic": "CSC 540",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 540?",
+    "response": "CSC 540 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 540 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 545",
+    "response": "CSC 545 (Computer Speech, Music & Images) is a 3-credit course at Missouri State University. Offered: Spring.",
+    "metadata": {
+      "topic": "CSC 545",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 545?",
+    "response": "CSC 545 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 545 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 567",
+    "response": "CSC 567 (Mobile Computing Applications) is a 3-credit course at Missouri State University. Offered: Spring.",
+    "metadata": {
+      "topic": "CSC 567",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 567?",
+    "response": "CSC 567 is 3 credit hours.",
+    "metadata": {
+      "topic": "CSC 567 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 590",
+    "response": "CSC 590 (Adv. Topics in Computer Science) is a 1-4-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 590",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 590?",
+    "response": "CSC 590 is 1-4 credit hours.",
+    "metadata": {
+      "topic": "CSC 590 Credits",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "Tell me about CSC 596",
+    "response": "CSC 596 (Special Readings) is a 1-3-credit course at Missouri State University. Offered: Demand.",
+    "metadata": {
+      "topic": "CSC 596",
+      "content_type": "course_information"
+    }
+  },
+  {
+    "instruction": "How many credits is CSC 596?",
+    "response": "CSC 596 is 1-3 credit hours.",
+    "metadata": {
+      "topic": "CSC 596 Credits",
+      "content_type": "course_information"
+    }
+  }
+]
