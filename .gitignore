@@ -46,3 +46,7 @@ Thumbs.db
 # Environment variables
 .env
 .env.local
+
+# Separate folders (keep out of version control)
+rk33s@SGF.EDUBEAR.NET@babbage/
+.rk33s@SGF.EDUBEAR.NET@babbage
