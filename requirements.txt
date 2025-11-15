@@ -17,3 +17,6 @@ PyPDF2
 Pillow
 pdf2image
 pytesseract
+
+# Web search integration
+google-api-python-client  # Google Custom Search API

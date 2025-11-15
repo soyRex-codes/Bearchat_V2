@@ -1,0 +1,26 @@
+[
+  {
+    "instruction": "Example: What are the current admission requirements for the CS master's program?",
+    "input": "",
+    "output": "Example response: Based on the Missouri State University website, the Computer Science master's program requires: 1) Bachelor's degree in CS or related field, 2) Minimum 3.0 GPA, 3) GRE scores (optional), 4) Three letters of recommendation, 5) Statement of purpose. The program offers thesis and non-thesis options. Applications are reviewed on a rolling basis for Fall, Spring, and Summer semesters. [1][2]",
+    "topic": "Computer Science",
+    "content_type": "academic_program",
+    "metadata": {
+      "source": "web_search",
+      "date_collected": "2025-11-14",
+      "citations": [
+        {
+          "title": "CS Graduate Program - Missouri State University",
+          "url": "https://www.missouristate.edu/cs/graduate/",
+          "snippet": "Graduate program information including admission requirements..."
+        },
+        {
+          "title": "Graduate Admissions - MSU",
+          "url": "https://www.missouristate.edu/graduate/admissions/",
+          "snippet": "General graduate admission requirements and procedures..."
+        }
+      ],
+      "model_version": "llama-3.2-3b-instruct-finetuned"
+    }
+  }
+]

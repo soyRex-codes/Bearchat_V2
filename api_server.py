@@ -19,6 +19,7 @@ from functools import lru_cache
 from datetime import datetime
 import logging
 import traceback
+import json
 
 # Try to import PDF processing libraries
 try:
@@ -35,6 +36,14 @@ try:
 except ImportError:
     HAS_OCR = False
     print("⚠️  PIL/pytesseract not installed - Image OCR will be disabled")
+
+# Try to import web search module
+try:
+    from web_search import get_search_engine, should_use_web_search
+    HAS_WEB_SEARCH = True
+except ImportError:
+    HAS_WEB_SEARCH = False
+    print("⚠️  Web search not available - install: pip install google-api-python-client")
 
 
 # Configure logging for performance monitoring
@@ -63,6 +72,7 @@ model = None
 tokenizer = None
 device = None
 doc_processor = None
+search_engine = None  # Web search engine
 
 # Response cache (in-memory LRU cache for frequent questions)
 # Key: hash of (question + temperature + top_p)
@@ -218,9 +228,9 @@ class SimpleDocumentProcessor:
 
 def load_model():
     """Load the fine-tuned model at server startup"""
-    global model, tokenizer, device, doc_processor
+    global model, tokenizer, device, doc_processor, search_engine
     
-    print(" Loading model...")
+    print("🔄 Loading model...")
     
     # Set device
     if torch.backends.mps.is_available():
@@ -300,9 +310,17 @@ def load_model():
     
     # Initialize document processor
     doc_processor = SimpleDocumentProcessor()
-    print(" Document processor initialized")
+    print("✓ Document processor initialized")
     
-    print(" Model loaded successfully!\n")
+    # Initialize web search engine
+    if HAS_WEB_SEARCH:
+        search_engine = get_search_engine()
+        if search_engine and search_engine.is_available():
+            print("✓ Web search engine initialized (Google Custom Search)")
+        else:
+            print("⚠️  Web search engine not configured (add GOOGLE_API_KEY and GOOGLE_CSE_ID to .env)")
+    
+    print("✅ Model loaded successfully!\n")
 
 def detect_topic(question):
     """Simple topic detection based on keywords"""
@@ -406,7 +424,7 @@ def format_response_text(text):
     
     return text
 
-def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conversation_history=None):
+def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conversation_history=None, web_search_enabled=False):
     """
     Generate response from the model with optional conversation history and caching
     
@@ -416,6 +434,7 @@ def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conv
         temperature: Sampling temperature
         top_p: Top-p sampling parameter
         conversation_history: List of {"question": str, "answer": str} dicts (last 3-5 exchanges)
+        web_search_enabled: User preference for web search (default: False)
     
     Returns:
         tuple: (response, topic, content_type, metrics)
@@ -476,6 +495,33 @@ def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conv
         metrics = {'cached': False, 'casual_response': True, 'total_time': time.time() - start_time}
         return "I'm BearChat, your Missouri State University assistant. How can I help you today?", topic, content_type, metrics
     
+    # Check if web search should be used (respects user preference)
+    web_search_context = ""
+    search_citations = []
+    search_used = False
+    
+    # Only use web search if user enabled it AND it's needed for the query
+    if web_search_enabled:
+        if HAS_WEB_SEARCH and search_engine:
+            from web_search import should_use_web_search
+            if should_use_web_search(question, topic, content_type):
+                logger.info(f"🔍 Performing web search for: {question}")
+                search_response = search_engine.search(question, num_results=3)
+                
+                if search_response['success'] and search_response['results']:
+                    web_search_context = "\n" + search_engine.format_results_for_llm(search_response)
+                    search_citations = search_engine.extract_citations(search_response)
+                    search_used = True
+                    logger.info(f"✓ Added {len(search_citations)} web sources to context")
+                else:
+                    logger.warning("Web search failed or returned no results")
+            else:
+                logger.info("ℹ️  Web search enabled but not needed for this query type")
+        else:
+            logger.warning("⚠️  Web search requested but search engine not available")
+    else:
+        logger.info("⏭️  Web search disabled by client; skipping web lookup")
+    
     # Build conversation context if history exists
     history_context = ""
     if conversation_history and len(conversation_history) > 0:
@@ -487,9 +533,15 @@ def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conv
     # Format with contextual metadata (EXACTLY like training format)
     # CRITICAL: Add strong constraints to prevent generic responses
     content_type_readable = content_type.replace('_', ' ').title()
+    
+    # Add web search instruction if search was used
+    web_search_instruction = ""
+    if search_used:
+        web_search_instruction = " Use the web search results provided below to give accurate, up-to-date information. Cite sources using [1], [2], etc."
+    
     prompt = f"""### Topic: {topic}
 ### Category: {content_type_readable}
-### Context: You are BearChat, an AI assistant specialized ONLY in Missouri State University (MSU) information. You must ONLY provide information about MSU. Do NOT provide general advice or information about other universities.{history_context}
+### Context: You are BearChat, an AI assistant specialized ONLY in Missouri State University (MSU) information. You must ONLY provide information about MSU. Do NOT provide general advice or information about other universities.{web_search_instruction}{web_search_context}{history_context}
 ### Instruction:
 {question}
 
@@ -560,7 +612,9 @@ def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conv
         'casual_response': False,
         'inference_time': inference_time,
         'total_time': inference_time,
-        'tokens_generated': len(tokenizer.encode(response)) if tokenizer else 0
+        'tokens_generated': len(tokenizer.encode(response)) if tokenizer else 0,
+        'web_search_used': search_used,
+        'citations': search_citations if search_used else []
     }
     
     # Cache the response (skip casual conversations)
@@ -569,7 +623,42 @@ def generate_response(question, max_length=512, temperature=0.6, top_p=0.8, conv
     
     logger.info(f"Generated response in {inference_time:.2f}s ({metrics['tokens_generated']} tokens)")
     
+    # Save web search data for training if search was used
+    if search_used and search_citations:
+        save_web_search_training_data(
+            question=question,
+            answer=response,
+            citations=search_citations,
+            topic=topic,
+            content_type=content_type
+        )
+    
     return response, topic, content_type, metrics
+
+def save_web_search_training_data(question, answer, citations, topic, content_type):
+    """
+    Save web search queries and responses for future model training
+    Appends to web_search_data_collection.txt in JSON Lines format
+    """
+    try:
+        training_entry = {
+            "timestamp": datetime.now().isoformat(),
+            "question": question,
+            "answer": answer,
+            "topic": topic,
+            "content_type": content_type,
+            "citations": citations,
+            "source": "web_search",
+            "model_version": "llama-3.2-3b-instruct-finetuned"
+        }
+        
+        # Append to file in JSON Lines format (one JSON object per line)
+        with open('web_search_data_collection.txt', 'a', encoding='utf-8') as f:
+            f.write(json.dumps(training_entry, ensure_ascii=False) + '\n')
+        
+        logger.info(f"✓ Saved web search training data: {question[:50]}...")
+    except Exception as e:
+        logger.error(f"Failed to save web search training data: {e}")
 
 def allowed_file(filename):
     """Check if file extension is allowed."""
@@ -801,9 +890,14 @@ def chat():
         
         question = data['question']
         conversation_history = data.get('conversation_history', [])  # Optional history
+        web_search_enabled = bool(data.get('web_search_enabled', False))  # User preference for web search
         max_length = data.get('max_length', 512)
         temperature = data.get('temperature', 0.6)
         top_p = data.get('top_p', 0.8)
+
+        logger.info(
+            f"Web search preference (client): {'ENABLED' if web_search_enabled else 'DISABLED'}"
+        )
 
         # Validate parameters
         if not isinstance(question, str) or len(question.strip()) == 0:
@@ -819,13 +913,14 @@ def chat():
                 "error": "conversation_history must be a list of {question, answer} objects"
             }), 400
         
-        # Generate response WITH conversation context
+        # Generate response WITH conversation context and web search preference
         answer, topic, content_type, metrics = generate_response(
             question, 
             max_length=max_length,
             temperature=temperature,
             top_p=top_p,
-            conversation_history=conversation_history
+            conversation_history=conversation_history,
+            web_search_enabled=web_search_enabled
         )
         
         # Log performance metrics
@@ -842,7 +937,11 @@ def chat():
             "metrics": {
                 "cached": metrics.get('cached', False),
                 "inference_time": metrics.get('inference_time', 0),
-                "total_time": metrics.get('total_time', 0)
+                "total_time": metrics.get('total_time', 0),
+                "tokens_generated": metrics.get('tokens_generated', 0),
+                "web_search_used": metrics.get('web_search_used', False),
+                "citations": metrics.get('citations', []),
+                "web_search_enabled": web_search_enabled
             }
         })
         
