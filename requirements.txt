@@ -13,7 +13,7 @@ flask
 flask-cors
 
 # Document processing
-PyPDF2
+PyMuPDF  # Replaces PyPDF2 - 5-10x faster PDF text extraction
 Pillow
 pdf2image
 pytesseract
