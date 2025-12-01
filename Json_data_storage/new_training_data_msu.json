@@ -3562,8 +3562,7 @@
   },
   {
     "instruction": "What is Brightspace at Missouri State University?",
-    "input": "",
-    "output": "Brightspace is the Learning Management System (LMS) used at Missouri State University. Students access course content, assignments, quizzes, grades, announcements, and communication tools through this platform.",
+    "response": "Brightspace is the Learning Management System (LMS) used at Missouri State University. Students access course content, assignments, quizzes, grades, announcements, and communication tools through this platform.",
     "metadata": {
       "topic": "Brightspace - Overview",
       "content_type": "general_info",
@@ -3573,8 +3572,7 @@
   },
   {
     "instruction": "How do I access help inside Brightspace?",
-    "input": "",
-    "output": "Brightspace provides a built-in Virtual Assistant that offers support and guides students through using Brightspace tools. Additional help resources are available through the Brightspace Community.",
+    "response": "Brightspace provides a built-in Virtual Assistant that offers support and guides students through using Brightspace tools. Additional help resources are available through the Brightspace Community.",
     "metadata": {
       "topic": "Brightspace - Help",
       "content_type": "support",
@@ -3584,8 +3582,7 @@
   },
   {
     "instruction": "How can I change my Brightspace notification settings?",
-    "input": "",
-    "output": "You can change notification preferences in Brightspace by opening your account settings and adjusting how you receive alerts about assignments, grades, announcements, and other course activity.",
+    "response": "You can change notification preferences in Brightspace by opening your account settings and adjusting how you receive alerts about assignments, grades, announcements, and other course activity.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "settings",
@@ -3595,8 +3592,7 @@
   },
   {
     "instruction": "How do I update my account settings in Brightspace?",
-    "input": "",
-    "output": "Students can update account settings through the Personal Settings section, which allows adjustments to display options, accessibility settings, time zones, and notifications.",
+    "response": "Students can update account settings through the Personal Settings section, which allows adjustments to display options, accessibility settings, time zones, and notifications.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -3606,8 +3602,7 @@
   },
   {
     "instruction": "How do I navigate my courses in Brightspace?",
-    "input": "",
-    "output": "Students navigate courses using the Course Selector or the My Courses widget on the Brightspace homepage, which offers quick access to current and previous classes.",
+    "response": "Students navigate courses using the Course Selector or the My Courses widget on the Brightspace homepage, which offers quick access to current and previous classes.",
     "metadata": {
       "topic": "Brightspace - Navigation",
       "content_type": "navigation",
@@ -3617,8 +3612,7 @@
   },
   {
     "instruction": "What is the Course Selector in Brightspace?",
-    "input": "",
-    "output": "The Course Selector is a dropdown menu that displays all courses you are enrolled in, allowing fast switching between classes.",
+    "response": "The Course Selector is a dropdown menu that displays all courses you are enrolled in, allowing fast switching between classes.",
     "metadata": {
       "topic": "Brightspace - Course Selector",
       "content_type": "navigation",
@@ -3628,8 +3622,7 @@
   },
   {
     "instruction": "What is the My Courses widget?",
-    "input": "",
-    "output": "The My Courses widget shows all active courses on your Brightspace homepage. Students can click any course card to enter the class.",
+    "response": "The My Courses widget shows all active courses on your Brightspace homepage. Students can click any course card to enter the class.",
     "metadata": {
       "topic": "Brightspace - My Courses Widget",
       "content_type": "navigation",
@@ -3639,8 +3632,7 @@
   },
   {
     "instruction": "How do I remove old courses from Brightspace?",
-    "input": "",
-    "output": "To remove old courses, open the Course Selector and unpin previous semester courses. This hides them from your My Courses widget without deleting them.",
+    "response": "To remove old courses, open the Course Selector and unpin previous semester courses. This hides them from your My Courses widget without deleting them.",
     "metadata": {
       "topic": "Brightspace - Course Management",
       "content_type": "navigation",
@@ -3650,8 +3642,7 @@
   },
   {
     "instruction": "What tools are available on the Brightspace course homepage?",
-    "input": "",
-    "output": "Brightspace course homepages may include content modules, assignments, discussions, quizzes, announcements, grades, class progress, classlist, calendar, and media library.",
+    "response": "Brightspace course homepages may include content modules, assignments, discussions, quizzes, announcements, grades, class progress, classlist, calendar, and media library.",
     "metadata": {
       "topic": "Brightspace - Tools",
       "content_type": "feature_list",
@@ -3661,8 +3652,7 @@
   },
   {
     "instruction": "What is Brightspace Pulse?",
-    "input": "",
-    "output": "Brightspace Pulse is a mobile app that helps students stay organized with course deadlines, upcoming activities, and class updates on iOS or Android.",
+    "response": "Brightspace Pulse is a mobile app that helps students stay organized with course deadlines, upcoming activities, and class updates on iOS or Android.",
     "metadata": {
       "topic": "Brightspace Pulse",
       "content_type": "mobile_access",
@@ -3672,8 +3662,7 @@
   },
   {
     "instruction": "Where can I download the Brightspace Pulse app on iOS?",
-    "input": "",
-    "output": "You can download Brightspace Pulse from the Apple App Store by searching for 'Brightspace Pulse.'",
+    "response": "You can download Brightspace Pulse from the Apple App Store by searching for 'Brightspace Pulse.'",
     "metadata": {
       "topic": "Brightspace Pulse iOS",
       "content_type": "mobile_access",
@@ -3683,8 +3672,7 @@
   },
   {
     "instruction": "Where can I download the Brightspace Pulse app for Android?",
-    "input": "",
-    "output": "Brightspace Pulse can be downloaded from the Google Play Store by searching for 'Brightspace Pulse.'",
+    "response": "Brightspace Pulse can be downloaded from the Google Play Store by searching for 'Brightspace Pulse.'",
     "metadata": {
       "topic": "Brightspace Pulse Android",
       "content_type": "mobile_access",
@@ -3694,8 +3682,7 @@
   },
   {
     "instruction": "How do I check course announcements in Brightspace?",
-    "input": "",
-    "output": "Announcements are displayed on the course homepage and may also appear on your Brightspace main dashboard depending on instructor settings.",
+    "response": "Announcements are displayed on the course homepage and may also appear on your Brightspace main dashboard depending on instructor settings.",
     "metadata": {
       "topic": "Brightspace - Announcements",
       "content_type": "communication",
@@ -3705,8 +3692,7 @@
   },
   {
     "instruction": "Where do I find my assignments in Brightspace?",
-    "input": "",
-    "output": "Assignments are located under the Assignments tool on your course navbar. Instructors may also place links directly inside content modules.",
+    "response": "Assignments are located under the Assignments tool on your course navbar. Instructors may also place links directly inside content modules.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -3716,8 +3702,7 @@
   },
   {
     "instruction": "How do I submit assignments in Brightspace?",
-    "input": "",
-    "output": "To submit an assignment, open the Assignments tool, select the assignment you want to complete, upload your file or text submission, and click Submit. Confirmation details will appear after submission.",
+    "response": "To submit an assignment, open the Assignments tool, select the assignment you want to complete, upload your file or text submission, and click Submit. Confirmation details will appear after submission.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -3727,8 +3712,7 @@
   },
   {
     "instruction": "Where can I see my grades in Brightspace?",
-    "input": "",
-    "output": "Grades are shown inside the Grades tool on the course navbar. Instructors may choose whether to display point totals, letter grades, or feedback.",
+    "response": "Grades are shown inside the Grades tool on the course navbar. Instructors may choose whether to display point totals, letter grades, or feedback.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -3738,8 +3722,7 @@
   },
   {
     "instruction": "How do quizzes work in Brightspace?",
-    "input": "",
-    "output": "Quizzes in Brightspace may include multiple choice, true/false, written response, matching, and other question types. Instructors may set time limits, attempts, and availability dates.",
+    "response": "Quizzes in Brightspace may include multiple choice, true/false, written response, matching, and other question types. Instructors may set time limits, attempts, and availability dates.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -3749,8 +3732,7 @@
   },
   {
     "instruction": "Where do I take quizzes on Brightspace?",
-    "input": "",
-    "output": "You can take quizzes by clicking the Quizzes tool in the course navbar or by accessing quiz links inside course content modules.",
+    "response": "You can take quizzes by clicking the Quizzes tool in the course navbar or by accessing quiz links inside course content modules.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -3760,8 +3742,7 @@
   },
   {
     "instruction": "How do discussions work in Brightspace?",
-    "input": "",
-    "output": "Brightspace discussions are organized into forums and topics. Students create and reply to discussion threads within each topic.",
+    "response": "Brightspace discussions are organized into forums and topics. Students create and reply to discussion threads within each topic.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -3771,8 +3752,7 @@
   },
   {
     "instruction": "How do I post to a discussion in Brightspace?",
-    "input": "",
-    "output": "Open the Discussions tool, choose a topic, click Start a New Thread, enter your message, and click Post. Some instructors require you to post before seeing others’ responses.",
+    "response": "Open the Discussions tool, choose a topic, click Start a New Thread, enter your message, and click Post. Some instructors require you to post before seeing others’ responses.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -3782,8 +3762,7 @@
   },
   {
     "instruction": "What is the Class Progress tool in Brightspace?",
-    "input": "",
-    "output": "Class Progress shows your progress in a course, including grades, activity logs, content completion, and discussion participation.",
+    "response": "Class Progress shows your progress in a course, including grades, activity logs, content completion, and discussion participation.",
     "metadata": {
       "topic": "Brightspace - Class Progress",
       "content_type": "analytics",
@@ -3793,8 +3772,7 @@
   },
   {
     "instruction": "What is the Media Library in Brightspace?",
-    "input": "",
-    "output": "The Media Library stores course-related audio and video content. Instructors may use it to upload recordings, lectures, or media resources.",
+    "response": "The Media Library stores course-related audio and video content. Instructors may use it to upload recordings, lectures, or media resources.",
     "metadata": {
       "topic": "Brightspace - Media Library",
       "content_type": "media",
@@ -3804,8 +3782,7 @@
   },
   {
     "instruction": "What is the Classlist tool in Brightspace?",
-    "input": "",
-    "output": "Classlist lists all students and instructors enrolled in a course. It also allows you to send emails to classmates or your instructor.",
+    "response": "Classlist lists all students and instructors enrolled in a course. It also allows you to send emails to classmates or your instructor.",
     "metadata": {
       "topic": "Brightspace - Classlist",
       "content_type": "communication",
@@ -3815,8 +3792,7 @@
   },
   {
     "instruction": "How do I use the Brightspace Calendar?",
-    "input": "",
-    "output": "The Calendar displays upcoming due dates, quizzes, assignments, events, and course activities added by your instructor.",
+    "response": "The Calendar displays upcoming due dates, quizzes, assignments, events, and course activities added by your instructor.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -3826,8 +3802,7 @@
   },
   {
     "instruction": "What replaces Blackboard Achievements in Brightspace?",
-    "input": "",
-    "output": "In Brightspace, the Awards tool replaces Blackboard's Achievements tool.",
+    "response": "In Brightspace, the Awards tool replaces Blackboard's Achievements tool.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -3837,8 +3812,7 @@
   },
   {
     "instruction": "What is Brightspace’s equivalent of Blackboard Activity Stream?",
-    "input": "",
-    "output": "Brightspace uses Update Alerts instead of Blackboard’s Activity Stream.",
+    "response": "Brightspace uses Update Alerts instead of Blackboard’s Activity Stream.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -3848,8 +3822,7 @@
   },
   {
     "instruction": "What replaces Blackboard Content Item in Brightspace?",
-    "input": "",
-    "output": "A Content Topic in Brightspace replaces the Content Item feature in Blackboard.",
+    "response": "A Content Topic in Brightspace replaces the Content Item feature in Blackboard.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -3859,8 +3832,7 @@
   },
   {
     "instruction": "What is Brightspace’s alternative to Blackboard Journals?",
-    "input": "",
-    "output": "Brightspace does not include a Journals tool. Instructors can use single-person discussion groups as an alternative.",
+    "response": "Brightspace does not include a Journals tool. Instructors can use single-person discussion groups as an alternative.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -3870,8 +3842,7 @@
   },
   {
     "instruction": "What replaces Blackboard Tests in Brightspace?",
-    "input": "",
-    "output": "Brightspace Quizzes replace Blackboard Tests.",
+    "response": "Brightspace Quizzes replace Blackboard Tests.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -3881,8 +3852,7 @@
   },
   {
     "instruction": "What replaces SafeAssign in Brightspace?",
-    "input": "",
-    "output": "Brightspace uses Turnitin instead of Blackboard's SafeAssign for plagiarism checking.",
+    "response": "Brightspace uses Turnitin instead of Blackboard's SafeAssign for plagiarism checking.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -3892,8 +3862,7 @@
   },
   {
     "instruction": "Where do I go for Brightspace support at Missouri State University?",
-    "input": "",
-    "output": "Students can request help through Missouri State’s Service Catalog under the Student LMS Support category.",
+    "response": "Students can request help through Missouri State’s Service Catalog under the Student LMS Support category.",
     "metadata": {
       "topic": "Brightspace - Support",
       "content_type": "support",
@@ -3903,8 +3872,7 @@
   },
   {
     "instruction": "What is the Content tool in Brightspace?",
-    "input": "",
-    "output": "The Content tool is where instructors organize course materials into modules and topics. Students use it to access lectures, documents, assignments, quizzes, videos, and learning activities.",
+    "response": "The Content tool is where instructors organize course materials into modules and topics. Students use it to access lectures, documents, assignments, quizzes, videos, and learning activities.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -3914,8 +3882,7 @@
   },
   {
     "instruction": "How do I navigate modules in Brightspace?",
-    "input": "",
-    "output": "Modules appear as units or sections inside the Content tool. Clicking a module displays all topics, such as readings, assignment links, and embedded media.",
+    "response": "Modules appear as units or sections inside the Content tool. Clicking a module displays all topics, such as readings, assignment links, and embedded media.",
     "metadata": {
       "topic": "Brightspace - Content Modules",
       "content_type": "content",
@@ -3925,8 +3892,7 @@
   },
   {
     "instruction": "What is a Content Topic in Brightspace?",
-    "input": "",
-    "output": "A Content Topic is any individual item inside a module, such as a file, page, link, assignment, quiz, or video.",
+    "response": "A Content Topic is any individual item inside a module, such as a file, page, link, assignment, quiz, or video.",
     "metadata": {
       "topic": "Brightspace - Content Topics",
       "content_type": "content",
@@ -3936,8 +3902,7 @@
   },
   {
     "instruction": "How do I check if I've completed a module?",
-    "input": "",
-    "output": "If instructors enable completion tracking, a checkmark appears next to completed items. Some modules may automatically track progress based on viewing or completion of tasks.",
+    "response": "If instructors enable completion tracking, a checkmark appears next to completed items. Some modules may automatically track progress based on viewing or completion of tasks.",
     "metadata": {
       "topic": "Brightspace - Completion Tracking",
       "content_type": "analytics",
@@ -3947,8 +3912,7 @@
   },
   {
     "instruction": "What is the Navbar in Brightspace?",
-    "input": "",
-    "output": "The Navbar is the top menu bar inside each course that gives access to tools like Content, Assignments, Grades, Discussions, Quizzes, and Classlist.",
+    "response": "The Navbar is the top menu bar inside each course that gives access to tools like Content, Assignments, Grades, Discussions, Quizzes, and Classlist.",
     "metadata": {
       "topic": "Brightspace - Navbar",
       "content_type": "navigation",
@@ -3958,8 +3922,7 @@
   },
   {
     "instruction": "Why does my Navbar look different in each course?",
-    "input": "",
-    "output": "Instructors can customize their Navbar to include only the tools they use, so the layout may vary between courses.",
+    "response": "Instructors can customize their Navbar to include only the tools they use, so the layout may vary between courses.",
     "metadata": {
       "topic": "Brightspace - Navbar",
       "content_type": "navigation",
@@ -3969,8 +3932,7 @@
   },
   {
     "instruction": "What are Update Alerts in Brightspace?",
-    "input": "",
-    "output": "Update Alerts notify you about new grades, feedback, assignment updates, quizzes, and discussion activity.",
+    "response": "Update Alerts notify you about new grades, feedback, assignment updates, quizzes, and discussion activity.",
     "metadata": {
       "topic": "Brightspace - Alerts",
       "content_type": "notifications",
@@ -3980,8 +3942,7 @@
   },
   {
     "instruction": "Where do I find my Update Alerts in Brightspace?",
-    "input": "",
-    "output": "Update Alerts appear in the top-right corner of Brightspace as a bell icon.",
+    "response": "Update Alerts appear in the top-right corner of Brightspace as a bell icon.",
     "metadata": {
       "topic": "Brightspace - Alerts",
       "content_type": "notifications",
@@ -3991,8 +3952,7 @@
   },
   {
     "instruction": "What are Instant Messages in Brightspace?",
-    "input": "",
-    "output": "Instant Messages allow real-time messaging between students and instructors inside Brightspace.",
+    "response": "Instant Messages allow real-time messaging between students and instructors inside Brightspace.",
     "metadata": {
       "topic": "Brightspace - Instant Messages",
       "content_type": "communication",
@@ -4002,8 +3962,7 @@
   },
   {
     "instruction": "What is the Email tool in Brightspace?",
-    "input": "",
-    "output": "The Email tool lets you send messages to classmates or instructors. Messages are sent to the recipient’s university email address.",
+    "response": "The Email tool lets you send messages to classmates or instructors. Messages are sent to the recipient’s university email address.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -4013,8 +3972,7 @@
   },
   {
     "instruction": "Does Brightspace have an internal inbox?",
-    "input": "",
-    "output": "Brightspace does not provide an internal inbox. Emails sent through Brightspace arrive in your university email account.",
+    "response": "Brightspace does not provide an internal inbox. Emails sent through Brightspace arrive in your university email account.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -4024,8 +3982,7 @@
   },
   {
     "instruction": "What is the difference between Announcements and Update Alerts?",
-    "input": "",
-    "output": "Announcements are instructor-posted messages on the course homepage. Update Alerts are system notifications about grades, due dates, or new content.",
+    "response": "Announcements are instructor-posted messages on the course homepage. Update Alerts are system notifications about grades, due dates, or new content.",
     "metadata": {
       "topic": "Brightspace - Communication Tools",
       "content_type": "communication",
@@ -4035,8 +3992,7 @@
   },
   {
     "instruction": "How do I reply to an Announcement in Brightspace?",
-    "input": "",
-    "output": "Students cannot reply directly to Announcements. You must email or message your instructor if you need clarification.",
+    "response": "Students cannot reply directly to Announcements. You must email or message your instructor if you need clarification.",
     "metadata": {
       "topic": "Brightspace - Announcements",
       "content_type": "communication",
@@ -4046,8 +4002,7 @@
   },
   {
     "instruction": "Why can't I see my discussion posts?",
-    "input": "",
-    "output": "Some instructors enable 'must post first' settings, meaning you must create your own post before viewing replies from classmates.",
+    "response": "Some instructors enable 'must post first' settings, meaning you must create your own post before viewing replies from classmates.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -4057,8 +4012,7 @@
   },
   {
     "instruction": "What does 'must post first' mean in a Brightspace discussion?",
-    "input": "",
-    "output": "You cannot view other students' replies until you've posted your own thread. This encourages original responses.",
+    "response": "You cannot view other students' replies until you've posted your own thread. This encourages original responses.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -4068,8 +4022,7 @@
   },
   {
     "instruction": "Can I edit my discussion post in Brightspace?",
-    "input": "",
-    "output": "Whether you can edit or delete posts depends on instructor settings. Some instructors allow edits; others restrict changes after posting.",
+    "response": "Whether you can edit or delete posts depends on instructor settings. Some instructors allow edits; others restrict changes after posting.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -4079,8 +4032,7 @@
   },
   {
     "instruction": "Where do I submit group assignments in Brightspace?",
-    "input": "",
-    "output": "Group assignments appear in the Assignments tool, marked with a group icon. Only one member needs to submit on behalf of the group.",
+    "response": "Group assignments appear in the Assignments tool, marked with a group icon. Only one member needs to submit on behalf of the group.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -4090,8 +4042,7 @@
   },
   {
     "instruction": "How do I view assignment feedback in Brightspace?",
-    "input": "",
-    "output": "Feedback for assignments can be found inside the Assignments tool by opening the submitted assignment. Some instructors also post feedback through Grades.",
+    "response": "Feedback for assignments can be found inside the Assignments tool by opening the submitted assignment. Some instructors also post feedback through Grades.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "feedback",
@@ -4101,8 +4052,7 @@
   },
   {
     "instruction": "Why is my assignment still marked as 'not submitted' after I upload it?",
-    "input": "",
-    "output": "Be sure you clicked the Submit button. Uploading a file is not enough—your submission must show a confirmation receipt.",
+    "response": "Be sure you clicked the Submit button. Uploading a file is not enough—your submission must show a confirmation receipt.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -4112,8 +4062,7 @@
   },
   {
     "instruction": "Where do I find assignment due dates in Brightspace?",
-    "input": "",
-    "output": "Due dates may appear in the Assignments tool, the Calendar, the Content module, and Update Alerts.",
+    "response": "Due dates may appear in the Assignments tool, the Calendar, the Content module, and Update Alerts.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -4123,8 +4072,7 @@
   },
   {
     "instruction": "What is Turnitin inside Brightspace?",
-    "input": "",
-    "output": "Turnitin is the plagiarism detection system used in Brightspace. It may automatically analyze assignment submissions and produce a similarity report.",
+    "response": "Turnitin is the plagiarism detection system used in Brightspace. It may automatically analyze assignment submissions and produce a similarity report.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -4134,8 +4082,7 @@
   },
   {
     "instruction": "Where do I see my Turnitin similarity score?",
-    "input": "",
-    "output": "If your instructor enables it, a similarity score appears next to your assignment submission after processing.",
+    "response": "If your instructor enables it, a similarity score appears next to your assignment submission after processing.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -4145,8 +4092,7 @@
   },
   {
     "instruction": "Why can’t I see my Turnitin similarity score?",
-    "input": "",
-    "output": "Instructors control whether students can view similarity reports. If you cannot see your score, your instructor may have disabled student visibility.",
+    "response": "Instructors control whether students can view similarity reports. If you cannot see your score, your instructor may have disabled student visibility.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -4156,8 +4102,7 @@
   },
   {
     "instruction": "How do I view quiz feedback in Brightspace?",
-    "input": "",
-    "output": "Quiz feedback may include correct answers, instructor comments, or scores. Availability of this information depends on instructor settings.",
+    "response": "Quiz feedback may include correct answers, instructor comments, or scores. Availability of this information depends on instructor settings.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4167,8 +4112,7 @@
   },
   {
     "instruction": "Why can’t I see correct answers after taking a quiz?",
-    "input": "",
-    "output": "Instructors can restrict visibility of correct answers. If you cannot view them, the instructor has likely disabled post-quiz question details.",
+    "response": "Instructors can restrict visibility of correct answers. If you cannot view them, the instructor has likely disabled post-quiz question details.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4178,8 +4122,7 @@
   },
   {
     "instruction": "What types of quiz questions does Brightspace support?",
-    "input": "",
-    "output": "Brightspace supports multiple choice, true/false, written response, matching, ordering, multi-select, arithmetic, and fill-in-the-blanks questions.",
+    "response": "Brightspace supports multiple choice, true/false, written response, matching, ordering, multi-select, arithmetic, and fill-in-the-blanks questions.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4189,8 +4132,7 @@
   },
   {
     "instruction": "How do I check my quiz availability and due dates?",
-    "input": "",
-    "output": "Quiz dates appear in the Quizzes tool, Calendar, Content modules, and Update Alerts depending on instructor setup.",
+    "response": "Quiz dates appear in the Quizzes tool, Calendar, Content modules, and Update Alerts depending on instructor setup.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4200,8 +4142,7 @@
   },
   {
     "instruction": "Why does my quiz say 'Not Yet Available'?",
-    "input": "",
-    "output": "This message appears when a quiz has not reached its start date or time. Instructors control availability.",
+    "response": "This message appears when a quiz has not reached its start date or time. Instructors control availability.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4211,8 +4152,7 @@
   },
   {
     "instruction": "What is a timed quiz in Brightspace?",
-    "input": "",
-    "output": "A timed quiz counts down once you start it. Time continues even if you close the browser or lose connection unless set otherwise.",
+    "response": "A timed quiz counts down once you start it. Time continues even if you close the browser or lose connection unless set otherwise.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4222,8 +4162,7 @@
   },
   {
     "instruction": "Can I pause a timed quiz in Brightspace?",
-    "input": "",
-    "output": "Most timed quizzes cannot be paused. The timer continues until it expires unless the instructor allows special exceptions.",
+    "response": "Most timed quizzes cannot be paused. The timer continues until it expires unless the instructor allows special exceptions.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4233,8 +4172,7 @@
   },
   {
     "instruction": "What is Special Access in Brightspace?",
-    "input": "",
-    "output": "Special Access allows instructors to extend deadlines, offer more quiz attempts, or extend quiz times for specific students.",
+    "response": "Special Access allows instructors to extend deadlines, offer more quiz attempts, or extend quiz times for specific students.",
     "metadata": {
       "topic": "Brightspace - Special Access",
       "content_type": "accommodations",
@@ -4244,8 +4182,7 @@
   },
   {
     "instruction": "Where do I see if I have Special Access?",
-    "input": "",
-    "output": "Special Access settings appear in the details of a quiz or assignment when granted by an instructor.",
+    "response": "Special Access settings appear in the details of a quiz or assignment when granted by an instructor.",
     "metadata": {
       "topic": "Brightspace - Special Access",
       "content_type": "accommodations",
@@ -4255,8 +4192,7 @@
   },
   {
     "instruction": "What is the Awards tool in Brightspace?",
-    "input": "",
-    "output": "The Awards tool recognizes achievements with digital badges and certificates issued by instructors.",
+    "response": "The Awards tool recognizes achievements with digital badges and certificates issued by instructors.",
     "metadata": {
       "topic": "Brightspace - Awards",
       "content_type": "recognition",
@@ -4266,8 +4202,7 @@
   },
   {
     "instruction": "How do I view earned awards in Brightspace?",
-    "input": "",
-    "output": "Students can view awards by opening the Awards tool in their course or via their Profile menu.",
+    "response": "Students can view awards by opening the Awards tool in their course or via their Profile menu.",
     "metadata": {
       "topic": "Brightspace - Awards",
       "content_type": "recognition",
@@ -4277,8 +4212,7 @@
   },
   {
     "instruction": "What is the Calendar tool used for in Brightspace?",
-    "input": "",
-    "output": "The Calendar tool keeps track of due dates, events, quizzes, assignments, and instructor-posted activities across all courses.",
+    "response": "The Calendar tool keeps track of due dates, events, quizzes, assignments, and instructor-posted activities across all courses.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -4288,8 +4222,7 @@
   },
   {
     "instruction": "How do I sync Brightspace Calendar with my phone?",
-    "input": "",
-    "output": "Some Brightspace calendars allow iCal subscription, which can sync with Google Calendar or Apple Calendar if enabled by instructors.",
+    "response": "Some Brightspace calendars allow iCal subscription, which can sync with Google Calendar or Apple Calendar if enabled by instructors.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -4299,8 +4232,7 @@
   },
   {
     "instruction": "What is the Virtual Classroom in Brightspace?",
-    "input": "",
-    "output": "Virtual Classroom is a video meeting tool used to host live classes, office hours, presentations, and recorded sessions.",
+    "response": "Virtual Classroom is a video meeting tool used to host live classes, office hours, presentations, and recorded sessions.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -4310,8 +4242,7 @@
   },
   {
     "instruction": "Can Virtual Classroom sessions be recorded?",
-    "input": "",
-    "output": "Instructors may choose to record Virtual Classroom sessions, and recordings become available inside the course for students to view.",
+    "response": "Instructors may choose to record Virtual Classroom sessions, and recordings become available inside the course for students to view.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -4321,8 +4252,7 @@
   },
   {
     "instruction": "Where do I find Virtual Classroom recordings?",
-    "input": "",
-    "output": "Recordings appear within the Virtual Classroom tool or inside the Content modules depending on how the instructor publishes them.",
+    "response": "Recordings appear within the Virtual Classroom tool or inside the Content modules depending on how the instructor publishes them.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -4332,8 +4262,7 @@
   },
   {
     "instruction": "Why can't I join a Virtual Classroom meeting?",
-    "input": "",
-    "output": "You may not be able to join if the meeting has reached participant limits, has expired, or is restricted until a certain time.",
+    "response": "You may not be able to join if the meeting has reached participant limits, has expired, or is restricted until a certain time.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -4343,8 +4272,7 @@
   },
   {
     "instruction": "What is the Classlist used for?",
-    "input": "",
-    "output": "Classlist shows all students, teaching assistants, and instructors enrolled in the course. It can also be used to send emails.",
+    "response": "Classlist shows all students, teaching assistants, and instructors enrolled in the course. It can also be used to send emails.",
     "metadata": {
       "topic": "Brightspace - Classlist",
       "content_type": "communication",
@@ -4354,8 +4282,7 @@
   },
   {
     "instruction": "Why can't I email my instructor from Classlist?",
-    "input": "",
-    "output": "If emailing is disabled, your instructor may have adjusted email permissions or the course may restrict emailing through Brightspace.",
+    "response": "If emailing is disabled, your instructor may have adjusted email permissions or the course may restrict emailing through Brightspace.",
     "metadata": {
       "topic": "Brightspace - Classlist",
       "content_type": "communication",
@@ -4365,8 +4292,7 @@
   },
   {
     "instruction": "What is a Self-Enrollment Group in Brightspace?",
-    "input": "",
-    "output": "Self-Enrollment Groups allow students to choose their own group within a course for assignments, discussions, or projects.",
+    "response": "Self-Enrollment Groups allow students to choose their own group within a course for assignments, discussions, or projects.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -4376,8 +4302,7 @@
   },
   {
     "instruction": "How do I join a Self-Enrollment Group?",
-    "input": "",
-    "output": "Open the Groups tool and select the group you want to join, then click Enroll. Availability depends on instructor settings.",
+    "response": "Open the Groups tool and select the group you want to join, then click Enroll. Availability depends on instructor settings.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -4387,8 +4312,7 @@
   },
   {
     "instruction": "Why can't I join a Self-Enrollment Group?",
-    "input": "",
-    "output": "Groups may be full, enrollment may not have opened yet, or your instructor may have assigned groups manually.",
+    "response": "Groups may be full, enrollment may not have opened yet, or your instructor may have assigned groups manually.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -4398,8 +4322,7 @@
   },
   {
     "instruction": "What is a Group Discussion in Brightspace?",
-    "input": "",
-    "output": "Group Discussions restrict discussion areas so each group can only view and respond within its designated discussion topic.",
+    "response": "Group Discussions restrict discussion areas so each group can only view and respond within its designated discussion topic.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -4409,8 +4332,7 @@
   },
   {
     "instruction": "How do I upload media to a Brightspace assignment?",
-    "input": "",
-    "output": "Assignments may allow audio or video submissions. Use the Record or Upload buttons within the assignment submission window.",
+    "response": "Assignments may allow audio or video submissions. Use the Record or Upload buttons within the assignment submission window.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -4420,8 +4342,7 @@
   },
   {
     "instruction": "Why is my video upload failing in Brightspace?",
-    "input": "",
-    "output": "Large files, slow internet, or unsupported formats may cause failures. Compressing your video or using a wired connection may help.",
+    "response": "Large files, slow internet, or unsupported formats may cause failures. Compressing your video or using a wired connection may help.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -4431,8 +4352,7 @@
   },
   {
     "instruction": "What is the Work To Do widget in Brightspace?",
-    "input": "",
-    "output": "Work To Do shows upcoming and overdue activities across all your courses, such as assignments, quizzes, and discussions.",
+    "response": "Work To Do shows upcoming and overdue activities across all your courses, such as assignments, quizzes, and discussions.",
     "metadata": {
       "topic": "Brightspace - Work To Do",
       "content_type": "dashboard",
@@ -4442,8 +4362,7 @@
   },
   {
     "instruction": "Why is the Work To Do widget empty?",
-    "input": "",
-    "output": "Instructors must set due dates for activities to appear. If a course uses no due dates, the widget may show nothing.",
+    "response": "Instructors must set due dates for activities to appear. If a course uses no due dates, the widget may show nothing.",
     "metadata": {
       "topic": "Brightspace - Work To Do",
       "content_type": "dashboard",
@@ -4453,8 +4372,7 @@
   },
   {
     "instruction": "What is Class Progress used for?",
-    "input": "",
-    "output": "Class Progress helps you monitor your participation, grade trends, content completion, and access logs.",
+    "response": "Class Progress helps you monitor your participation, grade trends, content completion, and access logs.",
     "metadata": {
       "topic": "Brightspace - Class Progress",
       "content_type": "analytics",
@@ -4464,8 +4382,7 @@
   },
   {
     "instruction": "Can instructors see my activity on Brightspace?",
-    "input": "",
-    "output": "Yes. Instructors can view login history, content access, discussion activity, assignment submissions, and quiz attempts.",
+    "response": "Yes. Instructors can view login history, content access, discussion activity, assignment submissions, and quiz attempts.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -4475,8 +4392,7 @@
   },
   {
     "instruction": "Does Brightspace track when I open a file?",
-    "input": "",
-    "output": "If completion tracking is enabled, Brightspace records when you access content topics.",
+    "response": "If completion tracking is enabled, Brightspace records when you access content topics.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -4486,8 +4402,7 @@
   },
   {
     "instruction": "How do I print course materials in Brightspace?",
-    "input": "",
-    "output": "Many documents can be downloaded and printed directly from their Content Topic page.",
+    "response": "Many documents can be downloaded and printed directly from their Content Topic page.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -4497,8 +4412,7 @@
   },
   {
     "instruction": "How do I download files from Brightspace?",
-    "input": "",
-    "output": "Open the Content Topic and click the Download button if available. Some file types may open directly in your browser.",
+    "response": "Open the Content Topic and click the Download button if available. Some file types may open directly in your browser.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -4508,8 +4422,7 @@
   },
   {
     "instruction": "Can I use Dark Mode in Brightspace?",
-    "input": "",
-    "output": "Brightspace supports browser-based dark mode on many devices, but the LMS does not offer a built-in dark theme in all versions.",
+    "response": "Brightspace supports browser-based dark mode on many devices, but the LMS does not offer a built-in dark theme in all versions.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -4519,8 +4432,7 @@
   },
   {
     "instruction": "What browser works best for Brightspace?",
-    "input": "",
-    "output": "Brightspace works best on updated versions of Chrome, Firefox, Safari, and Edge. Out-of-date browsers may cause issues.",
+    "response": "Brightspace works best on updated versions of Chrome, Firefox, Safari, and Edge. Out-of-date browsers may cause issues.",
     "metadata": {
       "topic": "Brightspace - Requirements",
       "content_type": "technical",
@@ -4530,8 +4442,7 @@
   },
   {
     "instruction": "Why am I being logged out of Brightspace?",
-    "input": "",
-    "output": "Brightspace automatically logs out after periods of inactivity for security reasons. Network interruptions may also cause logouts.",
+    "response": "Brightspace automatically logs out after periods of inactivity for security reasons. Network interruptions may also cause logouts.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "technical",
@@ -4541,8 +4452,7 @@
   },
   {
     "instruction": "How do I access course videos in Brightspace?",
-    "input": "",
-    "output": "Course videos are usually located in the Content tool or Media Library. Some instructors embed videos directly in modules.",
+    "response": "Course videos are usually located in the Content tool or Media Library. Some instructors embed videos directly in modules.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -4552,8 +4462,7 @@
   },
   {
     "instruction": "Why can't I see videos in Brightspace?",
-    "input": "",
-    "output": "Browser extensions, VPNs, or blocked cookies may interfere with video playback. Try disabling blockers or switching browsers.",
+    "response": "Browser extensions, VPNs, or blocked cookies may interfere with video playback. Try disabling blockers or switching browsers.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -4563,8 +4472,7 @@
   },
   {
     "instruction": "How does the Grades tool work in Brightspace?",
-    "input": "",
-    "output": "The Grades tool displays scores, weighted categories, instructor feedback, and overall calculated grades if enabled.",
+    "response": "The Grades tool displays scores, weighted categories, instructor feedback, and overall calculated grades if enabled.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -4574,8 +4482,7 @@
   },
   {
     "instruction": "Why can’t I see my final grade in Brightspace?",
-    "input": "",
-    "output": "Instructors must release final grades. If you cannot see it, it may not have been published yet.",
+    "response": "Instructors must release final grades. If you cannot see it, it may not have been published yet.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -4585,8 +4492,7 @@
   },
   {
     "instruction": "What is the difference between a draft and submitted assignment?",
-    "input": "",
-    "output": "A draft appears when you upload a file but do not click Submit. A submitted assignment shows a confirmation receipt.",
+    "response": "A draft appears when you upload a file but do not click Submit. A submitted assignment shows a confirmation receipt.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -4596,8 +4502,7 @@
   },
   {
     "instruction": "Why can't I upload multiple files to an assignment?",
-    "input": "",
-    "output": "Some assignments restrict submissions to a single file. The instructor controls upload settings.",
+    "response": "Some assignments restrict submissions to a single file. The instructor controls upload settings.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -4607,8 +4512,7 @@
   },
   {
     "instruction": "How do I check extension dates for assignments?",
-    "input": "",
-    "output": "Extensions appear inside the Assignment details if granted by the instructor under Special Access.",
+    "response": "Extensions appear inside the Assignment details if granted by the instructor under Special Access.",
     "metadata": {
       "topic": "Brightspace - Special Access",
       "content_type": "accommodations",
@@ -4618,8 +4522,7 @@
   },
   {
     "instruction": "Where do I see feedback for quizzes?",
-    "input": "",
-    "output": "Quiz feedback appears in the Quizzes tool after you open a completed attempt, depending on instructor settings.",
+    "response": "Quiz feedback appears in the Quizzes tool after you open a completed attempt, depending on instructor settings.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4629,8 +4532,7 @@
   },
   {
     "instruction": "Why does my quiz show a zero even though I submitted it?",
-    "input": "",
-    "output": "If the quiz requires manual grading for written responses, the score may show as zero until the instructor finishes grading.",
+    "response": "If the quiz requires manual grading for written responses, the score may show as zero until the instructor finishes grading.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4640,8 +4542,7 @@
   },
   {
     "instruction": "What is Content Completion Tracking?",
-    "input": "",
-    "output": "Completion Tracking shows whether you have opened or completed content items. It may be automatic or manual depending on instructor preferences.",
+    "response": "Completion Tracking shows whether you have opened or completed content items. It may be automatic or manual depending on instructor preferences.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -4651,8 +4552,7 @@
   },
   {
     "instruction": "How do I access course announcements from previous weeks?",
-    "input": "",
-    "output": "Previous announcements appear at the bottom of the Announcements widget on the course homepage.",
+    "response": "Previous announcements appear at the bottom of the Announcements widget on the course homepage.",
     "metadata": {
       "topic": "Brightspace - Announcements",
       "content_type": "communication",
@@ -4662,8 +4562,7 @@
   },
   {
     "instruction": "Why is my course missing in Brightspace?",
-    "input": "",
-    "output": "Courses may not appear if you are not enrolled, the course is not yet active, or the instructor has not released it.",
+    "response": "Courses may not appear if you are not enrolled, the course is not yet active, or the instructor has not released it.",
     "metadata": {
       "topic": "Brightspace - Courses",
       "content_type": "navigation",
@@ -4673,8 +4572,7 @@
   },
   {
     "instruction": "When will my course appear in Brightspace?",
-    "input": "",
-    "output": "Most courses appear before the semester begins, but instructors control when courses become active for students.",
+    "response": "Most courses appear before the semester begins, but instructors control when courses become active for students.",
     "metadata": {
       "topic": "Brightspace - Courses",
       "content_type": "navigation",
@@ -4684,8 +4582,7 @@
   },
   {
     "instruction": "Why am I seeing a 403 error in Brightspace?",
-    "input": "",
-    "output": "A 403 error usually means you do not have permission to access that page. The instructor may not have opened the content yet.",
+    "response": "A 403 error usually means you do not have permission to access that page. The instructor may not have opened the content yet.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -4695,8 +4592,7 @@
   },
   {
     "instruction": "What should I do if Brightspace freezes during a quiz?",
-    "input": "",
-    "output": "Do not refresh immediately. Wait to see if the system recovers. If the quiz times out or fails, contact your instructor with screenshots.",
+    "response": "Do not refresh immediately. Wait to see if the system recovers. If the quiz times out or fails, contact your instructor with screenshots.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "technical",
@@ -4706,8 +4602,7 @@
   },
   {
     "instruction": "Can Brightspace run on mobile browsers?",
-    "input": "",
-    "output": "Yes, Brightspace supports mobile browsers, but some tools work better in the app or on desktop.",
+    "response": "Yes, Brightspace supports mobile browsers, but some tools work better in the app or on desktop.",
     "metadata": {
       "topic": "Brightspace - Mobile",
       "content_type": "mobile_access",
@@ -4717,8 +4612,7 @@
   },
   {
     "instruction": "How can I contact my instructor in Brightspace?",
-    "input": "",
-    "output": "Use the Email tool or Classlist to send messages. Some courses also use Announcements or Instant Messages.",
+    "response": "Use the Email tool or Classlist to send messages. Some courses also use Announcements or Instant Messages.",
     "metadata": {
       "topic": "Brightspace - Communication",
       "content_type": "communication",
@@ -4728,8 +4622,7 @@
   },
   {
     "instruction": "How do I check if my assignment was submitted?",
-    "input": "",
-    "output": "After submitting, Brightspace shows a confirmation message and stores a submission receipt in the Assignments tool.",
+    "response": "After submitting, Brightspace shows a confirmation message and stores a submission receipt in the Assignments tool.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -4739,8 +4632,7 @@
   },
   {
     "instruction": "What does the lock icon in Quizzes mean?",
-    "input": "",
-    "output": "A lock icon means the quiz is restricted by date or conditions such as prerequisites or Special Access.",
+    "response": "A lock icon means the quiz is restricted by date or conditions such as prerequisites or Special Access.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -4750,8 +4642,7 @@
   },
   {
     "instruction": "What does the blue dot mean next to content items?",
-    "input": "",
-    "output": "A blue dot indicates that the content item is new or has not been viewed yet.",
+    "response": "A blue dot indicates that the content item is new or has not been viewed yet.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -4761,8 +4652,7 @@
   },
   {
     "instruction": "How do I change my profile picture in Brightspace?",
-    "input": "",
-    "output": "To change your profile picture, open your Profile menu from the top-right corner, click Profile, and upload a new photo. Some institutions require the image to meet specific guidelines.",
+    "response": "To change your profile picture, open your Profile menu from the top-right corner, click Profile, and upload a new photo. Some institutions require the image to meet specific guidelines.",
     "metadata": {
       "topic": "Brightspace - Profile",
       "content_type": "settings",
@@ -4772,8 +4662,7 @@
   },
   {
     "instruction": "Why can't I change my profile picture in Brightspace?",
-    "input": "",
-    "output": "If you cannot change your profile picture, your institution may have disabled this feature or restricted profile edits.",
+    "response": "If you cannot change your profile picture, your institution may have disabled this feature or restricted profile edits.",
     "metadata": {
       "topic": "Brightspace - Profile",
       "content_type": "settings",
@@ -4783,8 +4672,7 @@
   },
   {
     "instruction": "How do I change my Brightspace display name?",
-    "input": "",
-    "output": "Display names are pulled from university records and cannot be changed inside Brightspace by students.",
+    "response": "Display names are pulled from university records and cannot be changed inside Brightspace by students.",
     "metadata": {
       "topic": "Brightspace - Profile",
       "content_type": "settings",
@@ -4794,8 +4682,7 @@
   },
   {
     "instruction": "How do I change my time zone in Brightspace?",
-    "input": "",
-    "output": "You can change your time zone in Account Settings under the Preferences tab. This ensures due dates and times display accurately.",
+    "response": "You can change your time zone in Account Settings under the Preferences tab. This ensures due dates and times display accurately.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -4805,8 +4692,7 @@
   },
   {
     "instruction": "Why are my due dates showing the wrong time?",
-    "input": "",
-    "output": "Your Brightspace time zone may not match your actual location. Adjust it in Account Settings under Preferences.",
+    "response": "Your Brightspace time zone may not match your actual location. Adjust it in Account Settings under Preferences.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -4816,8 +4702,7 @@
   },
   {
     "instruction": "What is Accessibility Mode in Brightspace?",
-    "input": "",
-    "output": "Accessibility Mode adjusts Brightspace to support screen readers and other accessibility tools by simplifying navigation and content structure.",
+    "response": "Accessibility Mode adjusts Brightspace to support screen readers and other accessibility tools by simplifying navigation and content structure.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -4827,8 +4712,7 @@
   },
   {
     "instruction": "How do I enable Accessibility Mode in Brightspace?",
-    "input": "",
-    "output": "Accessibility Mode can be activated in Account Settings if supported by your institution.",
+    "response": "Accessibility Mode can be activated in Account Settings if supported by your institution.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -4838,8 +4722,7 @@
   },
   {
     "instruction": "Does Brightspace support screen readers?",
-    "input": "",
-    "output": "Yes, Brightspace is compatible with major screen readers, including NVDA, JAWS, and VoiceOver.",
+    "response": "Yes, Brightspace is compatible with major screen readers, including NVDA, JAWS, and VoiceOver.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -4849,8 +4732,7 @@
   },
   {
     "instruction": "Can I use Brightspace with keyboard navigation?",
-    "input": "",
-    "output": "Yes, Brightspace supports keyboard navigation with tabbing and shortcut keys depending on the browser.",
+    "response": "Yes, Brightspace supports keyboard navigation with tabbing and shortcut keys depending on the browser.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -4860,8 +4742,7 @@
   },
   {
     "instruction": "How do I enable captions on videos in Brightspace?",
-    "input": "",
-    "output": "Many videos in Brightspace include built-in captions. If not, instructors must enable captions when uploading media.",
+    "response": "Many videos in Brightspace include built-in captions. If not, instructors must enable captions when uploading media.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -4871,8 +4752,7 @@
   },
   {
     "instruction": "What should I do if captions are missing on course videos?",
-    "input": "",
-    "output": "Contact your instructor to request captioning, as they manage accessibility settings for uploaded media.",
+    "response": "Contact your instructor to request captioning, as they manage accessibility settings for uploaded media.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -4882,8 +4762,7 @@
   },
   {
     "instruction": "What is the Brightspace Course Homepage?",
-    "input": "",
-    "output": "The Course Homepage is the landing page of each Brightspace course, displaying Announcements, Course Overview, and quick access to course tools.",
+    "response": "The Course Homepage is the landing page of each Brightspace course, displaying Announcements, Course Overview, and quick access to course tools.",
     "metadata": {
       "topic": "Brightspace - Homepage",
       "content_type": "navigation",
@@ -4893,8 +4772,7 @@
   },
   {
     "instruction": "Why does my Course Homepage look different from another class?",
-    "input": "",
-    "output": "Instructors can customize Homepages, including the layout and displayed widgets, so each course may look unique.",
+    "response": "Instructors can customize Homepages, including the layout and displayed widgets, so each course may look unique.",
     "metadata": {
       "topic": "Brightspace - Homepage",
       "content_type": "navigation",
@@ -4904,8 +4782,7 @@
   },
   {
     "instruction": "What is a widget in Brightspace?",
-    "input": "",
-    "output": "Widgets are blocks on the Course Homepage that display information such as Announcements, Content Browser, Work To Do, and Calendar.",
+    "response": "Widgets are blocks on the Course Homepage that display information such as Announcements, Content Browser, Work To Do, and Calendar.",
     "metadata": {
       "topic": "Brightspace - Homepage",
       "content_type": "widgets",
@@ -4915,8 +4792,7 @@
   },
   {
     "instruction": "What is the Content Browser widget?",
-    "input": "",
-    "output": "The Content Browser shows the first few modules of a course and provides fast access to content.",
+    "response": "The Content Browser shows the first few modules of a course and provides fast access to content.",
     "metadata": {
       "topic": "Brightspace - Homepage",
       "content_type": "widgets",
@@ -4926,8 +4802,7 @@
   },
   {
     "instruction": "What is the Work To Do widget used for?",
-    "input": "",
-    "output": "The Work To Do widget highlights upcoming due dates and overdue tasks from all your courses.",
+    "response": "The Work To Do widget highlights upcoming due dates and overdue tasks from all your courses.",
     "metadata": {
       "topic": "Brightspace - Work To Do",
       "content_type": "dashboard",
@@ -4937,8 +4812,7 @@
   },
   {
     "instruction": "Why don't I see the Work To Do widget?",
-    "input": "",
-    "output": "Instructors or the institution may remove or disable the Work To Do widget from the homepage.",
+    "response": "Instructors or the institution may remove or disable the Work To Do widget from the homepage.",
     "metadata": {
       "topic": "Brightspace - Work To Do",
       "content_type": "dashboard",
@@ -4948,8 +4822,7 @@
   },
   {
     "instruction": "How do I view all course announcements?",
-    "input": "",
-    "output": "Click 'Show All Announcements' at the bottom of the Announcements widget to see older posts.",
+    "response": "Click 'Show All Announcements' at the bottom of the Announcements widget to see older posts.",
     "metadata": {
       "topic": "Brightspace - Announcements",
       "content_type": "communication",
@@ -4959,8 +4832,7 @@
   },
   {
     "instruction": "Can I hide announcements in Brightspace?",
-    "input": "",
-    "output": "Students cannot hide announcements; visibility is controlled by instructors.",
+    "response": "Students cannot hide announcements; visibility is controlled by instructors.",
     "metadata": {
       "topic": "Brightspace - Announcements",
       "content_type": "communication",
@@ -4970,8 +4842,7 @@
   },
   {
     "instruction": "How do I reorder my pinned courses?",
-    "input": "",
-    "output": "Courses in the My Courses widget can be reordered by pinning or unpinning courses using the Course Selector.",
+    "response": "Courses in the My Courses widget can be reordered by pinning or unpinning courses using the Course Selector.",
     "metadata": {
       "topic": "Brightspace - Courses",
       "content_type": "navigation",
@@ -4981,8 +4852,7 @@
   },
   {
     "instruction": "Can I favorite a course in Brightspace?",
-    "input": "",
-    "output": "Pinning a course marks it as a favorite, placing it at the top of your My Courses list.",
+    "response": "Pinning a course marks it as a favorite, placing it at the top of your My Courses list.",
     "metadata": {
       "topic": "Brightspace - Courses",
       "content_type": "navigation",
@@ -4992,8 +4862,7 @@
   },
   {
     "instruction": "Why does my course appear 'inactive'?",
-    "input": "",
-    "output": "Courses marked inactive are not yet available to students. Instructors decide when to make them active.",
+    "response": "Courses marked inactive are not yet available to students. Instructors decide when to make them active.",
     "metadata": {
       "topic": "Brightspace - Courses",
       "content_type": "navigation",
@@ -5003,8 +4872,7 @@
   },
   {
     "instruction": "Why can't I access course content even though I see the course?",
-    "input": "",
-    "output": "Instructors may hide modules or restrict content availability using dates or release conditions.",
+    "response": "Instructors may hide modules or restrict content availability using dates or release conditions.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5014,8 +4882,7 @@
   },
   {
     "instruction": "What are Release Conditions in Brightspace?",
-    "input": "",
-    "output": "Release Conditions control access to content based on completing specific tasks, such as viewing a topic, submitting an assignment, or achieving a grade.",
+    "response": "Release Conditions control access to content based on completing specific tasks, such as viewing a topic, submitting an assignment, or achieving a grade.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "content",
@@ -5025,8 +4892,7 @@
   },
   {
     "instruction": "Why can't I open a module that has a release condition?",
-    "input": "",
-    "output": "You must complete the required activity before the module becomes visible or accessible.",
+    "response": "You must complete the required activity before the module becomes visible or accessible.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "content",
@@ -5036,8 +4902,7 @@
   },
   {
     "instruction": "How do I know if content has release conditions?",
-    "input": "",
-    "output": "Content with release conditions may show a lock icon or a message indicating prerequisites.",
+    "response": "Content with release conditions may show a lock icon or a message indicating prerequisites.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "content",
@@ -5047,8 +4912,7 @@
   },
   {
     "instruction": "What is the difference between Content and Course Files in Brightspace?",
-    "input": "",
-    "output": "Content displays materials for students, while Course Files is an instructor-only file management system not accessible to students.",
+    "response": "Content displays materials for students, while Course Files is an instructor-only file management system not accessible to students.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5058,8 +4922,7 @@
   },
   {
     "instruction": "How do I view embedded documents in Brightspace?",
-    "input": "",
-    "output": "Embedded files open directly in Brightspace's document viewer. If they do not load, try switching browsers or downloading the file.",
+    "response": "Embedded files open directly in Brightspace's document viewer. If they do not load, try switching browsers or downloading the file.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5069,8 +4932,7 @@
   },
   {
     "instruction": "What does 'Unavailable' mean in Content?",
-    "input": "",
-    "output": "Unavailable content is hidden by the instructor or has not reached its availability date.",
+    "response": "Unavailable content is hidden by the instructor or has not reached its availability date.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5080,8 +4942,7 @@
   },
   {
     "instruction": "How do I bookmark a content topic?",
-    "input": "",
-    "output": "Some versions of Brightspace allow bookmarking or saving content using the Bookmarks tool in the navbar.",
+    "response": "Some versions of Brightspace allow bookmarking or saving content using the Bookmarks tool in the navbar.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5091,8 +4952,7 @@
   },
   {
     "instruction": "What does the Notifications icon in Brightspace do?",
-    "input": "",
-    "output": "The Notifications icon alerts you to updates such as grades, feedback, assignment changes, and quiz attempts.",
+    "response": "The Notifications icon alerts you to updates such as grades, feedback, assignment changes, and quiz attempts.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -5102,8 +4962,7 @@
   },
   {
     "instruction": "How do email notifications work in Brightspace?",
-    "input": "",
-    "output": "Students can configure Brightspace to send email summaries or immediate alerts for activity like new announcements or grade updates.",
+    "response": "Students can configure Brightspace to send email summaries or immediate alerts for activity like new announcements or grade updates.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -5113,8 +4972,7 @@
   },
   {
     "instruction": "Why am I not receiving Brightspace email notifications?",
-    "input": "",
-    "output": "Email notifications require correct settings in Account Notifications. Also check spam folders and email forwarding rules.",
+    "response": "Email notifications require correct settings in Account Notifications. Also check spam folders and email forwarding rules.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -5124,8 +4982,7 @@
   },
   {
     "instruction": "What is the 'Activity Feed' in some Brightspace courses?",
-    "input": "",
-    "output": "Activity Feed is a homepage widget where instructors can post quick updates, links, or prompts for student interaction.",
+    "response": "Activity Feed is a homepage widget where instructors can post quick updates, links, or prompts for student interaction.",
     "metadata": {
       "topic": "Brightspace - Activity Feed",
       "content_type": "communication",
@@ -5135,8 +4992,7 @@
   },
   {
     "instruction": "How do I respond to Activity Feed posts?",
-    "input": "",
-    "output": "Depending on instructor settings, you may be able to comment or react to Activity Feed posts directly.",
+    "response": "Depending on instructor settings, you may be able to comment or react to Activity Feed posts directly.",
     "metadata": {
       "topic": "Brightspace - Activity Feed",
       "content_type": "communication",
@@ -5146,8 +5002,7 @@
   },
   {
     "instruction": "What does the Content Progress bar show?",
-    "input": "",
-    "output": "The Content Progress bar shows the percentage of course materials you have accessed or completed.",
+    "response": "The Content Progress bar shows the percentage of course materials you have accessed or completed.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -5157,8 +5012,7 @@
   },
   {
     "instruction": "What are Quicklinks in Brightspace?",
-    "input": "",
-    "output": "Quicklinks are shortcuts embedded in content that take you directly to assignments, quizzes, discussions, or files.",
+    "response": "Quicklinks are shortcuts embedded in content that take you directly to assignments, quizzes, discussions, or files.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5168,8 +5022,7 @@
   },
   {
     "instruction": "Why can't I open a Quicklink?",
-    "input": "",
-    "output": "Quicklinks may not open if the linked activity is hidden, unavailable, or restricted by dates or conditions.",
+    "response": "Quicklinks may not open if the linked activity is hidden, unavailable, or restricted by dates or conditions.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5179,8 +5032,7 @@
   },
   {
     "instruction": "What does 'Hidden from Users' mean in Brightspace?",
-    "input": "",
-    "output": "Hidden items are not visible to students until instructors choose to release them.",
+    "response": "Hidden items are not visible to students until instructors choose to release them.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5190,8 +5042,7 @@
   },
   {
     "instruction": "Why do some modules say 'Optional'?",
-    "input": "",
-    "output": "Some instructors designate supplemental or optional materials to differentiate them from required modules.",
+    "response": "Some instructors designate supplemental or optional materials to differentiate them from required modules.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5201,8 +5052,7 @@
   },
   {
     "instruction": "How do I upload images in discussion posts?",
-    "input": "",
-    "output": "Brightspace discussions include an Insert Image option that allows uploads from your device.",
+    "response": "Brightspace discussions include an Insert Image option that allows uploads from your device.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5212,8 +5062,7 @@
   },
   {
     "instruction": "Why is my discussion post blank after submitting?",
-    "input": "",
-    "output": "Pasting formatted text from Word or Google Docs can cause formatting issues. Try using the Insert Stuff or Plain Text option.",
+    "response": "Pasting formatted text from Word or Google Docs can cause formatting issues. Try using the Insert Stuff or Plain Text option.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5223,8 +5072,7 @@
   },
   {
     "instruction": "What is a Discussion Forum?",
-    "input": "",
-    "output": "A Discussion Forum is an organizational container that holds one or more Discussion Topics.",
+    "response": "A Discussion Forum is an organizational container that holds one or more Discussion Topics.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5234,8 +5082,7 @@
   },
   {
     "instruction": "What is a Discussion Topic?",
-    "input": "",
-    "output": "A Discussion Topic is where students create threads and reply to posts. It is the actual graded or ungraded discussion activity.",
+    "response": "A Discussion Topic is where students create threads and reply to posts. It is the actual graded or ungraded discussion activity.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5245,8 +5092,7 @@
   },
   {
     "instruction": "What is a Discussion Thread?",
-    "input": "",
-    "output": "A Discussion Thread is an individual conversation started by a student or instructor inside a Discussion Topic.",
+    "response": "A Discussion Thread is an individual conversation started by a student or instructor inside a Discussion Topic.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5256,8 +5102,7 @@
   },
   {
     "instruction": "Why can't I post in a Discussion Topic?",
-    "input": "",
-    "output": "Posting may be restricted by dates, must-post-first settings, group restrictions, or instructor permissions.",
+    "response": "Posting may be restricted by dates, must-post-first settings, group restrictions, or instructor permissions.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5267,8 +5112,7 @@
   },
   {
     "instruction": "What does 'locked' mean on a discussion?",
-    "input": "",
-    "output": "A locked discussion topic is closed, meaning students cannot create new threads or replies.",
+    "response": "A locked discussion topic is closed, meaning students cannot create new threads or replies.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5278,8 +5122,7 @@
   },
   {
     "instruction": "Why does my discussion post say 'Draft'?",
-    "input": "",
-    "output": "Draft status means the message was saved but not posted. You must click Post to make it visible.",
+    "response": "Draft status means the message was saved but not posted. You must click Post to make it visible.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -5289,8 +5132,7 @@
   },
   {
     "instruction": "What is a rubric in Brightspace?",
-    "input": "",
-    "output": "Rubrics outline grading criteria for assignments, discussions, and quizzes. Students can view them if enabled by instructors.",
+    "response": "Rubrics outline grading criteria for assignments, discussions, and quizzes. Students can view them if enabled by instructors.",
     "metadata": {
       "topic": "Brightspace - Rubrics",
       "content_type": "grading",
@@ -5300,8 +5142,7 @@
   },
   {
     "instruction": "Where do I find rubrics for my assignments?",
-    "input": "",
-    "output": "Rubrics appear within the assignment page or inside Grades when the instructor attaches them.",
+    "response": "Rubrics appear within the assignment page or inside Grades when the instructor attaches them.",
     "metadata": {
       "topic": "Brightspace - Rubrics",
       "content_type": "grading",
@@ -5311,8 +5152,7 @@
   },
   {
     "instruction": "Why can't I see the rubric for an assignment?",
-    "input": "",
-    "output": "Rubric visibility is controlled by the instructor. Some rubrics remain hidden until grading is complete.",
+    "response": "Rubric visibility is controlled by the instructor. Some rubrics remain hidden until grading is complete.",
     "metadata": {
       "topic": "Brightspace - Rubrics",
       "content_type": "grading",
@@ -5322,8 +5162,7 @@
   },
   {
     "instruction": "What file formats does Brightspace support for assignment uploads?",
-    "input": "",
-    "output": "Brightspace commonly supports PDF, DOCX, PPTX, XLSX, JPEG, PNG, and TXT files. Instructors may set restrictions.",
+    "response": "Brightspace commonly supports PDF, DOCX, PPTX, XLSX, JPEG, PNG, and TXT files. Instructors may set restrictions.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -5333,8 +5172,7 @@
   },
   {
     "instruction": "Why does my assignment say 'File type not supported'?",
-    "input": "",
-    "output": "Your instructor may restrict submissions to specific formats. Convert your file to PDF or DOCX if unsure.",
+    "response": "Your instructor may restrict submissions to specific formats. Convert your file to PDF or DOCX if unsure.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -5344,8 +5182,7 @@
   },
   {
     "instruction": "Why is my quiz locked after I started it?",
-    "input": "",
-    "output": "Quizzes lock after the time limit expires or after the final attempt is used.",
+    "response": "Quizzes lock after the time limit expires or after the final attempt is used.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -5355,8 +5192,7 @@
   },
   {
     "instruction": "What does 'Attempt in Progress' mean on a quiz?",
-    "input": "",
-    "output": "This means a quiz attempt started but was not submitted. Contact your instructor if you cannot resume.",
+    "response": "This means a quiz attempt started but was not submitted. Contact your instructor if you cannot resume.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -5366,8 +5202,7 @@
   },
   {
     "instruction": "Why is my quiz showing as 'Late'?",
-    "input": "",
-    "output": "You may have exceeded the time limit or missed the due date. Brightspace records completion even if late.",
+    "response": "You may have exceeded the time limit or missed the due date. Brightspace records completion even if late.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -5377,8 +5212,7 @@
   },
   {
     "instruction": "What does 'Not Yet Graded' mean in Grades?",
-    "input": "",
-    "output": "This means the instructor has not yet finished grading or publishing results.",
+    "response": "This means the instructor has not yet finished grading or publishing results.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -5388,8 +5222,7 @@
   },
   {
     "instruction": "What does 'Dropped' mean next to a grade item?",
-    "input": "",
-    "output": "Dropped items do not count toward your final grade. These decisions are set by your instructor.",
+    "response": "Dropped items do not count toward your final grade. These decisions are set by your instructor.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -5399,8 +5232,7 @@
   },
   {
     "instruction": "Why does Brightspace show a different final grade than my instructor?",
-    "input": "",
-    "output": "If instructors use hidden categories or ungraded items, Brightspace may calculate a grade that differs from your actual final grade.",
+    "response": "If instructors use hidden categories or ungraded items, Brightspace may calculate a grade that differs from your actual final grade.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -5410,8 +5242,7 @@
   },
   {
     "instruction": "Can I export my grades from Brightspace?",
-    "input": "",
-    "output": "Some courses allow grade exports if the instructor enables the option, but this varies by course.",
+    "response": "Some courses allow grade exports if the instructor enables the option, but this varies by course.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -5421,8 +5252,7 @@
   },
   {
     "instruction": "Where can I download course materials as a ZIP file?",
-    "input": "",
-    "output": "Brightspace does not offer a built-in student-controlled ZIP download tool; instructors must enable material downloads individually.",
+    "response": "Brightspace does not offer a built-in student-controlled ZIP download tool; instructors must enable material downloads individually.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5432,8 +5262,7 @@
   },
   {
     "instruction": "What is a Checklist in Brightspace?",
-    "input": "",
-    "output": "A Checklist is a tool instructors use to help students track tasks or steps in a module. It can include required or optional items.",
+    "response": "A Checklist is a tool instructors use to help students track tasks or steps in a module. It can include required or optional items.",
     "metadata": {
       "topic": "Brightspace - Checklist",
       "content_type": "tools",
@@ -5443,8 +5272,7 @@
   },
   {
     "instruction": "Where do I find Checklists in Brightspace?",
-    "input": "",
-    "output": "Checklists appear in the course navbar or can be linked inside content modules.",
+    "response": "Checklists appear in the course navbar or can be linked inside content modules.",
     "metadata": {
       "topic": "Brightspace - Checklist",
       "content_type": "tools",
@@ -5454,8 +5282,7 @@
   },
   {
     "instruction": "Can instructors see my progress on a Checklist?",
-    "input": "",
-    "output": "Checklist completion is visible to instructors if they enable tracking features.",
+    "response": "Checklist completion is visible to instructors if they enable tracking features.",
     "metadata": {
       "topic": "Brightspace - Checklist",
       "content_type": "tools",
@@ -5465,8 +5292,7 @@
   },
   {
     "instruction": "What is the Surveys tool in Brightspace?",
-    "input": "",
-    "output": "Surveys allow instructors to collect anonymous or non-anonymous feedback from students about their course experience.",
+    "response": "Surveys allow instructors to collect anonymous or non-anonymous feedback from students about their course experience.",
     "metadata": {
       "topic": "Brightspace - Surveys",
       "content_type": "tools",
@@ -5476,8 +5302,7 @@
   },
   {
     "instruction": "Are Survey responses anonymous in Brightspace?",
-    "input": "",
-    "output": "Whether surveys are anonymous depends on instructor settings. Some surveys allow tracking of respondents.",
+    "response": "Whether surveys are anonymous depends on instructor settings. Some surveys allow tracking of respondents.",
     "metadata": {
       "topic": "Brightspace - Surveys",
       "content_type": "tools",
@@ -5487,8 +5312,7 @@
   },
   {
     "instruction": "Where do I find Surveys in Brightspace?",
-    "input": "",
-    "output": "Surveys appear in the course navbar or inside content modules if instructors provide links.",
+    "response": "Surveys appear in the course navbar or inside content modules if instructors provide links.",
     "metadata": {
       "topic": "Brightspace - Surveys",
       "content_type": "tools",
@@ -5498,8 +5322,7 @@
   },
   {
     "instruction": "What is an Intelligent Agent in Brightspace?",
-    "input": "",
-    "output": "Intelligent Agents monitor student activity and send automated email notifications triggered by specific conditions such as inactivity or missed work.",
+    "response": "Intelligent Agents monitor student activity and send automated email notifications triggered by specific conditions such as inactivity or missed work.",
     "metadata": {
       "topic": "Brightspace - Intelligent Agents",
       "content_type": "automation",
@@ -5509,8 +5332,7 @@
   },
   {
     "instruction": "Why did I get an automated email from Brightspace?",
-    "input": "",
-    "output": "You may have triggered an Intelligent Agent rule, such as inactivity or missing a deadline.",
+    "response": "You may have triggered an Intelligent Agent rule, such as inactivity or missing a deadline.",
     "metadata": {
       "topic": "Brightspace - Intelligent Agents",
       "content_type": "automation",
@@ -5520,8 +5342,7 @@
   },
   {
     "instruction": "Can students be monitored by Intelligent Agents?",
-    "input": "",
-    "output": "Yes. Intelligent Agents can track login frequency, grade thresholds, and content access patterns.",
+    "response": "Yes. Intelligent Agents can track login frequency, grade thresholds, and content access patterns.",
     "metadata": {
       "topic": "Brightspace - Intelligent Agents",
       "content_type": "automation",
@@ -5531,8 +5352,7 @@
   },
   {
     "instruction": "What is the difference between Surveys and Quizzes in Brightspace?",
-    "input": "",
-    "output": "Surveys are often anonymous and ungraded, while Quizzes are graded assessments.",
+    "response": "Surveys are often anonymous and ungraded, while Quizzes are graded assessments.",
     "metadata": {
       "topic": "Brightspace - Surveys vs Quizzes",
       "content_type": "comparison",
@@ -5542,8 +5362,7 @@
   },
   {
     "instruction": "Why can’t I open a Checklist?",
-    "input": "",
-    "output": "The Checklist may be hidden or restricted by availability dates or release conditions.",
+    "response": "The Checklist may be hidden or restricted by availability dates or release conditions.",
     "metadata": {
       "topic": "Brightspace - Checklist",
       "content_type": "tools",
@@ -5553,8 +5372,7 @@
   },
   {
     "instruction": "Does Brightspace support downloadable course packages?",
-    "input": "",
-    "output": "Brightspace does not allow students to download a full course as a package; instructors must individually allow downloads.",
+    "response": "Brightspace does not allow students to download a full course as a package; instructors must individually allow downloads.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5564,8 +5382,7 @@
   },
   {
     "instruction": "Why does Brightspace load slowly on my device?",
-    "input": "",
-    "output": "Slow loading may be caused by browser extensions, old cache, unstable internet, or outdated browsers.",
+    "response": "Slow loading may be caused by browser extensions, old cache, unstable internet, or outdated browsers.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -5575,8 +5392,7 @@
   },
   {
     "instruction": "How do I clear Brightspace cache issues?",
-    "input": "",
-    "output": "Clearing your browser cache, switching browsers, or using incognito mode often resolves caching problems.",
+    "response": "Clearing your browser cache, switching browsers, or using incognito mode often resolves caching problems.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -5586,8 +5402,7 @@
   },
   {
     "instruction": "Why is my Brightspace page blank?",
-    "input": "",
-    "output": "Pop-up blockers, ad blockers, VPNs, or expired sessions may cause blank pages. Disable blockers and refresh.",
+    "response": "Pop-up blockers, ad blockers, VPNs, or expired sessions may cause blank pages. Disable blockers and refresh.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -5597,8 +5412,7 @@
   },
   {
     "instruction": "What should I do if Brightspace freezes during a file upload?",
-    "input": "",
-    "output": "Wait to see if the upload resolves. If it stalls, refresh the page and reupload the file. Ensure your connection is stable.",
+    "response": "Wait to see if the upload resolves. If it stalls, refresh the page and reupload the file. Ensure your connection is stable.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -5608,8 +5422,7 @@
   },
   {
     "instruction": "Why won't my PDF display in Brightspace?",
-    "input": "",
-    "output": "Browser extensions, outdated browsers, or unsupported embedded file types may prevent PDFs from rendering.",
+    "response": "Browser extensions, outdated browsers, or unsupported embedded file types may prevent PDFs from rendering.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5619,8 +5432,7 @@
   },
   {
     "instruction": "How do I download a PDF that won’t open in Brightspace?",
-    "input": "",
-    "output": "Right-click the link and select Save Link As or use the Download button if available.",
+    "response": "Right-click the link and select Save Link As or use the Download button if available.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5630,8 +5442,7 @@
   },
   {
     "instruction": "How can I troubleshoot video playback issues in Brightspace?",
-    "input": "",
-    "output": "Try disabling browser extensions, clearing cache, switching browsers, or ensuring cookies and media permissions are enabled.",
+    "response": "Try disabling browser extensions, clearing cache, switching browsers, or ensuring cookies and media permissions are enabled.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -5641,8 +5452,7 @@
   },
   {
     "instruction": "Why does Brightspace ask for media permissions?",
-    "input": "",
-    "output": "Video and audio tools may request permissions to access your camera or microphone for virtual classroom or video submissions.",
+    "response": "Video and audio tools may request permissions to access your camera or microphone for virtual classroom or video submissions.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -5652,8 +5462,7 @@
   },
   {
     "instruction": "What is a Content Module in Brightspace?",
-    "input": "",
-    "output": "A Content Module is a unit or chapter containing multiple topics such as lectures, readings, assignments, and quizzes.",
+    "response": "A Content Module is a unit or chapter containing multiple topics such as lectures, readings, assignments, and quizzes.",
     "metadata": {
       "topic": "Brightspace - Content Modules",
       "content_type": "content",
@@ -5663,8 +5472,7 @@
   },
   {
     "instruction": "Why can't I see an entire module?",
-    "input": "",
-    "output": "The module may be restricted by start dates, end dates, or completion requirements.",
+    "response": "The module may be restricted by start dates, end dates, or completion requirements.",
     "metadata": {
       "topic": "Brightspace - Content Modules",
       "content_type": "content",
@@ -5674,8 +5482,7 @@
   },
   {
     "instruction": "How do I navigate to the Course Overview?",
-    "input": "",
-    "output": "Course Overview is typically located at the top of the Content section and contains general information about the course.",
+    "response": "Course Overview is typically located at the top of the Content section and contains general information about the course.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5685,8 +5492,7 @@
   },
   {
     "instruction": "What is the difference between Content Browser and Content?",
-    "input": "",
-    "output": "Content Browser is a homepage widget showing shortcuts to modules, while Content is the full course content organized in modules and topics.",
+    "response": "Content Browser is a homepage widget showing shortcuts to modules, while Content is the full course content organized in modules and topics.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -5696,8 +5502,7 @@
   },
   {
     "instruction": "How do I send an email to my instructor through Classlist?",
-    "input": "",
-    "output": "Open Classlist, check the box next to your instructor's name, and click Email to compose a message.",
+    "response": "Open Classlist, check the box next to your instructor's name, and click Email to compose a message.",
     "metadata": {
       "topic": "Brightspace - Classlist",
       "content_type": "communication",
@@ -5707,8 +5512,7 @@
   },
   {
     "instruction": "Why can't I attach files to emails in Brightspace?",
-    "input": "",
-    "output": "Some institutions disable file attachments for Brightspace emails to ensure messages go through university email servers.",
+    "response": "Some institutions disable file attachments for Brightspace emails to ensure messages go through university email servers.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -5718,8 +5522,7 @@
   },
   {
     "instruction": "What is the Email tool used for in Brightspace?",
-    "input": "",
-    "output": "The Email tool allows sending messages to instructors or classmates using their university email addresses.",
+    "response": "The Email tool allows sending messages to instructors or classmates using their university email addresses.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -5729,8 +5532,7 @@
   },
   {
     "instruction": "Why does my email from Brightspace fail to send?",
-    "input": "",
-    "output": "Email sending may fail if your email address is not properly configured, the course restricts emailing, or attachments are too large.",
+    "response": "Email sending may fail if your email address is not properly configured, the course restricts emailing, or attachments are too large.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -5740,8 +5542,7 @@
   },
   {
     "instruction": "Can I track sent emails in Brightspace?",
-    "input": "",
-    "output": "Brightspace does not provide a traditional inbox, but it stores sent messages in the Sent Mail folder within the Email tool.",
+    "response": "Brightspace does not provide a traditional inbox, but it stores sent messages in the Sent Mail folder within the Email tool.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -5751,8 +5552,7 @@
   },
   {
     "instruction": "How do I access my Sent Mail in Brightspace?",
-    "input": "",
-    "output": "Open the Email tool and go to the Sent Mail tab to view previously sent emails.",
+    "response": "Open the Email tool and go to the Sent Mail tab to view previously sent emails.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -5762,8 +5562,7 @@
   },
   {
     "instruction": "Why is my instructor not receiving my Brightspace emails?",
-    "input": "",
-    "output": "Emails may fail due to incorrect email forwarding, spam filtering, or disabled attachments. Try contacting them via Classlist.",
+    "response": "Emails may fail due to incorrect email forwarding, spam filtering, or disabled attachments. Try contacting them via Classlist.",
     "metadata": {
       "topic": "Brightspace - Email",
       "content_type": "communication",
@@ -5773,8 +5572,7 @@
   },
   {
     "instruction": "What is the difference between Instant Messages and Email in Brightspace?",
-    "input": "",
-    "output": "Instant Messages support real-time chat inside Brightspace, while Email sends messages externally to university email accounts.",
+    "response": "Instant Messages support real-time chat inside Brightspace, while Email sends messages externally to university email accounts.",
     "metadata": {
       "topic": "Brightspace - Communication",
       "content_type": "communication",
@@ -5784,8 +5582,7 @@
   },
   {
     "instruction": "Why doesn’t Instant Messaging work for my course?",
-    "input": "",
-    "output": "Instructors or the institution may disable Instant Messaging for the course or entire LMS.",
+    "response": "Instructors or the institution may disable Instant Messaging for the course or entire LMS.",
     "metadata": {
       "topic": "Brightspace - Instant Messaging",
       "content_type": "communication",
@@ -5795,8 +5592,7 @@
   },
   {
     "instruction": "How do I join a Virtual Classroom session in Brightspace?",
-    "input": "",
-    "output": "Open the Virtual Classroom tool and click Join Session next to the scheduled meeting.",
+    "response": "Open the Virtual Classroom tool and click Join Session next to the scheduled meeting.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5806,8 +5602,7 @@
   },
   {
     "instruction": "Why can't I hear audio in Virtual Classroom?",
-    "input": "",
-    "output": "Check your microphone and speaker permissions, browser settings, and ensure no audio devices are muted.",
+    "response": "Check your microphone and speaker permissions, browser settings, and ensure no audio devices are muted.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5817,8 +5612,7 @@
   },
   {
     "instruction": "Why can't others hear me in Virtual Classroom?",
-    "input": "",
-    "output": "The browser may not have microphone permissions, or the microphone may be selected incorrectly.",
+    "response": "The browser may not have microphone permissions, or the microphone may be selected incorrectly.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5828,8 +5622,7 @@
   },
   {
     "instruction": "Why can't I see the presentation in Virtual Classroom?",
-    "input": "",
-    "output": "Presentations may not load due to slow internet, restricted sharing settings, or unsupported file types in the meeting.",
+    "response": "Presentations may not load due to slow internet, restricted sharing settings, or unsupported file types in the meeting.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5839,8 +5632,7 @@
   },
   {
     "instruction": "Can Virtual Classroom sessions time out?",
-    "input": "",
-    "output": "Yes. Sessions may end automatically after reaching the time limit or when the instructor closes the room.",
+    "response": "Yes. Sessions may end automatically after reaching the time limit or when the instructor closes the room.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5850,8 +5642,7 @@
   },
   {
     "instruction": "Why did my Virtual Classroom session expire?",
-    "input": "",
-    "output": "Sessions expire based on the scheduled end time or if the instructor chooses to close the session early.",
+    "response": "Sessions expire based on the scheduled end time or if the instructor chooses to close the session early.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5861,8 +5652,7 @@
   },
   {
     "instruction": "Why can't I access a Virtual Classroom session after it ends?",
-    "input": "",
-    "output": "Access ends when a meeting expires. Only recorded sessions remain available afterwards if the instructor posts them.",
+    "response": "Access ends when a meeting expires. Only recorded sessions remain available afterwards if the instructor posts them.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5872,8 +5662,7 @@
   },
   {
     "instruction": "Where are Virtual Classroom recordings stored?",
-    "input": "",
-    "output": "Recordings appear in the Virtual Classroom tool or inside Content modules, depending on instructor settings.",
+    "response": "Recordings appear in the Virtual Classroom tool or inside Content modules, depending on instructor settings.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5883,8 +5672,7 @@
   },
   {
     "instruction": "Why can't I watch a Virtual Classroom recording?",
-    "input": "",
-    "output": "Recordings may require specific permissions or may not yet be processed and published.",
+    "response": "Recordings may require specific permissions or may not yet be processed and published.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -5894,8 +5682,7 @@
   },
   {
     "instruction": "What is the function of the Calendar widget?",
-    "input": "",
-    "output": "The Calendar widget displays due dates and events for your courses on your homepage.",
+    "response": "The Calendar widget displays due dates and events for your courses on your homepage.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -5905,8 +5692,7 @@
   },
   {
     "instruction": "Why are my course events missing from the Calendar?",
-    "input": "",
-    "output": "Events only appear if instructors add due dates or activities to the Calendar tool.",
+    "response": "Events only appear if instructors add due dates or activities to the Calendar tool.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -5916,8 +5702,7 @@
   },
   {
     "instruction": "Can I hide events in the Brightspace Calendar?",
-    "input": "",
-    "output": "Students cannot hide events individually, but they can filter calendars by course.",
+    "response": "Students cannot hide events individually, but they can filter calendars by course.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -5927,8 +5712,7 @@
   },
   {
     "instruction": "Why do I see events from old courses in my Calendar?",
-    "input": "",
-    "output": "Brightspace may still display events from pinned or active-seeming courses. Unpinning old courses may help reduce clutter.",
+    "response": "Brightspace may still display events from pinned or active-seeming courses. Unpinning old courses may help reduce clutter.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -5938,8 +5722,7 @@
   },
   {
     "instruction": "How do I filter Calendar events by course?",
-    "input": "",
-    "output": "Use the Calendar tool’s filter options to display or hide events from selected courses.",
+    "response": "Use the Calendar tool’s filter options to display or hide events from selected courses.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -5949,8 +5732,7 @@
   },
   {
     "instruction": "What is the difference between course-level and system-level notifications?",
-    "input": "",
-    "output": "System-level notifications cover all courses, while course-level notifications depend on instructor settings inside each course.",
+    "response": "System-level notifications cover all courses, while course-level notifications depend on instructor settings inside each course.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -5960,8 +5742,7 @@
   },
   {
     "instruction": "Why does Brightspace say I have notifications but I don’t see any?",
-    "input": "",
-    "output": "Notifications may be for courses where content or updates were removed, or they may be cached alerts that need refreshing.",
+    "response": "Notifications may be for courses where content or updates were removed, or they may be cached alerts that need refreshing.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -5971,8 +5752,7 @@
   },
   {
     "instruction": "How do I unsubscribe from Brightspace emails?",
-    "input": "",
-    "output": "Adjust your email notification preferences in Account Settings under Notifications.",
+    "response": "Adjust your email notification preferences in Account Settings under Notifications.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -5982,8 +5762,7 @@
   },
   {
     "instruction": "Why does my Brightspace keep logging me out during quizzes?",
-    "input": "",
-    "output": "Network instability, VPNs, browser crashes, or inactivity may force logout. Use a stable connection and avoid switching tabs excessively.",
+    "response": "Network instability, VPNs, browser crashes, or inactivity may force logout. Use a stable connection and avoid switching tabs excessively.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -5993,8 +5772,7 @@
   },
   {
     "instruction": "What browsers are recommended for Brightspace?",
-    "input": "",
-    "output": "Brightspace works best with updated versions of Chrome, Firefox, Safari, and Edge.",
+    "response": "Brightspace works best with updated versions of Chrome, Firefox, Safari, and Edge.",
     "metadata": {
       "topic": "Brightspace - Requirements",
       "content_type": "technical",
@@ -6004,8 +5782,7 @@
   },
   {
     "instruction": "Does Brightspace support offline access?",
-    "input": "",
-    "output": "Limited offline access is available through the Pulse app for some content, but full offline access is not supported.",
+    "response": "Limited offline access is available through the Pulse app for some content, but full offline access is not supported.",
     "metadata": {
       "topic": "Brightspace - Mobile",
       "content_type": "mobile_access",
@@ -6015,8 +5792,7 @@
   },
   {
     "instruction": "How do I update the Pulse app?",
-    "input": "",
-    "output": "Update the app from the App Store or Google Play to ensure compatibility with Brightspace features.",
+    "response": "Update the app from the App Store or Google Play to ensure compatibility with Brightspace features.",
     "metadata": {
       "topic": "Brightspace - Pulse",
       "content_type": "mobile_access",
@@ -6026,8 +5802,7 @@
   },
   {
     "instruction": "Why aren't my Pulse app notifications showing?",
-    "input": "",
-    "output": "Check notification permissions, internet connection, and Brightspace notification settings for mobile alerts.",
+    "response": "Check notification permissions, internet connection, and Brightspace notification settings for mobile alerts.",
     "metadata": {
       "topic": "Brightspace - Pulse",
       "content_type": "mobile_access",
@@ -6037,8 +5812,7 @@
   },
   {
     "instruction": "Can instructors track activity on the Pulse app?",
-    "input": "",
-    "output": "Pulse syncs with Brightspace, so any activity performed through the app is tracked similarly to desktop use.",
+    "response": "Pulse syncs with Brightspace, so any activity performed through the app is tracked similarly to desktop use.",
     "metadata": {
       "topic": "Brightspace - Pulse",
       "content_type": "mobile_access",
@@ -6048,8 +5822,7 @@
   },
   {
     "instruction": "What replaces Blackboard 'To Do' in Brightspace?",
-    "input": "",
-    "output": "In Brightspace, the Work To Do widget and Calendar together replace Blackboard’s To Do list.",
+    "response": "In Brightspace, the Work To Do widget and Calendar together replace Blackboard’s To Do list.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6059,8 +5832,7 @@
   },
   {
     "instruction": "What is the Brightspace alternative to Blackboard Messages?",
-    "input": "",
-    "output": "Brightspace uses Instant Messages for internal chat and Email for external communication.",
+    "response": "Brightspace uses Instant Messages for internal chat and Email for external communication.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6070,8 +5842,7 @@
   },
   {
     "instruction": "What replaces Blackboard Sign-Up lists in Brightspace?",
-    "input": "",
-    "output": "Brightspace uses Self-Enrollment Groups instead of Blackboard's Sign-Up lists.",
+    "response": "Brightspace uses Self-Enrollment Groups instead of Blackboard's Sign-Up lists.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6081,8 +5852,7 @@
   },
   {
     "instruction": "What replaces Blackboard Learning Modules in Brightspace?",
-    "input": "",
-    "output": "Modules and Submodules in Brightspace replace Blackboard Learning Modules.",
+    "response": "Modules and Submodules in Brightspace replace Blackboard Learning Modules.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6092,8 +5862,7 @@
   },
   {
     "instruction": "What is the Brightspace alternative to Blackboard Users?",
-    "input": "",
-    "output": "In Brightspace, the Classlist tool replaces Blackboard's Users list.",
+    "response": "In Brightspace, the Classlist tool replaces Blackboard's Users list.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6103,8 +5872,7 @@
   },
   {
     "instruction": "What replaces Blackboard Global Notifications in Brightspace?",
-    "input": "",
-    "output": "Announcements and Update Alerts together replace Blackboard’s Global Notifications.",
+    "response": "Announcements and Update Alerts together replace Blackboard’s Global Notifications.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6114,8 +5882,7 @@
   },
   {
     "instruction": "What is the Brightspace alternative to Blackboard Content Menu?",
-    "input": "",
-    "output": "Brightspace uses the Navbar instead of Blackboard’s Content Menu.",
+    "response": "Brightspace uses the Navbar instead of Blackboard’s Content Menu.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6125,8 +5892,7 @@
   },
   {
     "instruction": "What are Release Conditions in Brightspace?",
-    "input": "",
-    "output": "Release Conditions control when students can see modules, assignments, quizzes, or topics based on rules set by the instructor, such as completing an activity or achieving a grade threshold.",
+    "response": "Release Conditions control when students can see modules, assignments, quizzes, or topics based on rules set by the instructor, such as completing an activity or achieving a grade threshold.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "gating",
@@ -6136,8 +5902,7 @@
   },
   {
     "instruction": "Why can't I access a module with release conditions?",
-    "input": "",
-    "output": "You may not have completed a required activity, reached a necessary score, or met a prerequisite date.",
+    "response": "You may not have completed a required activity, reached a necessary score, or met a prerequisite date.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "gating",
@@ -6147,8 +5912,7 @@
   },
   {
     "instruction": "How do I know what release conditions are required?",
-    "input": "",
-    "output": "Instructors may list required conditions in module descriptions, or Brightspace may display a message explaining what must be completed.",
+    "response": "Instructors may list required conditions in module descriptions, or Brightspace may display a message explaining what must be completed.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "gating",
@@ -6158,8 +5922,7 @@
   },
   {
     "instruction": "What are Self-Enrollment Groups in Brightspace?",
-    "input": "",
-    "output": "Self-Enrollment Groups allow students to select groups on their own for projects, discussions, or sign-up activities.",
+    "response": "Self-Enrollment Groups allow students to select groups on their own for projects, discussions, or sign-up activities.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -6169,8 +5932,7 @@
   },
   {
     "instruction": "How do I join a self-enrollment group?",
-    "input": "",
-    "output": "Open the Groups tool, find the self-enrollment category, and choose Join Group next to the group you want.",
+    "response": "Open the Groups tool, find the self-enrollment category, and choose Join Group next to the group you want.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -6180,8 +5942,7 @@
   },
   {
     "instruction": "Why can't I join a self-enrollment group?",
-    "input": "",
-    "output": "The group may be full, the enrollment window may be closed, or the instructor may have locked enrollment.",
+    "response": "The group may be full, the enrollment window may be closed, or the instructor may have locked enrollment.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -6191,8 +5952,7 @@
   },
   {
     "instruction": "What are Group Discussions in Brightspace?",
-    "input": "",
-    "output": "Group Discussions restrict posts to members of a specific group so teams can collaborate privately.",
+    "response": "Group Discussions restrict posts to members of a specific group so teams can collaborate privately.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -6202,8 +5962,7 @@
   },
   {
     "instruction": "What is a Group Locker in Brightspace?",
-    "input": "",
-    "output": "Group Lockers allow students in a group to upload, download, and share files with teammates.",
+    "response": "Group Lockers allow students in a group to upload, download, and share files with teammates.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -6213,8 +5972,7 @@
   },
   {
     "instruction": "Why can't I upload to the Group Locker?",
-    "input": "",
-    "output": "Your instructor may have disabled file uploads or the locker may have reached storage limits.",
+    "response": "Your instructor may have disabled file uploads or the locker may have reached storage limits.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -6224,8 +5982,7 @@
   },
   {
     "instruction": "What is the Accessibility Checker in Brightspace?",
-    "input": "",
-    "output": "The Accessibility Checker analyzes text and content for issues such as contrast, headings, and alternative text.",
+    "response": "The Accessibility Checker analyzes text and content for issues such as contrast, headings, and alternative text.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -6235,8 +5992,7 @@
   },
   {
     "instruction": "How do I use the Accessibility Checker when submitting an assignment?",
-    "input": "",
-    "output": "Use the text editor inside Brightspace. The Accessibility Checker icon appears in the formatting bar and provides suggestions.",
+    "response": "Use the text editor inside Brightspace. The Accessibility Checker icon appears in the formatting bar and provides suggestions.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -6246,8 +6002,7 @@
   },
   {
     "instruction": "Why is Brightspace text read by my screen reader incorrectly?",
-    "input": "",
-    "output": "This may happen when content is uploaded as an image without alternative text or when HTML is incorrectly formatted.",
+    "response": "This may happen when content is uploaded as an image without alternative text or when HTML is incorrectly formatted.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -6257,8 +6012,7 @@
   },
   {
     "instruction": "Does Brightspace support screen readers?",
-    "input": "",
-    "output": "Yes. Brightspace supports JAWS, NVDA, VoiceOver, and ChromeVox.",
+    "response": "Yes. Brightspace supports JAWS, NVDA, VoiceOver, and ChromeVox.",
     "metadata": {
       "topic": "Brightspace - Accessibility",
       "content_type": "accessibility",
@@ -6268,8 +6022,7 @@
   },
   {
     "instruction": "Why do my grades look different on mobile vs desktop?",
-    "input": "",
-    "output": "The mobile view may group categories differently or hide instructor comments until expanded.",
+    "response": "The mobile view may group categories differently or hide instructor comments until expanded.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -6279,8 +6032,7 @@
   },
   {
     "instruction": "Can I upload assignments from the mobile browser?",
-    "input": "",
-    "output": "Yes, but the Pulse app or desktop browser is recommended for large file uploads to avoid mobile timing out.",
+    "response": "Yes, but the Pulse app or desktop browser is recommended for large file uploads to avoid mobile timing out.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6290,8 +6042,7 @@
   },
   {
     "instruction": "Why won't my file upload on mobile?",
-    "input": "",
-    "output": "Mobile uploads fail due to slow data connections, low storage, unsupported file types, or browser restrictions.",
+    "response": "Mobile uploads fail due to slow data connections, low storage, unsupported file types, or browser restrictions.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6301,8 +6052,7 @@
   },
   {
     "instruction": "Which file types are accepted for assignment uploads?",
-    "input": "",
-    "output": "Common file types include PDF, DOCX, PPTX, XLSX, JPG, PNG, and MP4. Instructors may restrict file types.",
+    "response": "Common file types include PDF, DOCX, PPTX, XLSX, JPG, PNG, and MP4. Instructors may restrict file types.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6312,8 +6062,7 @@
   },
   {
     "instruction": "Why does Brightspace say my file is too large?",
-    "input": "",
-    "output": "Brightspace may enforce institutional file size limits. Try compressing videos or PDFs before submitting.",
+    "response": "Brightspace may enforce institutional file size limits. Try compressing videos or PDFs before submitting.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6323,8 +6072,7 @@
   },
   {
     "instruction": "What does 'Conversion Failed' mean when uploading a file?",
-    "input": "",
-    "output": "Brightspace could not convert your file to a preview. This usually happens with corrupted, password-protected, or unsupported files.",
+    "response": "Brightspace could not convert your file to a preview. This usually happens with corrupted, password-protected, or unsupported files.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6334,8 +6082,7 @@
   },
   {
     "instruction": "Can I still submit a file if preview conversion fails?",
-    "input": "",
-    "output": "Yes. Conversion failures do not prevent submission. Only the preview will be unavailable.",
+    "response": "Yes. Conversion failures do not prevent submission. Only the preview will be unavailable.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6345,8 +6092,7 @@
   },
   {
     "instruction": "Why does my assignment show as 'Not Submitted' even after uploading?",
-    "input": "",
-    "output": "You must click Submit after uploading. Leaving the page without clicking Submit means the upload is not completed.",
+    "response": "You must click Submit after uploading. Leaving the page without clicking Submit means the upload is not completed.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6356,8 +6102,7 @@
   },
   {
     "instruction": "How can I confirm my assignment was submitted?",
-    "input": "",
-    "output": "A confirmation page appears after submission. You can also see a timestamp in the assignment submission history.",
+    "response": "A confirmation page appears after submission. You can also see a timestamp in the assignment submission history.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6367,8 +6112,7 @@
   },
   {
     "instruction": "Why is my quiz not starting?",
-    "input": "",
-    "output": "It may not be available yet, or there may be restrictions like IP filtering, lockdown browsers, or late submission cutoffs.",
+    "response": "It may not be available yet, or there may be restrictions like IP filtering, lockdown browsers, or late submission cutoffs.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6378,8 +6122,7 @@
   },
   {
     "instruction": "Why does Brightspace say my quiz is 'Not Authorized'?",
-    "input": "",
-    "output": "This appears when a quiz requires Respondus LockDown Browser or a specific IP range and conditions aren't met.",
+    "response": "This appears when a quiz requires Respondus LockDown Browser or a specific IP range and conditions aren't met.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6389,8 +6132,7 @@
   },
   {
     "instruction": "Can I take a quiz after the end time?",
-    "input": "",
-    "output": "Most quizzes lock automatically at the end time, even if you started late. Some instructors allow late attempts.",
+    "response": "Most quizzes lock automatically at the end time, even if you started late. Some instructors allow late attempts.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6400,8 +6142,7 @@
   },
   {
     "instruction": "Why did Brightspace submit my quiz early?",
-    "input": "",
-    "output": "Timed quizzes automatically submit when time expires, even if answers are incomplete.",
+    "response": "Timed quizzes automatically submit when time expires, even if answers are incomplete.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6411,8 +6152,7 @@
   },
   {
     "instruction": "Why do some quiz questions show 'Not Saved'?",
-    "input": "",
-    "output": "Unsaved answers may occur due to connection drops or if you navigate away without clicking Save.",
+    "response": "Unsaved answers may occur due to connection drops or if you navigate away without clicking Save.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6422,8 +6162,7 @@
   },
   {
     "instruction": "Does Brightspace autosave quiz answers?",
-    "input": "",
-    "output": "Yes, most question types autosave, but essay questions may require clicking Save manually.",
+    "response": "Yes, most question types autosave, but essay questions may require clicking Save manually.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6433,8 +6172,7 @@
   },
   {
     "instruction": "Why can't I see my quiz results?",
-    "input": "",
-    "output": "Instructors control whether you can see results, answers, or only the score.",
+    "response": "Instructors control whether you can see results, answers, or only the score.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -6444,8 +6182,7 @@
   },
   {
     "instruction": "What are Special Access settings in Brightspace?",
-    "input": "",
-    "output": "Special Access allows instructors to give individual students extended deadlines or additional quiz time.",
+    "response": "Special Access allows instructors to give individual students extended deadlines or additional quiz time.",
     "metadata": {
       "topic": "Brightspace - Special Access",
       "content_type": "accommodations",
@@ -6455,8 +6192,7 @@
   },
   {
     "instruction": "Why did I get extra time on a quiz?",
-    "input": "",
-    "output": "Your instructor or the disability office granted extended time using Special Access settings.",
+    "response": "Your instructor or the disability office granted extended time using Special Access settings.",
     "metadata": {
       "topic": "Brightspace - Special Access",
       "content_type": "accommodations",
@@ -6466,8 +6202,7 @@
   },
   {
     "instruction": "What is Turnitin in Brightspace?",
-    "input": "",
-    "output": "Turnitin checks student submissions for originality and plagiarism within Brightspace assignments.",
+    "response": "Turnitin checks student submissions for originality and plagiarism within Brightspace assignments.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -6477,8 +6212,7 @@
   },
   {
     "instruction": "Why can't I see my Turnitin similarity score?",
-    "input": "",
-    "output": "Instructors can choose whether students can view similarity reports.",
+    "response": "Instructors can choose whether students can view similarity reports.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -6488,8 +6222,7 @@
   },
   {
     "instruction": "Why does Turnitin say 'Pending' for a long time?",
-    "input": "",
-    "output": "Turnitin may take longer during peak times such as midterms or finals or when resubmissions occur.",
+    "response": "Turnitin may take longer during peak times such as midterms or finals or when resubmissions occur.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -6499,8 +6232,7 @@
   },
   {
     "instruction": "Can I resubmit to Turnitin?",
-    "input": "",
-    "output": "Resubmission depends on instructor settings. Some assignments allow unlimited attempts, others only one.",
+    "response": "Resubmission depends on instructor settings. Some assignments allow unlimited attempts, others only one.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -6510,8 +6242,7 @@
   },
   {
     "instruction": "Why does my Brightspace homepage look different from other students?",
-    "input": "",
-    "output": "Instructors and administrators can customize layouts, widgets, and course homepages, leading to variation.",
+    "response": "Instructors and administrators can customize layouts, widgets, and course homepages, leading to variation.",
     "metadata": {
       "topic": "Brightspace - Homepage",
       "content_type": "user_interface",
@@ -6521,8 +6252,7 @@
   },
   {
     "instruction": "Why do I see multiple navigation bars?",
-    "input": "",
-    "output": "Some courses use custom navbars or add secondary navigation inside modules.",
+    "response": "Some courses use custom navbars or add secondary navigation inside modules.",
     "metadata": {
       "topic": "Brightspace - Navbar",
       "content_type": "user_interface",
@@ -6532,8 +6262,7 @@
   },
   {
     "instruction": "Why is my navbar missing in a course?",
-    "input": "",
-    "output": "If an instructor selects a minimalist template or removes tools, certain nav items may not appear.",
+    "response": "If an instructor selects a minimalist template or removes tools, certain nav items may not appear.",
     "metadata": {
       "topic": "Brightspace - Navbar",
       "content_type": "user_interface",
@@ -6543,8 +6272,7 @@
   },
   {
     "instruction": "What is the Today widget?",
-    "input": "",
-    "output": "The Today widget lists activities, due dates, and deadlines occurring on the current day.",
+    "response": "The Today widget lists activities, due dates, and deadlines occurring on the current day.",
     "metadata": {
       "topic": "Brightspace - Widgets",
       "content_type": "widgets",
@@ -6554,8 +6282,7 @@
   },
   {
     "instruction": "Why are some widgets not visible to me?",
-    "input": "",
-    "output": "Widgets may be disabled by the instructor or hidden for students.",
+    "response": "Widgets may be disabled by the instructor or hidden for students.",
     "metadata": {
       "topic": "Brightspace - Widgets",
       "content_type": "widgets",
@@ -6565,8 +6292,7 @@
   },
   {
     "instruction": "What is the difference between Calendar widget and Calendar tool?",
-    "input": "",
-    "output": "The widget shows a quick list of upcoming items, while the full Calendar tool offers detailed monthly and weekly views.",
+    "response": "The widget shows a quick list of upcoming items, while the full Calendar tool offers detailed monthly and weekly views.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -6576,8 +6302,7 @@
   },
   {
     "instruction": "Why do some courses not appear in my Course Selector?",
-    "input": "",
-    "output": "Courses may be future-dated, inactive, or unpinned.",
+    "response": "Courses may be future-dated, inactive, or unpinned.",
     "metadata": {
       "topic": "Brightspace - Courses",
       "content_type": "course_access",
@@ -6587,8 +6312,7 @@
   },
   {
     "instruction": "What replaces Blackboard Blogs in Brightspace?",
-    "input": "",
-    "output": "Brightspace does not have a direct Blogs tool. Instructors typically use discussions or assignments.",
+    "response": "Brightspace does not have a direct Blogs tool. Instructors typically use discussions or assignments.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6598,8 +6322,7 @@
   },
   {
     "instruction": "What is the Brightspace alternative to Blackboard Rubrics?",
-    "input": "",
-    "output": "Brightspace uses its own Rubrics tool integrated with Assignments, Discussions, and Grades.",
+    "response": "Brightspace uses its own Rubrics tool integrated with Assignments, Discussions, and Grades.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6609,8 +6332,7 @@
   },
   {
     "instruction": "What replaces Blackboard My Grades?",
-    "input": "",
-    "output": "Brightspace uses the Grades tool to display course grades.",
+    "response": "Brightspace uses the Grades tool to display course grades.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -6620,8 +6342,7 @@
   },
   {
     "instruction": "Where can I see Feedback left by my instructor?",
-    "input": "",
-    "output": "Feedback may appear inside Grades, the Assignments tool, or inline within submissions.",
+    "response": "Feedback may appear inside Grades, the Assignments tool, or inline within submissions.",
     "metadata": {
       "topic": "Brightspace - Feedback",
       "content_type": "grades",
@@ -6631,8 +6352,7 @@
   },
   {
     "instruction": "Why is my instructor’s feedback blank?",
-    "input": "",
-    "output": "Feedback may include media comments that require clicking the play button or expanding the feedback panel.",
+    "response": "Feedback may include media comments that require clicking the play button or expanding the feedback panel.",
     "metadata": {
       "topic": "Brightspace - Feedback",
       "content_type": "grades",
@@ -6642,8 +6362,7 @@
   },
   {
     "instruction": "How do I check submission comments on assignments?",
-    "input": "",
-    "output": "Open the assignment, scroll to the Submission History section, and review instructor comments.",
+    "response": "Open the assignment, scroll to the Submission History section, and review instructor comments.",
     "metadata": {
       "topic": "Brightspace - Feedback",
       "content_type": "grades",
@@ -6653,8 +6372,7 @@
   },
   {
     "instruction": "Why does Brightspace log me out unexpectedly?",
-    "input": "",
-    "output": "Sessions expire after periods of inactivity or when logged in from multiple tabs or devices.",
+    "response": "Sessions expire after periods of inactivity or when logged in from multiple tabs or devices.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -6664,8 +6382,7 @@
   },
   {
     "instruction": "Can I stay logged in longer?",
-    "input": "",
-    "output": "Using the 'Keep me logged in' option or interacting frequently reduces auto-logout triggers.",
+    "response": "Using the 'Keep me logged in' option or interacting frequently reduces auto-logout triggers.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -6675,8 +6392,7 @@
   },
   {
     "instruction": "Why does Brightspace say 'Internal Error'?",
-    "input": "",
-    "output": "Internal Error appears when the system encounters a temporary issue, expired session, or broken content link.",
+    "response": "Internal Error appears when the system encounters a temporary issue, expired session, or broken content link.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -6686,8 +6402,7 @@
   },
   {
     "instruction": "How do I fix 'Internal Error' in Brightspace?",
-    "input": "",
-    "output": "Refresh the page, log out and back in, clear browser cache, or switch browsers.",
+    "response": "Refresh the page, log out and back in, clear browser cache, or switch browsers.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -6697,8 +6412,7 @@
   },
   {
     "instruction": "What is the HTML Editor in Brightspace used for?",
-    "input": "",
-    "output": "The HTML Editor is used for entering formatted text, inserting multimedia, adding links, and creating structured content in assignments, discussions, and other tools.",
+    "response": "The HTML Editor is used for entering formatted text, inserting multimedia, adding links, and creating structured content in assignments, discussions, and other tools.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6708,8 +6422,7 @@
   },
   {
     "instruction": "Where do I find the HTML Editor in Brightspace?",
-    "input": "",
-    "output": "The HTML Editor appears in any text-entry field, including assignments, discussions, announcements, and quizzes.",
+    "response": "The HTML Editor appears in any text-entry field, including assignments, discussions, announcements, and quizzes.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6719,8 +6432,7 @@
   },
   {
     "instruction": "Why are some HTML Editor features missing for me?",
-    "input": "",
-    "output": "Certain options may be disabled by your instructor or institution, or may not appear in mobile mode.",
+    "response": "Certain options may be disabled by your instructor or institution, or may not appear in mobile mode.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6730,8 +6442,7 @@
   },
   {
     "instruction": "How do I insert an image using the HTML Editor?",
-    "input": "",
-    "output": "Click the Insert Image icon in the toolbar and choose to upload a file, use a URL, or select from your course files.",
+    "response": "Click the Insert Image icon in the toolbar and choose to upload a file, use a URL, or select from your course files.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6741,8 +6452,7 @@
   },
   {
     "instruction": "Why does my image not appear after uploading in the HTML Editor?",
-    "input": "",
-    "output": "The image may be too large, use an unsupported format, or not have loaded correctly. Try reuploading or resizing.",
+    "response": "The image may be too large, use an unsupported format, or not have loaded correctly. Try reuploading or resizing.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6752,8 +6462,7 @@
   },
   {
     "instruction": "How do I insert a hyperlink in Brightspace?",
-    "input": "",
-    "output": "Highlight the text, click the Insert Quicklink icon, and enter or select the link target.",
+    "response": "Highlight the text, click the Insert Quicklink icon, and enter or select the link target.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6763,8 +6472,7 @@
   },
   {
     "instruction": "Why are links broken in Brightspace?",
-    "input": "",
-    "output": "Links break if pages are moved, deleted, or if URLs expire. Try re-saving the link.",
+    "response": "Links break if pages are moved, deleted, or if URLs expire. Try re-saving the link.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "content",
@@ -6774,8 +6482,7 @@
   },
   {
     "instruction": "What does 'You are not authorized to view this content' mean?",
-    "input": "",
-    "output": "The content is restricted by release conditions, availability dates, or instructor permissions.",
+    "response": "The content is restricted by release conditions, availability dates, or instructor permissions.",
     "metadata": {
       "topic": "Brightspace - Content Restrictions",
       "content_type": "content",
@@ -6785,8 +6492,7 @@
   },
   {
     "instruction": "Why can’t I view a PDF in Brightspace on mobile?",
-    "input": "",
-    "output": "Mobile browsers may block inline PDF viewing. Download the file or view in desktop mode.",
+    "response": "Mobile browsers may block inline PDF viewing. Download the file or view in desktop mode.",
     "metadata": {
       "topic": "Brightspace - Mobile",
       "content_type": "mobile_access",
@@ -6796,8 +6502,7 @@
   },
   {
     "instruction": "Why does Brightspace say 'File type not supported'?",
-    "input": "",
-    "output": "The file may be corrupted or use unsupported formats like HEIC, Apple Pages, or certain ZIPs.",
+    "response": "The file may be corrupted or use unsupported formats like HEIC, Apple Pages, or certain ZIPs.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6807,8 +6512,7 @@
   },
   {
     "instruction": "How do I convert HEIC photos for Brightspace uploads?",
-    "input": "",
-    "output": "Convert HEIC to JPG or PNG using your phone settings, or use an online converter before uploading.",
+    "response": "Convert HEIC to JPG or PNG using your phone settings, or use an online converter before uploading.",
     "metadata": {
       "topic": "Brightspace - Assignments",
       "content_type": "assignments",
@@ -6818,8 +6522,7 @@
   },
   {
     "instruction": "Why does Brightspace not display equations correctly?",
-    "input": "",
-    "output": "Equation formatting may break if copied from Word. Use the HTML Editor’s Equation tool instead.",
+    "response": "Equation formatting may break if copied from Word. Use the HTML Editor’s Equation tool instead.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6829,8 +6532,7 @@
   },
   {
     "instruction": "What is the Equation Editor in Brightspace?",
-    "input": "",
-    "output": "The Equation Editor allows input of math formulas using LaTeX, graphical editing, or handwriting recognition.",
+    "response": "The Equation Editor allows input of math formulas using LaTeX, graphical editing, or handwriting recognition.",
     "metadata": {
       "topic": "Brightspace - HTML Editor",
       "content_type": "editor",
@@ -6840,8 +6542,7 @@
   },
   {
     "instruction": "Why can't I see embedded YouTube videos in Brightspace?",
-    "input": "",
-    "output": "Browser security settings or institutional content filters may block embedded media. Try enabling third-party cookies.",
+    "response": "Browser security settings or institutional content filters may block embedded media. Try enabling third-party cookies.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -6851,8 +6552,7 @@
   },
   {
     "instruction": "How do I change my profile picture in Brightspace?",
-    "input": "",
-    "output": "Open your account menu, click Profile, and upload a new image.",
+    "response": "Open your account menu, click Profile, and upload a new image.",
     "metadata": {
       "topic": "Brightspace - Profile",
       "content_type": "settings",
@@ -6862,8 +6562,7 @@
   },
   {
     "instruction": "Why won't my profile picture update?",
-    "input": "",
-    "output": "Profile images may be cached. Try refreshing or clearing browser cache.",
+    "response": "Profile images may be cached. Try refreshing or clearing browser cache.",
     "metadata": {
       "topic": "Brightspace - Profile",
       "content_type": "settings",
@@ -6873,8 +6572,7 @@
   },
   {
     "instruction": "Can instructors see my profile picture?",
-    "input": "",
-    "output": "Yes, instructors and classmates can view your profile picture through Classlist.",
+    "response": "Yes, instructors and classmates can view your profile picture through Classlist.",
     "metadata": {
       "topic": "Brightspace - Profile",
       "content_type": "settings",
@@ -6884,8 +6582,7 @@
   },
   {
     "instruction": "What is the difference between My Settings and Course Settings?",
-    "input": "",
-    "output": "My Settings apply to your Brightspace account globally, while Course Settings apply only to an individual course.",
+    "response": "My Settings apply to your Brightspace account globally, while Course Settings apply only to an individual course.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -6895,8 +6592,7 @@
   },
   {
     "instruction": "Why is my grade rounded differently in Brightspace?",
-    "input": "",
-    "output": "Instructors control rounding rules and grade visibility, which may differ from what you expect.",
+    "response": "Instructors control rounding rules and grade visibility, which may differ from what you expect.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -6906,8 +6602,7 @@
   },
   {
     "instruction": "Why does my grade show as a dash?",
-    "input": "",
-    "output": "A dash (–) means the instructor has not entered or released a grade.",
+    "response": "A dash (–) means the instructor has not entered or released a grade.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -6917,8 +6612,7 @@
   },
   {
     "instruction": "What does 'Dropped' mean in Brightspace Grades?",
-    "input": "",
-    "output": "A dropped grade is excluded from grade calculations based on instructor settings.",
+    "response": "A dropped grade is excluded from grade calculations based on instructor settings.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -6928,8 +6622,7 @@
   },
   {
     "instruction": "Why is my final grade hidden?",
-    "input": "",
-    "output": "Final grades may be hidden until released by the instructor or institution.",
+    "response": "Final grades may be hidden until released by the instructor or institution.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -6939,8 +6632,7 @@
   },
   {
     "instruction": "What is the Class Progress tool used for?",
-    "input": "",
-    "output": "Class Progress tracks your course activity, including submissions, access logs, grades, and content completion.",
+    "response": "Class Progress tracks your course activity, including submissions, access logs, grades, and content completion.",
     "metadata": {
       "topic": "Brightspace - Class Progress",
       "content_type": "analytics",
@@ -6950,8 +6642,7 @@
   },
   {
     "instruction": "Why is my Class Progress score low?",
-    "input": "",
-    "output": "Low progress may be due to missing assignments, low grades, or limited activity in course materials.",
+    "response": "Low progress may be due to missing assignments, low grades, or limited activity in course materials.",
     "metadata": {
       "topic": "Brightspace - Class Progress",
       "content_type": "analytics",
@@ -6961,8 +6652,7 @@
   },
   {
     "instruction": "Can instructors see how long I spend on content?",
-    "input": "",
-    "output": "Yes. Class Progress logs time spent on content topics and pages.",
+    "response": "Yes. Class Progress logs time spent on content topics and pages.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -6972,8 +6662,7 @@
   },
   {
     "instruction": "Does Brightspace track how many times I open a file?",
-    "input": "",
-    "output": "Yes. Instructors can view access counts for content files and topics.",
+    "response": "Yes. Instructors can view access counts for content files and topics.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -6983,8 +6672,7 @@
   },
   {
     "instruction": "Why can’t I see the rubric for an assignment?",
-    "input": "",
-    "output": "Rubrics may be hidden until after submitting or until grading is completed.",
+    "response": "Rubrics may be hidden until after submitting or until grading is completed.",
     "metadata": {
       "topic": "Brightspace - Rubrics",
       "content_type": "rubrics",
@@ -6994,8 +6682,7 @@
   },
   {
     "instruction": "How do I view assignment rubrics?",
-    "input": "",
-    "output": "Rubrics can be viewed within the assignment page or in Grades after grading is published.",
+    "response": "Rubrics can be viewed within the assignment page or in Grades after grading is published.",
     "metadata": {
       "topic": "Brightspace - Rubrics",
       "content_type": "rubrics",
@@ -7005,8 +6692,7 @@
   },
   {
     "instruction": "Why is my rubric not showing correctly on mobile?",
-    "input": "",
-    "output": "Rubrics display better on desktop. Some mobile browsers collapse rubric grids for readability.",
+    "response": "Rubrics display better on desktop. Some mobile browsers collapse rubric grids for readability.",
     "metadata": {
       "topic": "Brightspace - Rubrics",
       "content_type": "rubrics",
@@ -7016,8 +6702,7 @@
   },
   {
     "instruction": "What is Audio Recording in assignments?",
-    "input": "",
-    "output": "Audio Recording allows students to submit spoken responses directly into Brightspace using their microphone.",
+    "response": "Audio Recording allows students to submit spoken responses directly into Brightspace using their microphone.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -7027,8 +6712,7 @@
   },
   {
     "instruction": "Why can’t I submit audio recordings?",
-    "input": "",
-    "output": "Microphone permissions may be blocked, or your browser may not support inline recording.",
+    "response": "Microphone permissions may be blocked, or your browser may not support inline recording.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -7038,8 +6722,7 @@
   },
   {
     "instruction": "What is Video Submission in Brightspace?",
-    "input": "",
-    "output": "Video Submission allows students to upload or record short videos directly in assignments or discussions.",
+    "response": "Video Submission allows students to upload or record short videos directly in assignments or discussions.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -7049,8 +6732,7 @@
   },
   {
     "instruction": "Why is my video submission failing?",
-    "input": "",
-    "output": "Video uploads fail due to large file sizes, weak connections, or unsupported formats like MOV or HEVC.",
+    "response": "Video uploads fail due to large file sizes, weak connections, or unsupported formats like MOV or HEVC.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -7060,8 +6742,7 @@
   },
   {
     "instruction": "Why does Brightspace show 'Unable to Play File'?",
-    "input": "",
-    "output": "This occurs when the uploaded file uses a codec the browser cannot decode.",
+    "response": "This occurs when the uploaded file uses a codec the browser cannot decode.",
     "metadata": {
       "topic": "Brightspace - Media",
       "content_type": "media",
@@ -7071,8 +6752,7 @@
   },
   {
     "instruction": "What is Respondus LockDown Browser?",
-    "input": "",
-    "output": "Respondus LockDown Browser is a secure browser required for certain quizzes to prevent opening other applications or websites.",
+    "response": "Respondus LockDown Browser is a secure browser required for certain quizzes to prevent opening other applications or websites.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -7082,8 +6762,7 @@
   },
   {
     "instruction": "Why does Brightspace tell me to open Respondus LockDown Browser?",
-    "input": "",
-    "output": "The quiz is configured to require LockDown Browser. You must open it to begin the attempt.",
+    "response": "The quiz is configured to require LockDown Browser. You must open it to begin the attempt.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -7093,8 +6772,7 @@
   },
   {
     "instruction": "Why can't I start a LockDown Browser quiz?",
-    "input": "",
-    "output": "You may be using the wrong browser. LockDown Browser quizzes cannot be started in Chrome, Firefox, or mobile.",
+    "response": "You may be using the wrong browser. LockDown Browser quizzes cannot be started in Chrome, Firefox, or mobile.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -7104,8 +6782,7 @@
   },
   {
     "instruction": "Does LockDown Browser work on Chromebooks?",
-    "input": "",
-    "output": "Some institutions support LockDown for Chromebooks, but not all. Compatibility varies by institution.",
+    "response": "Missouri state University LockDown Browser is not supported on Chromebooks.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -7115,8 +6792,7 @@
   },
   {
     "instruction": "Why did LockDown Browser say I was flagged?",
-    "input": "",
-    "output": "Flags occur for unusual activity such as looking away too long, background noise, or missing facial detection.",
+    "response": "Flags occur for unusual activity such as looking away too long, background noise, or missing facial detection.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -7126,8 +6802,7 @@
   },
   {
     "instruction": "What replaces Blackboard SafeAssign?",
-    "input": "",
-    "output": "Turnitin replaces SafeAssign in Brightspace for plagiarism checking.",
+    "response": "Turnitin replaces SafeAssign in Brightspace for plagiarism checking.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7137,8 +6812,7 @@
   },
   {
     "instruction": "What replaces Blackboard Announcements?",
-    "input": "",
-    "output": "Brightspace Announcements perform the same function for posting course updates.",
+    "response": "Brightspace Announcements perform the same function for posting course updates.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7148,8 +6822,7 @@
   },
   {
     "instruction": "What replaces Blackboard Tests?",
-    "input": "",
-    "output": "Brightspace Quizzes are equivalent to Blackboard Tests.",
+    "response": "Brightspace Quizzes are equivalent to Blackboard Tests.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7159,8 +6832,7 @@
   },
   {
     "instruction": "What is the Brightspace alternative to Blackboard Assignments?",
-    "input": "",
-    "output": "Brightspace Assignments directly replace Blackboard Assignments.",
+    "response": "Brightspace Assignments directly replace Blackboard Assignments.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7170,8 +6842,7 @@
   },
   {
     "instruction": "What replaces Blackboard Discussion Board?",
-    "input": "",
-    "output": "Brightspace Discussions serve the same role as Blackboard Discussion Board.",
+    "response": "Brightspace Discussions serve the same role as Blackboard Discussion Board.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7181,8 +6852,7 @@
   },
   {
     "instruction": "What replaces Blackboard Course Messages?",
-    "input": "",
-    "output": "Brightspace uses Instant Messages or Email instead of Course Messages.",
+    "response": "Brightspace uses Instant Messages or Email instead of Course Messages.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7192,8 +6862,7 @@
   },
   {
     "instruction": "Why is my Brightspace content page scrolling slowly?",
-    "input": "",
-    "output": "Heavy HTML pages, large embedded content, or old browser cache may cause scrolling lag.",
+    "response": "Heavy HTML pages, large embedded content, or old browser cache may cause scrolling lag.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -7203,8 +6872,7 @@
   },
   {
     "instruction": "How do I enable dark mode for Brightspace?",
-    "input": "",
-    "output": "Brightspace does not offer native dark mode. Browser-level dark mode can be enabled if desired.",
+    "response": "Brightspace does not offer native dark mode. Browser-level dark mode can be enabled if desired.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -7214,8 +6882,7 @@
   },
   {
     "instruction": "What does 'Content Locked' mean?",
-    "input": "",
-    "output": "Content Locked means you must complete a prerequisite, such as a quiz, assignment, or module.",
+    "response": "Content Locked means you must complete a prerequisite, such as a quiz, assignment, or module.",
     "metadata": {
       "topic": "Brightspace - Content Restrictions",
       "content_type": "content",
@@ -7225,8 +6892,7 @@
   },
   {
     "instruction": "Why is there a padlock icon on a module?",
-    "input": "",
-    "output": "The padlock icon appears when a content item is gated behind a release condition.",
+    "response": "The padlock icon appears when a content item is gated behind a release condition.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "gating",
@@ -7236,8 +6902,7 @@
   },
   {
     "instruction": "Why does a completed module not unlock the next one?",
-    "input": "",
-    "output": "The completion rule may require viewing all topics, submitting an assignment, or scoring a minimum grade.",
+    "response": "The completion rule may require viewing all topics, submitting an assignment, or scoring a minimum grade.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "gating",
@@ -7247,8 +6912,7 @@
   },
   {
     "instruction": "What is the difference between visible and available content?",
-    "input": "",
-    "output": "Content may be visible but unavailable if restricted by time or conditions.",
+    "response": "Content may be visible but unavailable if restricted by time or conditions.",
     "metadata": {
       "topic": "Brightspace - Content Restrictions",
       "content_type": "content",
@@ -7258,8 +6922,7 @@
   },
   {
     "instruction": "How do I change my time zone in Brightspace?",
-    "input": "",
-    "output": "You can adjust your time zone under Account Settings in the Preferences tab.",
+    "response": "You can adjust your time zone under Account Settings in the Preferences tab.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -7269,8 +6932,7 @@
   },
   {
     "instruction": "Why are my assignment due dates wrong?",
-    "input": "",
-    "output": "If your Brightspace time zone differs from the university’s or your instructor’s settings, due dates may display incorrectly.",
+    "response": "If your Brightspace time zone differs from the university’s or your instructor’s settings, due dates may display incorrectly.",
     "metadata": {
       "topic": "Brightspace - Settings",
       "content_type": "settings",
@@ -7280,8 +6942,7 @@
   },
   {
     "instruction": "Why can't I log in to Brightspace?",
-    "input": "",
-    "output": "Login issues often occur due to incorrect password, expired credentials, Duo authentication problems, or university single sign-on outages.",
+    "response": "Login issues often occur due to incorrect password, expired credentials, Duo authentication problems, or university single sign-on outages.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "authentication",
@@ -7291,8 +6952,7 @@
   },
   {
     "instruction": "Why does Brightspace redirect me to the login page repeatedly?",
-    "input": "",
-    "output": "This usually happens when browser cookies are blocked, expired, or corrupted. Enable cookies and clear your cache.",
+    "response": "This usually happens when browser cookies are blocked, expired, or corrupted. Enable cookies and clear your cache.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "authentication",
@@ -7302,8 +6962,7 @@
   },
   {
     "instruction": "Why does Brightspace say my session expired immediately after logging in?",
-    "input": "",
-    "output": "Old cookies, multiple open tabs, VPN settings, or browser extensions can instantly invalidate a session.",
+    "response": "Old cookies, multiple open tabs, VPN settings, or browser extensions can instantly invalidate a session.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "authentication",
@@ -7313,8 +6972,7 @@
   },
   {
     "instruction": "Why can’t I log in using Safari?",
-    "input": "",
-    "output": "Safari may block cross-site tracking required for single sign-on. Disable 'Prevent cross-site tracking' in Safari settings.",
+    "response": "Safari may block cross-site tracking required for single sign-on. Disable 'Prevent cross-site tracking' in Safari settings.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "authentication",
@@ -7324,8 +6982,7 @@
   },
   {
     "instruction": "Why does Brightspace not work on my Chromebook?",
-    "input": "",
-    "output": "Some features such as LockDown Browser quizzes or certain media embeds may not be fully supported on Chromebooks.",
+    "response": "Some features such as LockDown Browser quizzes or certain media embeds may not be fully supported on Chromebooks.",
     "metadata": {
       "topic": "Brightspace - Device Support",
       "content_type": "technical",
@@ -7335,8 +6992,7 @@
   },
   {
     "instruction": "What should I do if Brightspace loads forever on the login screen?",
-    "input": "",
-    "output": "Try a different browser, disable VPN, clear cache, and check university system status.",
+    "response": "Try a different browser, disable VPN, clear cache, and check university system status.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "authentication",
@@ -7346,8 +7002,7 @@
   },
   {
     "instruction": "Why can’t I change my password in Brightspace?",
-    "input": "",
-    "output": "Password changes must be made through your university’s account portal, not within Brightspace.",
+    "response": "Password changes must be made through your university’s account portal, not within Brightspace.",
     "metadata": {
       "topic": "Brightspace - Login",
       "content_type": "authentication",
@@ -7357,8 +7012,7 @@
   },
   {
     "instruction": "Why is Brightspace stuck on a white screen after login?",
-    "input": "",
-    "output": "A blank white screen often happens due to outdated cache, blocked scripts, or a bad browser extension.",
+    "response": "A blank white screen often happens due to outdated cache, blocked scripts, or a bad browser extension.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -7368,8 +7022,7 @@
   },
   {
     "instruction": "Why can’t I open Word documents inside Brightspace?",
-    "input": "",
-    "output": "DOCX preview sometimes fails. Download the file and open it locally with a Word-compatible viewer.",
+    "response": "DOCX preview sometimes fails. Download the file and open it locally with a Word-compatible viewer.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "file_viewing",
@@ -7379,8 +7032,7 @@
   },
   {
     "instruction": "Why does Brightspace show 'File Unavailable' for course files?",
-    "input": "",
-    "output": "The file may have been deleted, moved, or restricted by the instructor.",
+    "response": "The file may have been deleted, moved, or restricted by the instructor.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "file_viewing",
@@ -7390,8 +7042,7 @@
   },
   {
     "instruction": "Why can't I view PowerPoint slides in Brightspace?",
-    "input": "",
-    "output": "PPTX preview may fail on mobile or outdated browsers. Downloading the file is the most reliable option.",
+    "response": "PPTX preview may fail on mobile or outdated browsers. Downloading the file is the most reliable option.",
     "metadata": {
       "topic": "Brightspace - Content",
       "content_type": "file_viewing",
@@ -7401,8 +7052,7 @@
   },
   {
     "instruction": "Why does Brightspace say 'This content is not available' for a module?",
-    "input": "",
-    "output": "Modules may be hidden, future-dated, or tied to release conditions you haven't completed.",
+    "response": "Modules may be hidden, future-dated, or tied to release conditions you haven't completed.",
     "metadata": {
       "topic": "Brightspace - Content Restrictions",
       "content_type": "content",
@@ -7412,8 +7062,7 @@
   },
   {
     "instruction": "Why does Brightspace automatically mark content complete?",
-    "input": "",
-    "output": "Content may auto-complete when viewed depending on instructor completion settings.",
+    "response": "Content may auto-complete when viewed depending on instructor completion settings.",
     "metadata": {
       "topic": "Brightspace - Content Completion",
       "content_type": "content",
@@ -7423,8 +7072,7 @@
   },
   {
     "instruction": "Why isn't my content marked complete even after opening it?",
-    "input": "",
-    "output": "The completion rule may require additional steps like viewing all subtopics, clicking a button, or completing a related activity.",
+    "response": "The completion rule may require additional steps like viewing all subtopics, clicking a button, or completing a related activity.",
     "metadata": {
       "topic": "Brightspace - Content Completion",
       "content_type": "content",
@@ -7434,8 +7082,7 @@
   },
   {
     "instruction": "What does 'Required: View Topic' mean?",
-    "input": "",
-    "output": "You must open the topic and view it to satisfy the completion condition.",
+    "response": "You must open the topic and view it to satisfy the completion condition.",
     "metadata": {
       "topic": "Brightspace - Content Completion",
       "content_type": "content",
@@ -7445,8 +7092,7 @@
   },
   {
     "instruction": "What does 'Required: Score of X' mean in Brightspace?",
-    "input": "",
-    "output": "You must achieve a minimum score on a quiz or assignment before the next item unlocks.",
+    "response": "You must achieve a minimum score on a quiz or assignment before the next item unlocks.",
     "metadata": {
       "topic": "Brightspace - Release Conditions",
       "content_type": "gating",
@@ -7456,8 +7102,7 @@
   },
   {
     "instruction": "Why does my group assignment show 'Group not assigned'?",
-    "input": "",
-    "output": "You must join a group in the Groups tool before submitting a group assignment.",
+    "response": "You must join a group in the Groups tool before submitting a group assignment.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -7467,8 +7112,7 @@
   },
   {
     "instruction": "Why is my group assignment submission overwriting someone else’s?",
-    "input": "",
-    "output": "Group assignments share one submission area. Any member can overwrite or resubmit.",
+    "response": "Group assignments share one submission area. Any member can overwrite or resubmit.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -7478,8 +7122,7 @@
   },
   {
     "instruction": "Why don’t I see 'Submit' for a group assignment?",
-    "input": "",
-    "output": "Only one member may need to submit, or you may not be enrolled in a group.",
+    "response": "Only one member may need to submit, or you may not be enrolled in a group.",
     "metadata": {
       "topic": "Brightspace - Groups",
       "content_type": "groups",
@@ -7489,8 +7132,7 @@
   },
   {
     "instruction": "How do I subscribe to a discussion in Brightspace?",
-    "input": "",
-    "output": "Open the discussion topic and click Subscribe to receive notifications for new posts.",
+    "response": "Open the discussion topic and click Subscribe to receive notifications for new posts.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -7500,8 +7142,7 @@
   },
   {
     "instruction": "Why am I receiving discussion notifications for a course I'm not active in?",
-    "input": "",
-    "output": "You may have subscribed to a topic or forum previously. Unsubscribe via the Discussions tool.",
+    "response": "You may have subscribed to a topic or forum previously. Unsubscribe via the Discussions tool.",
     "metadata": {
       "topic": "Brightspace - Notifications",
       "content_type": "notifications",
@@ -7511,8 +7152,7 @@
   },
   {
     "instruction": "Why can't I post in a discussion?",
-    "input": "",
-    "output": "Posting may be disabled until you meet a prerequisite, or the discussion may be locked or instructor-only.",
+    "response": "Posting may be disabled until you meet a prerequisite, or the discussion may be locked or instructor-only.",
     "metadata": {
       "topic": "Brightspace - Discussions",
       "content_type": "discussions",
@@ -7522,8 +7162,7 @@
   },
   {
     "instruction": "Why does Pulse show different due dates than the Brightspace desktop site?",
-    "input": "",
-    "output": "Pulse syncs differently for items without due dates or for drafts, leading to minor differences in display.",
+    "response": "Pulse syncs differently for items without due dates or for drafts, leading to minor differences in display.",
     "metadata": {
       "topic": "Brightspace - Pulse",
       "content_type": "mobile_access",
@@ -7533,8 +7172,7 @@
   },
   {
     "instruction": "Why does the Pulse app not show all my classes?",
-    "input": "",
-    "output": "Pulse only displays *active* and *pinned* courses. Unpinning and repinning may refresh the list.",
+    "response": "Pulse only displays *active* and *pinned* courses. Unpinning and repinning may refresh the list.",
     "metadata": {
       "topic": "Brightspace - Pulse",
       "content_type": "mobile_access",
@@ -7544,8 +7182,7 @@
   },
   {
     "instruction": "Why does Pulse keep logging me out?",
-    "input": "",
-    "output": "App sessions expire after inactivity or when single sign-on tokens refresh.",
+    "response": "App sessions expire after inactivity or when single sign-on tokens refresh.",
     "metadata": {
       "topic": "Brightspace - Pulse",
       "content_type": "mobile_access",
@@ -7555,8 +7192,7 @@
   },
   {
     "instruction": "Why are my Calendar items duplicated in Brightspace?",
-    "input": "",
-    "output": "Duplicate events often occur when instructors add dates both manually and through assignment settings.",
+    "response": "Duplicate events often occur when instructors add dates both manually and through assignment settings.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -7566,8 +7202,7 @@
   },
   {
     "instruction": "Why is a quiz showing in my Calendar but not visible in the course?",
-    "input": "",
-    "output": "The quiz may exist but be unpublished or restricted by conditions.",
+    "response": "The quiz may exist but be unpublished or restricted by conditions.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -7577,8 +7212,7 @@
   },
   {
     "instruction": "Why does Brightspace show past events as unread?",
-    "input": "",
-    "output": "Calendar notifications may not clear if the item was recently modified by the instructor.",
+    "response": "Calendar notifications may not clear if the item was recently modified by the instructor.",
     "metadata": {
       "topic": "Brightspace - Calendar",
       "content_type": "calendar",
@@ -7588,8 +7222,7 @@
   },
   {
     "instruction": "Why can’t I join Virtual Classroom on iPhone?",
-    "input": "",
-    "output": "Virtual Classroom may require permissions that are blocked on mobile browsers. Use Safari or enable microphone/camera access.",
+    "response": "Virtual Classroom may require permissions that are blocked on mobile browsers. Use Safari or enable microphone/camera access.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -7599,8 +7232,7 @@
   },
   {
     "instruction": "Why is my Virtual Classroom camera black?",
-    "input": "",
-    "output": "Your browser may be blocking camera access, or another application is using the camera.",
+    "response": "Your browser may be blocking camera access, or another application is using the camera.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -7610,8 +7242,7 @@
   },
   {
     "instruction": "Why is Virtual Classroom lagging?",
-    "input": "",
-    "output": "Lag may occur due to slow internet, heavy presentations, or multiple browser tabs.",
+    "response": "Lag may occur due to slow internet, heavy presentations, or multiple browser tabs.",
     "metadata": {
       "topic": "Brightspace - Virtual Classroom",
       "content_type": "video",
@@ -7621,8 +7252,7 @@
   },
   {
     "instruction": "Why does my Turnitin report say 'Error processing file'?",
-    "input": "",
-    "output": "Turnitin may reject encrypted, corrupted, or unsupported documents such as Pages files.",
+    "response": "Turnitin may reject encrypted, corrupted, or unsupported documents such as Pages files.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -7632,8 +7262,7 @@
   },
   {
     "instruction": "Why is my Turnitin similarity score 0% even though I copied content?",
-    "input": "",
-    "output": "Similarity reports may be delayed or disabled for student view.",
+    "response": "Similarity reports may be delayed or disabled for student view.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -7643,8 +7272,7 @@
   },
   {
     "instruction": "Why is my Turnitin similarity score extremely high?",
-    "input": "",
-    "output": "Assignments with templates, cover pages, or previous drafts often trigger high similarity matches.",
+    "response": "Assignments with templates, cover pages, or previous drafts often trigger high similarity matches.",
     "metadata": {
       "topic": "Brightspace - Turnitin",
       "content_type": "academic_integrity",
@@ -7654,8 +7282,7 @@
   },
   {
     "instruction": "What replaces Blackboard Grade Center?",
-    "input": "",
-    "output": "Brightspace uses the Grades tool, which includes weighted categories, drop rules, and feedback options.",
+    "response": "Brightspace uses the Grades tool, which includes weighted categories, drop rules, and feedback options.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7665,8 +7292,7 @@
   },
   {
     "instruction": "What replaces Blackboard My Organizations?",
-    "input": "",
-    "output": "Brightspace uses Org Units to host non-course communities.",
+    "response": "Brightspace uses Org Units to host non-course communities.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7676,8 +7302,7 @@
   },
   {
     "instruction": "What is the Brightspace equivalent of Blackboard Needs Grading?",
-    "input": "",
-    "output": "Brightspace does not have a direct Needs Grading tool; instructors use the assignment or quiz grading area.",
+    "response": "Brightspace does not have a direct Needs Grading tool; instructors use the assignment or quiz grading area.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7687,8 +7312,7 @@
   },
   {
     "instruction": "What replaces Blackboard Attendance?",
-    "input": "",
-    "output": "Brightspace uses the Attendance tool or Class Progress metrics depending on setup.",
+    "response": "Brightspace uses the Attendance tool or Class Progress metrics depending on setup.",
     "metadata": {
       "topic": "Blackboard to Brightspace",
       "content_type": "tool_equivalency",
@@ -7698,8 +7322,7 @@
   },
   {
     "instruction": "Why does Brightspace say 'Error: Not Authorized' when opening a quiz?",
-    "input": "",
-    "output": "You may lack permissions, need LockDown Browser, or the quiz is not yet available.",
+    "response": "You may lack permissions, need LockDown Browser, or the quiz is not yet available.",
     "metadata": {
       "topic": "Brightspace - Quizzes",
       "content_type": "quizzes",
@@ -7709,8 +7332,7 @@
   },
   {
     "instruction": "Why does Brightspace say I have no permission to view grades?",
-    "input": "",
-    "output": "Instructors can disable grade visibility until all grading is complete.",
+    "response": "Instructors can disable grade visibility until all grading is complete.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -7720,8 +7342,7 @@
   },
   {
     "instruction": "Why do some grades show a question mark icon?",
-    "input": "",
-    "output": "A question mark means the grade is exempt or not included in the final calculation.",
+    "response": "A question mark means the grade is exempt or not included in the final calculation.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
@@ -7731,8 +7352,7 @@
   },
   {
     "instruction": "How do I refresh a stuck Brightspace page?",
-    "input": "",
-    "output": "Press CTRL+F5 (Windows) or CMD+SHIFT+R (Mac) to force a hard refresh.",
+    "response": "Press CTRL+F5 (Windows) or CMD+SHIFT+R (Mac) to force a hard refresh.",
     "metadata": {
       "topic": "Brightspace - Technical Issues",
       "content_type": "technical",
@@ -7742,8 +7362,7 @@
   },
   {
     "instruction": "Why is my content view counter inaccurate?",
-    "input": "",
-    "output": "View counters track page loads, not time spent or scrolling. Refreshing also increases counts.",
+    "response": "View counters track page loads, not time spent or scrolling. Refreshing also increases counts.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -7753,8 +7372,7 @@
   },
   {
     "instruction": "Does Brightspace track video watch progress?",
-    "input": "",
-    "output": "Depending on how media is hosted, instructors may see whether students opened a video but not always completion percentage.",
+    "response": "Depending on how media is hosted, instructors may see whether students opened a video but not always completion percentage.",
     "metadata": {
       "topic": "Brightspace - Analytics",
       "content_type": "analytics",
@@ -7764,8 +7382,7 @@
   },
   {
     "instruction": "What does the 'eye with a slash' icon mean on grades?",
-    "input": "",
-    "output": "It means the grade is hidden and not visible to students.",
+    "response": "It means the grade is hidden and not visible to students.",
     "metadata": {
       "topic": "Brightspace - Grades",
       "content_type": "grades",
