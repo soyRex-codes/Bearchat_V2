@@ -8,7 +8,7 @@ import 'main.dart'; // Import ChatMessage from main.dart
 class ApiService {
   static String get baseUrl =>
       dotenv.env['API_BASE_URL'] ??
-      'http://192.168.4.93:8080'; // Default URL # use env variable if available
+      'http://10.13.11.125:8080'; // Default URL # use env variable if available
 
   // Retry configuration
   static const int maxRetries = 3;
